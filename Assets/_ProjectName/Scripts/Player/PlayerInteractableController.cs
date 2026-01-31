@@ -6,10 +6,12 @@ public class PlayerInteractableController : MonoBehaviour
     [SerializeField] private PlayerController playerController;
     [SerializeField] private InteractableBaseController interactableInRange;
     private InputAction interactAction;
+    private InputAction transformAction;
 
     private void Awake()
     {
-        interactAction = GetComponentInParent<PlayerInput>().actions["Attack"];
+        interactAction = GetComponentInParent<PlayerInput>().actions["Interact"];
+        transformAction = GetComponentInParent<PlayerInput>().actions["Transform"];
     }
     private void Start()
     {
@@ -21,13 +23,21 @@ public class PlayerInteractableController : MonoBehaviour
     }
     private void AddListeners()
     {
-        interactAction.performed += BeginAction;
+        interactAction.performed += Interact;
+        transformAction.performed += Transform;
     }
-    public void BeginAction(InputAction.CallbackContext context)
+    public void Interact(InputAction.CallbackContext context)
     {
         if (interactableInRange != null)
         {
             interactableInRange.Interact(playerController);
+        }
+    }
+    public void Transform(InputAction.CallbackContext context)
+    {
+        if (interactableInRange != null)
+        {
+            interactableInRange.Transform(playerController);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -48,7 +58,8 @@ public class PlayerInteractableController : MonoBehaviour
     }
     private void RemoveListeners()
     {
-        interactAction.performed -= BeginAction;
+        interactAction.performed -= Interact;
+        transformAction.performed -= Transform;
     }
     public void Conclude()
     {

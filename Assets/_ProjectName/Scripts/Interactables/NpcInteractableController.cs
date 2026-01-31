@@ -3,8 +3,7 @@ using UnityEngine;
 public class NpcInteractableController : InteractableBaseController
 {
     [SerializeField] private GameObject hoverGO;
-    [SerializeField] private Animator skin;
-
+    [SerializeField] private NpcDataSO npcData;
     private void Awake()
     {
         hoverGO.SetActive(false);
@@ -16,11 +15,14 @@ public class NpcInteractableController : InteractableBaseController
 
     public override void Interact(PlayerController playerController = null)
     {
-        if(playerController != null)
+        Debug.Log("Try talk");
+    }
+    public override void Transform(PlayerController playerController = null)
+    {
+        base.Transform();
+        if (playerController != null)
         {
-            Debug.Log("playerController: " + playerController);
-            Debug.Log("skin: " + skin);
-            playerController.ChangeSkin(skin.runtimeAnimatorController);
+            playerController.ChangeSkin(npcData);
         }
     }
 }
