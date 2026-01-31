@@ -59,6 +59,12 @@ public class GameManager : MonoBehaviour
             case ResultsState resultsState:
                 resultsState.Dependencies();
                 break;
+            case CamiloTestState camiloTestState:
+                camiloTestState.Dependencies();
+                break;
+            case KevinTestState kevinTestState:
+                kevinTestState.Dependencies();
+                break;
             default:
                 break;
         }

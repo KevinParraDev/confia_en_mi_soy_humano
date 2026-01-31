@@ -4,7 +4,9 @@ public enum States
     Main = 1,
     Onboarding = 2,
     Gameplay = 3,
-    Results = 4
+    Results = 4,
+    CamiloScene = 5,
+    KevinScene = 6,
 }
 
 public enum UI
