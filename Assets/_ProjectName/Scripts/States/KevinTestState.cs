@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class KevinTestState : GameStateBase
 {
+    [SerializeField] private PlayerController playerController;
     protected override void Awake()
     {
         base.Awake();
@@ -20,8 +21,13 @@ public class KevinTestState : GameStateBase
     public override void EnterState()
     {
         base.EnterState();
+        Initialize();
     }
+    public void Initialize()
+    {
+        playerController?.Initialize();
 
+    }
 
     private void StartGameplay()
     {
@@ -32,9 +38,14 @@ public class KevinTestState : GameStateBase
     {
 
     }
+    public void Conclude()
+    {
+        playerController?.Conclude();
+    }
 
     public override void ExitState()
     {
+        Conclude();
         base.ExitState();
     }
 }
