@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     private PlayerMovementController movementController;
     private PlayerInteractableController interactableController;
     private CharacterView view;
-
+    [SerializeField] private NpcDataSO currentNPC;
     private void Awake()
     {
         movementController = GetComponent<PlayerMovementController>();
@@ -19,9 +19,14 @@ public class PlayerController : MonoBehaviour
         movementController?.Initialize();
         interactableController?.Initialize();
     }
-    public void ChangeSkin(RuntimeAnimatorController newSkin)
+    public void ChangeSkin(NpcDataSO npc)
     {
-        view.ChangeSkin(newSkin);
+        currentNPC = npc;
+        view.ChangeSkin(currentNPC.animatorSkin);
+    }
+    public NPC GetCurrentSkin()
+    {
+        return currentNPC != null ? currentNPC.npcType : NPC.None;
     }
     public void Conclude()
     {
