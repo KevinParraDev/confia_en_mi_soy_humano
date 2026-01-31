@@ -88,4 +88,6 @@ public abstract class NPCBaseController : MonoBehaviour
     public virtual void Interact() { }
 
     public virtual void StopInteract() { }
+
+    public virtual void StopIdleCheck() { }
 }

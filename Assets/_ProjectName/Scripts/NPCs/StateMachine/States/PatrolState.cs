@@ -62,4 +62,15 @@ public class PatrolState : IState
     {
         npc.Interact();
     }
+
+    public void ResetPatrol()
+    {
+        currentWaypointIndex = 0;
+        MoveToWaypoint();
+    }
+
+    public int GetCurrentWaypointIndex()
+    {
+        return currentWaypointIndex;
+    }
 }

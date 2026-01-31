@@ -8,6 +8,7 @@ public class ChefNpcController : NPCBaseController
 
     [Header("Cooking Interaction Config")]
     [SerializeField] private InteractableBaseController cookingStation;
+    [SerializeField] private DishesDeskInteractable servingStation;
     [SerializeField] private float cookingDuration = 5f;
     [SerializeField] private float interactionDistance = 1f;
 
@@ -28,14 +29,14 @@ public class ChefNpcController : NPCBaseController
         {
             stateMachine.ChangeState(NPCState.Interact);
             this.StopMovement();
-            Debug.Log("Chef NPC is interacting with the cooking station.");
         }
     }
 
     public override void StopInteract()
     {
+        servingStation.AddDish();
+        servingStation.AddDish();
         stateMachine.ChangeState(NPCState.Patrol);
         this.ResumeMovement();
-        Debug.Log("Chef NPC has finished cooking and is resuming patrol.");
     }
 }

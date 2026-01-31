@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class DishesDeskInteractable : InteractableBaseController
@@ -15,13 +16,20 @@ public class DishesDeskInteractable : InteractableBaseController
         }
     }
 
-    public void RemoveDish()
+    public bool RemoveDish(int dishesRemoved = 1)
     {
-        if(dishCount > 0)
+        if(dishCount >= dishesRemoved)
         {
-            dishCount--;
-            dishView[dishCount].SetActive(false);
+            dishCount -= dishesRemoved;
+            for(int i = dishView.Length - 1; i >= dishCount; i--)
+            {
+                dishView[i].SetActive(false);
+            }
+
+            return true;
         }
+
+        return false;
     }
 
     public override void Hover(bool active, PlayerController playerController = null)
