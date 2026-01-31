@@ -2,11 +2,16 @@ using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerCanvasController : AnimatorControllerBase
+public class PlayerCanvasController : MonoBehaviour
 {
+    [SerializeField] private Animator buttonsAnim;
+    [SerializeField] private Animator changeSkinAnim;
     public void SetActiveButtons(bool active)
     {
-        Debug.Log("Set active buttons " + active);
-        SetBoolAnimation(Constants.ANIM_PANNEL_APPEAR, active);
+        buttonsAnim.SetBool(Constants.ANIM_PANNEL_APPEAR, active);
+    }
+    public void PlayChangeSkinAnimation()
+    {
+        changeSkinAnim.SetTrigger(Constants.ANIM_PANNEL_APPEAR);
     }
 }

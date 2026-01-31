@@ -39,6 +39,10 @@ public class PlayerInteractableController : MonoBehaviour
         if (interactableInRange != null)
         {
             interactableInRange.Transform(playerController);
+            if (interactableInRange is NpcInteractableController)
+            {
+                playerCanvasController?.PlayChangeSkinAnimation();
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -47,7 +51,6 @@ public class PlayerInteractableController : MonoBehaviour
         {
             if (interactableInRange is NpcInteractableController)
             {
-                Debug.Log("Appear buttons");
                 playerCanvasController?.SetActiveButtons(true);
             }
             interactableInRange.Hover(true);
@@ -60,7 +63,6 @@ public class PlayerInteractableController : MonoBehaviour
         {
             if (interactableInRange is NpcInteractableController)
             {
-                Debug.Log("Disappear buttons");
                 playerCanvasController?.SetActiveButtons(false);
             }
             interactableInRange.Hover(false);

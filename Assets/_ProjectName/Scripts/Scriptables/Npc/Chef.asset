@@ -21,3 +21,6 @@ MonoBehaviour:
   - npcToResponse: 3
     dialogs:
     - "Creo que me estoy volviendo loco, jurar\xEDa que vi un extraterreste"
+  - npcToResponse: 2
+    dialogs:
+    - "\xBFQuien eres t\xFA? \xBFComo hiciste eso?!"
