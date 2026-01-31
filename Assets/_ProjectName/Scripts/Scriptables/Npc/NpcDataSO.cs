@@ -37,5 +37,6 @@ public enum NPC
     Chef,
     Waiter,
     Guard,
-    Bureaucrat
+    Bureaucrat,
+    Trun
 }
