@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 7414075684701191035}
   - component: {fileID: 6255760431888104992}
   - component: {fileID: 2356592100807514377}
+  - component: {fileID: 6314659507965044954}
   m_Layer: 0
   m_Name: npcAgent
   m_TagString: Untagged
@@ -214,6 +215,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e15730f8942ac364eaea6d17f7bcb022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6314659507965044954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5854329200408850276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4bbab50c182c74cb8f8b5ed1b5d01a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7077565532838926251

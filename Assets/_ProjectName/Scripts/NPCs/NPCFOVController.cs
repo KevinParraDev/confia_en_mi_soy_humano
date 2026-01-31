@@ -23,6 +23,12 @@ public class NPCFOVController : MonoBehaviour
         GetComponent<MeshFilter>().mesh = mesh;
     }
 
+    public void SetNewFOV(float newFovAngle, float newFovDistance)
+    {
+        fov = newFovAngle;
+        viewDistance = newFovDistance;
+    }
+
     private void LateUpdate()
     {
         float angle = startingAngle;

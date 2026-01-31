@@ -46,7 +46,6 @@ public class WaiterNPCController : NPCBaseController
                 if (servingStation.GetDishCount() < patrolPoints.Length - 1)
                 {
                     stateMachine.ChangeState(NPCState.Idle);
-                    Debug.Log("No dishes to pick up at the serving station.");
                 }
             }
         }
@@ -58,12 +57,10 @@ public class WaiterNPCController : NPCBaseController
         {
             servingStation.RemoveDish(patrolPoints.Length - 1);
             stateMachine.ChangeState(NPCState.Patrol);
-            Debug.Log("Waiter NPC is picking up dishes from the serving station.");
         }
         else
         {
             stateMachine.ChangeState(NPCState.Idle);
-            Debug.Log("No dishes to pick up at the serving station.");
         }
         this.ResumeMovement();
     }
@@ -78,8 +75,6 @@ public class WaiterNPCController : NPCBaseController
                 patrolState.ResetPatrol();
             }
             this.ResumeMovement();
-            Debug.Log("Waiter NPC is resuming patrol to pick up dishes.");
         }
-        Debug.Log("Waiter NPC remains idle as there are no dishes to pick up.");
     }
 }

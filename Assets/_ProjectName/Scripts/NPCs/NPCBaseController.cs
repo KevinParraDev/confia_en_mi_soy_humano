@@ -18,6 +18,12 @@ public abstract class NPCBaseController : MonoBehaviour
     [SerializeField] protected float fovViewDistance = 3f;
     protected NPCDetectionController detectionController;
 
+    protected float currentFovAngle;
+    protected float currentFovViewDistance;
+
+    // Provisional Method
+    protected Transform playerTransform;
+
     private bool isAlarmed;
     public bool IsAlarmed { get { return isAlarmed; } }
 
@@ -47,17 +53,19 @@ public abstract class NPCBaseController : MonoBehaviour
             Debug.LogWarning("NPCDetectionController Component Not Set");
         }
 
+        // TODO : Pass Player Transform Dynamically
+        playerTransform = FindFirstObjectByType<PlayerController>()?.transform;
+
         SetupStateMachine();
 
         // Initialize
         npcView.Initialize();
         stateMachine.Initialize();
 
-        npcFov.Initialize(fovAngle, fovViewDistance);
-
-        // TODO : Pass Player Transform Dynamically
-        Transform playerTransform = FindFirstObjectByType<PlayerController>()?.transform;
-        detectionController.Initialize(fovAngle, fovViewDistance, playerTransform.transform, this.transform);
+        currentFovAngle = fovAngle;
+        currentFovViewDistance = fovViewDistance;
+        npcFov.Initialize(currentFovAngle, currentFovViewDistance);
+        detectionController.Initialize(playerTransform.transform, this.transform);
 
 
         AlarmOffNPC();
@@ -72,7 +80,7 @@ public abstract class NPCBaseController : MonoBehaviour
     {
         npcFov.SetAimDirection(GetAimDirection());
         npcFov.SetOrigin(transform.position);
-        detectionController.FindPlayer(GetAimDirection());
+        detectionController.FindPlayer(GetAimDirection(), currentFovViewDistance, currentFovAngle);
 
     }
 
@@ -91,10 +99,12 @@ public abstract class NPCBaseController : MonoBehaviour
     public void SetNewDestination(Vector3 position)
     {
         agent.destination = position;
+        ResumeMovement();
     }
 
     public void StopMovement()
     {
+        agent.velocity = Vector3.zero;
         agent.isStopped = true;
     }
 
@@ -128,4 +138,6 @@ public abstract class NPCBaseController : MonoBehaviour
     public virtual void StopInteract() { }
 
     public virtual void StopIdleCheck() { }
+
+    public virtual void StopChase() { }
 }
