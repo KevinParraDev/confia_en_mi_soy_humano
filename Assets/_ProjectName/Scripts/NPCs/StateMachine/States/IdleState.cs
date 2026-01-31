@@ -20,20 +20,23 @@ public class IdleState : IState
     public void Enter()
     {
         npcController.SetNewDestination(idlePosition.position);
+
+        Debug.Log("Enter Idle");
     }
 
     public void Execute()
     {
-        if (!isInDestinationRange)
+        if (npcController.HasReachedDestination())
         {
-            if (npcController.HasReachedDestination())
-            {
-                isInDestinationRange = true;
-                npcController.StopMovement();
-            }
+            npcController.StopMovement();
+            Debug.Log("Moving to original position");
+        }
+        else
+        {
+            npcController.SetNewDestination(idlePosition.position);
         }
 
-        if (isInDestinationRange && !isAlwaysIdle)
+        if (npcController.HasReachedDestination() && !isAlwaysIdle)
         {
             idleTimer += Time.deltaTime;
             if (idleTimer >= idleDuration)
