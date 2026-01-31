@@ -1,6 +1,4 @@
-using UnityEditor.Animations;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -26,7 +24,7 @@ public class PlayerController : MonoBehaviour
     }
     public NPC GetCurrentSkin()
     {
-        return currentNPC != null ? currentNPC.npcType : NPC.None;
+        return currentNPC != null ? currentNPC.npcType : NPC.Alien;
     }
     public void Conclude()
     {

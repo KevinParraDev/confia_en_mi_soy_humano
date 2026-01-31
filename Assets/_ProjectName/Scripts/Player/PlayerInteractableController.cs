@@ -5,6 +5,7 @@ public class PlayerInteractableController : MonoBehaviour
 {
     [SerializeField] private PlayerController playerController;
     [SerializeField] private InteractableBaseController interactableInRange;
+    [SerializeField] private PlayerCanvasController playerCanvasController;
     private InputAction interactAction;
     private InputAction transformAction;
 
@@ -44,6 +45,11 @@ public class PlayerInteractableController : MonoBehaviour
     {
         if (interactableInRange == null && collision.TryGetComponent<InteractableBaseController>(out interactableInRange))
         {
+            if (interactableInRange is NpcInteractableController)
+            {
+                Debug.Log("Appear buttons");
+                playerCanvasController?.SetActiveButtons(true);
+            }
             interactableInRange.Hover(true);
         }
     }
@@ -52,6 +58,11 @@ public class PlayerInteractableController : MonoBehaviour
     {
         if (collision.TryGetComponent<InteractableBaseController>(out InteractableBaseController exitInteractable) && interactableInRange == exitInteractable)
         {
+            if (interactableInRange is NpcInteractableController)
+            {
+                Debug.Log("Disappear buttons");
+                playerCanvasController?.SetActiveButtons(false);
+            }
             interactableInRange.Hover(false);
             interactableInRange = null;
         }

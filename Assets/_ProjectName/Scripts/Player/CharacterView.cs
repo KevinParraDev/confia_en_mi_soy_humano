@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class CharacterView : AnimatorControllerBase
 {
+    private SpriteRenderer spriteRenderer;
+    protected override void Awake()
+    {
+        base.Awake();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
     public void Turn(float x)
     {
         if (x < 0 && transform.localScale.x > 0)
@@ -14,5 +20,10 @@ public class CharacterView : AnimatorControllerBase
     public void ChangeSkin(RuntimeAnimatorController newSkin)
     {
         animator.runtimeAnimatorController = newSkin;
+    }
+
+    public Sprite GetCurrentSprite()
+    {
+        return spriteRenderer.sprite;
     }
 }
