@@ -11,11 +11,13 @@ public class PlayerMovementController : MonoBehaviour
     private Vector2 moveDirection;
 
     private PlayerInput playerInput;
+    private CharacterView view;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         playerInput = GetComponent<PlayerInput>();
+        view = GetComponentInChildren<CharacterView>();
     }
     public void Initialize()
     {
@@ -31,10 +33,13 @@ public class PlayerMovementController : MonoBehaviour
     private void BeginAction(InputAction.CallbackContext context)
     {
         moveDirection = context.ReadValue<Vector2>().normalized;
+        view.SetBoolAnimation(Constants.ANIM_MOVING, true);
+        view.Turn(moveDirection.x);
     }
     private void EndAction(InputAction.CallbackContext context)
     {
         moveDirection = Vector2.zero;
+        view.SetBoolAnimation(Constants.ANIM_MOVING, false);
     }
     private void Move()
     {

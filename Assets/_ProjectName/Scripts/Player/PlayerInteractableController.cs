@@ -32,9 +32,8 @@ public class PlayerInteractableController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (interactableInRange == null)
+        if (interactableInRange == null && collision.TryGetComponent<InteractableBaseController>(out interactableInRange))
         {
-            collision.TryGetComponent<InteractableBaseController>(out interactableInRange);
             interactableInRange.Hover(true);
         }
     }

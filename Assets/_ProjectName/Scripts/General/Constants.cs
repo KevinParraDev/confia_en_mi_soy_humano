@@ -14,4 +14,8 @@ public class Constants
     public const string AUDIO_MIXER_SFX_VOLUME = "sfxVolume";
     public const string AUDIO_MIXER_MUSIC_VOLUME = "musicVolume";
     public const string AUDIO_MIXER_UNDERWATER_EFFECT = "LowpassFreq";
+
+    //Animations
+    public const string ANIM_MOVING = "Moving";
+
 }
