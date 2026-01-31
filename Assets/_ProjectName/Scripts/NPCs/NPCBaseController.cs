@@ -12,6 +12,12 @@ public abstract class NPCBaseController : MonoBehaviour
     protected StateMachine stateMachine;
     protected NPCBaseView npcView;
 
+    [Header("NPC FOV Config")]
+    [SerializeField] protected NPCFOVController npcFov;
+    [SerializeField] protected float fovAngle = 90f;
+    [SerializeField] protected float fovViewDistance = 3f;
+    protected NPCDetectionController detectionController;
+
     private bool isAlarmed;
     public bool IsAlarmed { get { return isAlarmed; } }
 
@@ -21,7 +27,9 @@ public abstract class NPCBaseController : MonoBehaviour
         stateMachine = GetComponent<StateMachine>();
         npcView = GetComponentInChildren<NPCBaseView>();
 
-        if(agent == null)
+        detectionController = GetComponent<NPCDetectionController>();
+
+        if (agent == null)
         {
             Debug.LogWarning("Agent Component Not set");
         }
@@ -34,11 +42,23 @@ public abstract class NPCBaseController : MonoBehaviour
             Debug.LogWarning("NPCView Component Not Set");
         }
 
+        if (detectionController == null)
+        {
+            Debug.LogWarning("NPCDetectionController Component Not Set");
+        }
+
         SetupStateMachine();
 
         // Initialize
         npcView.Initialize();
         stateMachine.Initialize();
+
+        npcFov.Initialize(fovAngle, fovViewDistance);
+
+        // TODO : Pass Player Transform Dynamically
+        Transform playerTransform = FindFirstObjectByType<PlayerController>()?.transform;
+        detectionController.Initialize(fovAngle, fovViewDistance, playerTransform.transform, this.transform);
+
 
         AlarmOffNPC();
 
@@ -46,6 +66,14 @@ public abstract class NPCBaseController : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.speed = moveSpeed;
+    }
+
+    private void Update()
+    {
+        npcFov.SetAimDirection(GetAimDirection());
+        npcFov.SetOrigin(transform.position);
+        detectionController.FindPlayer(GetAimDirection());
+
     }
 
     protected abstract void SetupStateMachine();
@@ -83,6 +111,16 @@ public abstract class NPCBaseController : MonoBehaviour
         }
 
         return false;
+    }
+
+    private Vector3 GetAimDirection()
+    {
+        Vector3 direction = agent.velocity.normalized;
+        if(direction == Vector3.zero)
+        {
+            direction = transform.up;
+        }
+        return direction;
     }
 
     public virtual void Interact() { }
