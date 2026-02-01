@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SecurityAnimator
+  m_Controller: {fileID: 9100000, guid: 273d9a2e8911d8844ac5506924884be9, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 9e9d2a68c44d0aa48ae11ca1954ff4e9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d83805c164ed53b4b8ff35eeb876501c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b88f34d3bce818b439f4e75be94cc2cb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d1ff3a25a275b244f8664fcf8915e88b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 48cb17f5df997ac40a516b5306d01b4a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 633b9730e4cdd3d4f88ac44f12093925, type: 2}

@@ -4,6 +4,7 @@ using UnityEngine;
 public class CharacterView : AnimatorControllerBase
 {
     private SpriteRenderer spriteRenderer;
+    [SerializeField] private bool reversed = false;
     protected override void Awake()
     {
         base.Awake();
@@ -11,10 +12,22 @@ public class CharacterView : AnimatorControllerBase
     }
     public void Turn(float x)
     {
-        if (x < 0 && transform.localScale.x > 0)
-            transform.localScale = new Vector3(-1, 1, 1);
-        else if (x > 0 && transform.localScale.x < 0)
-            transform.localScale = Vector3.one;
+        if(!reversed)
+        {
+            if (x < 0 && transform.localScale.x < 0)
+                transform.localScale = new Vector3(1, 1, 1);
+            else if (x > 0 && transform.localScale.x > 0)
+                transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            if (x < 0 && transform.localScale.x > 0)
+                transform.localScale = new Vector3(-1, 1, 1);
+            else if (x > 0 && transform.localScale.x < 0)
+                transform.localScale = new Vector3(1, 1, 1);
+        }
+
+        
     }
 
     public void ChangeSkin(RuntimeAnimatorController newSkin)

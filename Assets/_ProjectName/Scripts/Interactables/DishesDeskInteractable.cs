@@ -18,6 +18,7 @@ public class DishesDeskInteractable : InteractableBaseController
 
     public bool RemoveDish(int dishesRemoved = 1)
     {
+        Debug.Log("Remove Dishes");
         if(dishCount >= dishesRemoved)
         {
             dishCount -= dishesRemoved;

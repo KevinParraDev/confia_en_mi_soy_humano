@@ -3,6 +3,7 @@ using UnityEngine;
 public class PotController : InteractableBaseController
 {
     [SerializeField] private GameObject hoverGO;
+    [SerializeField] private DishesDeskInteractable dishDesk;
 
     private void Awake()
     {
@@ -30,5 +31,6 @@ public class PotController : InteractableBaseController
     private void Cook()
     {
         Debug.Log("Cocinar");
+        dishDesk.AddDish();
     }
 }
