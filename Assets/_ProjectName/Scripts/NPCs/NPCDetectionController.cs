@@ -35,7 +35,6 @@ public class NPCDetectionController : MonoBehaviour
                         if (!isPlayerInRange)
                         {
                             isPlayerInRange = true;
-                            Debug.Log("Player Detected by NPC");
                         }
                         return;
                     }

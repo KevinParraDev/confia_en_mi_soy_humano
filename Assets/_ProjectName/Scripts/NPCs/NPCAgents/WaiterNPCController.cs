@@ -92,7 +92,7 @@ public class WaiterNPCController : NPCBaseController
 
     private void FixedUpdate()
     {
-        if (stateMachine.GetCurrentStateType() == NPCState.Idle)
+        if (stateMachine.GetCurrentStateType() != NPCState.Panic)
         {
             if (this.IsAlarmed)
             {

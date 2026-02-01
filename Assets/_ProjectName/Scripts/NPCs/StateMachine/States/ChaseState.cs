@@ -47,6 +47,5 @@ public class ChaseState : IState
 
     public void Exit()
     {
-        Debug.Log("Exit chase");
     }
 }

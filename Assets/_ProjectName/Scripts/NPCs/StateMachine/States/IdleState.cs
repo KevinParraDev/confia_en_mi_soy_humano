@@ -4,7 +4,6 @@ public class IdleState : IState
 {
     private NPCBaseController npcController;
     private Transform idlePosition;
-    private bool isInDestinationRange = false;
     private float idleDuration = 2f;
     private float idleTimer = 0f;
     private bool isAlwaysIdle = false;
@@ -21,7 +20,6 @@ public class IdleState : IState
     {
         npcController.SetNewDestination(idlePosition.position);
         npcController.ResumeMovement();
-        Debug.Log("Enter Idle");
     }
 
     public void Execute()

@@ -4,6 +4,7 @@ using UnityEngine;
 public class AlarmBarController : MonoBehaviour
 {
     public static Action onPanicAlarm;
+    public static Action onAlarmStopped;
 
     private int panicLevel = 0;
 
@@ -11,6 +12,9 @@ public class AlarmBarController : MonoBehaviour
     private bool inGame = false;
 
     private bool isInAlarm = false;
+
+    [SerializeField]
+    private float alarmDuration = 10f;
 
     private float alarmTimer = 0f;
 
@@ -75,11 +79,13 @@ public class AlarmBarController : MonoBehaviour
             if (isInAlarm)
             {
                 alarmTimer += Time.deltaTime;
-                if (alarmTimer >= 2f)
+                if (alarmTimer >= alarmDuration)
                 {
                     if (currentGuardsChasing == 0)
                     {
+                        Debug.Log("Out Of Alarm");
                         isInAlarm = false;
+                        onAlarmStopped?.Invoke();
                         panicLevel = 0;
                         view.UpdateAlarmBar(panicLevel, 100);
                         alarmTimer = 0f;

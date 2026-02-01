@@ -73,6 +73,7 @@ public abstract class NPCBaseController : MonoBehaviour
         // Alarm Config
         AlarmOffNPC();
         AlarmBarController.onPanicAlarm += AlarmOnNPC;
+        AlarmBarController.onAlarmStopped += AlarmOffNPC;
 
         // Agent Config
         agent.updateRotation = false;
