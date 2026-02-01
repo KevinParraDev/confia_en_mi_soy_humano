@@ -63,7 +63,7 @@ public class WaiterNPCController : NPCBaseController
     {
         if (servingStation.GetDishCount() > patrolPoints.Length - 1)
         {
-            servingStation.RemoveDish(patrolPoints.Length - 1);
+            servingStation.RemoveDish(1);
             stateMachine.ChangeState(NPCState.Patrol);
         }
         else
