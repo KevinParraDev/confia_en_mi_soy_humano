@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class MainView : UIViewBase
@@ -14,6 +15,7 @@ public class MainView : UIViewBase
 
     public override void Initialize(params object[] parameters)
     {
+        EventSystem.current.SetSelectedGameObject(playButton.gameObject);
         mainController = parameters[0] as IMainController;
         if (mainController == null)
             Debug.LogError($"MainController is missing in {gameObject.name}");

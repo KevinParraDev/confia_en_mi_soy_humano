@@ -20,7 +20,7 @@ public class MainState : GameStateBase
     }
     public void OnPressPlay()
     {
-        nextState = States.Onboarding;
+        nextState = States.KevinScene;
         ExitState();
     }
     public override void ExitState()
