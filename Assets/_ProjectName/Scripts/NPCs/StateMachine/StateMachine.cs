@@ -74,5 +74,6 @@ public enum NPCState
     Chase,
     Interact,
     Panic,
-    Stun
+    Stun,
+    InBath
 }

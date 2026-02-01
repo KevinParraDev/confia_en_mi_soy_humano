@@ -158,4 +158,6 @@ public abstract class NPCBaseController : MonoBehaviour
     public virtual void StopIdleCheck() { }
 
     public virtual void StopChase() { }
+
+    public virtual void Poison() { }
 }
