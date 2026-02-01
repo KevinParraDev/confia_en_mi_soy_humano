@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d971bea71cd0b44b2c4e2fce537977, type: 3}
+  m_Name: Bureaucrat
+  m_EditorClassIdentifier: 
+  npcType: 5
+  animatorSkin: {fileID: 22100000, guid: 37439f5df9b91014da9e8099407d89b1, type: 2}
+  dialogs:
+  - npcToResponse: 0
+    dialogs: []
+  - npcToResponse: 1
+    dialogs:
+    - Que Eres?
+  - npcToResponse: 2
+    dialogs:
+    - Vuelve a la cocina!
+  - npcToResponse: 3
+    dialogs:
+    - Que rayos me diste?
+  - npcToResponse: 5
+    dialogs:
+    - Que bella es la burocracia

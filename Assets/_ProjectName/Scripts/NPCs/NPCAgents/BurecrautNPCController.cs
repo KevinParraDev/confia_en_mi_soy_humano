@@ -54,6 +54,7 @@ public class BurecrautNPCController : NPCBaseController
 
         if(stateMachine.GetCurrentStateType() == NPCState.Idle)
         {
+            Debug.Log("Bureaucrat NPC poisoned, going to bath.");
             stateMachine.ChangeState(NPCState.InBath);
         }
     }
