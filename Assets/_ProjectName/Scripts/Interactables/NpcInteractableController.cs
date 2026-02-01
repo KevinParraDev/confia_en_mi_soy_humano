@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class NpcInteractableController : InteractableBaseController
@@ -6,6 +7,9 @@ public class NpcInteractableController : InteractableBaseController
     [SerializeField] private NpcDataSO npcData;
     [SerializeField] private NpcDialogController dialogController;
     private CharacterView view;
+
+    public static Action onNPCIsCopied;
+
     private void Awake()
     {
         view = GetComponentInChildren<CharacterView>();
@@ -46,6 +50,7 @@ public class NpcInteractableController : InteractableBaseController
             if(npcData.npcType != NPC.Guard)
             {
                 playerController.ChangeSkin(npcData);
+                onNPCIsCopied?.Invoke();
                 view.SetBoolAnimation(Constants.ANIM_SCARRY, true);
 
                 if (this.TryGetComponent<NPCBaseController>(out NPCBaseController npcController))

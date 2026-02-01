@@ -74,6 +74,7 @@ public abstract class NPCBaseController : MonoBehaviour
         AlarmOffNPC();
         AlarmBarController.onPanicAlarm += AlarmOnNPC;
         AlarmBarController.onAlarmStopped += AlarmOffNPC;
+        NpcInteractableController.onNPCIsCopied += AnyNPCIsCopied;
 
         // Agent Config
         agent.updateRotation = false;
@@ -81,9 +82,20 @@ public abstract class NPCBaseController : MonoBehaviour
         agent.speed = moveSpeed;
     }
 
+    private void AnyNPCIsCopied()
+    {
+        if (detectionController.IsPlayerInRange)
+        {
+            
+            onSuspiciosAction?.Invoke(100, SuspicionType.VisibleTransformation);
+        }
+    }
+
     public void Conclude()
     {
         AlarmBarController.onPanicAlarm -= AlarmOnNPC;
+        AlarmBarController.onAlarmStopped -= AlarmOffNPC;
+        NpcInteractableController.onNPCIsCopied -= AnyNPCIsCopied;
     }
 
     private void Update()
