@@ -20,10 +20,10 @@ MonoBehaviour:
     - No me mates!
   - npcToResponse: 3
     dialogs:
-    - "Creo que me estoy volviendo loco, jurar\xEDa que vi un extraterreste"
+    - "No tienes nada que hacer aqu\xED"
   - npcToResponse: 2
     dialogs:
-    - "Creo que me estoy volviendo loco, jurar\xEDa que vi un extraterreste"
+    - "\xBFNo deber\xEDas estar en la cocina?"
   - npcToResponse: 4
     dialogs:
     - "\xBFQuien eres t\xFA? \xBFComo hiciste eso?!"

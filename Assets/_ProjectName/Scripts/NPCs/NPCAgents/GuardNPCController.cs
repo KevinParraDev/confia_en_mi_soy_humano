@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class GuardNPCController : NPCBaseController
@@ -14,7 +15,16 @@ public class GuardNPCController : NPCBaseController
     [SerializeField]
     private Transform IdlePlace;
 
-    private bool playerInRange;
+    [Header("Collider Door")]
+    [SerializeField]
+    private GameObject doorCollider;
+
+    [SerializeField]
+    private NPC npcAllowed = NPC.Bureaucrat;
+
+    private bool isInDialogue = false;
+    private float dialogueDuration = 2f;
+    private float dialogueTimer = 0f;
 
     public static Action onGuardChase;
     public static Action onGuardStopChase;
@@ -32,8 +42,21 @@ public class GuardNPCController : NPCBaseController
 
     private void FixedUpdate()
     {
-        if(stateMachine.GetCurrentStateType() == NPCState.Idle)
+        if (stateMachine.GetCurrentStateType() == NPCState.Idle)
         {
+            if(isInDialogue)
+            {
+                dialogueTimer += Time.fixedDeltaTime;
+                if(dialogueTimer >= dialogueDuration)
+                {
+                    isInDialogue = false;
+                    dialogueTimer = 0f;
+                } else
+                {
+                    return;
+                }
+            }
+
             if (this.IsAlarmed)
             {
                 stateMachine.ChangeState(NPCState.Chase);
@@ -44,19 +67,47 @@ public class GuardNPCController : NPCBaseController
                 currentFovViewDistance = chaseFovDistance;
                 npcFov.SetNewFOV(currentFovAngle, currentFovViewDistance);
             }
+            
+            else if (!this.IsAlarmed && detectionController.IsPlayerInRange && this.HasReachedDestination())
+            {
+                // Apply A Dump to the player, launch a dialogue & Trigger the menace level if not is the allowed type
+                if (playerController.GetCurrentSkin() != npcAllowed)
+                {
+                    isInDialogue = true;
+                    if(TryGetComponent(out NpcInteractableController npcInteractable))
+                    {
+                        npcInteractable.StartDialogue(playerController.GetCurrentSkin());
+                    }
+                    doorCollider.SetActive(true);
+                    onSuspiciosAction?.Invoke(25, SuspicionType.WrongZone);
+                }
+                else
+                {
+                    doorCollider.SetActive(false);
+                }
+            }
+            else if(!this.IsAlarmed && HasReachedDestination() && !doorCollider.activeSelf)
+            {
+                doorCollider.SetActive(true);
+            }
+        }
+
+        if(stateMachine.GetCurrentStateType() == NPCState.Chase)
+        {
+            doorCollider.SetActive(false);
         }
     }
 
     public override void StopChase()
     {
         base.StopChase();
+        currentFovAngle = fovAngle;
+        currentFovViewDistance = fovViewDistance;
+        npcFov.SetNewFOV(currentFovAngle, currentFovViewDistance);
         this.StopMovement();
         
 
         stateMachine.ChangeState(NPCState.Idle);
-        currentFovAngle = fovAngle;
-        currentFovViewDistance = fovViewDistance;
-        npcFov.SetNewFOV(currentFovAngle, currentFovViewDistance);
 
         // Stop Alarm Mode
         AlarmOffNPC();

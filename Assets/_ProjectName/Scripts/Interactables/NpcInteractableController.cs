@@ -30,17 +30,25 @@ public class NpcInteractableController : InteractableBaseController
             dialogController.ShowDialog(view.GetCurrentSprite(), npcData.GetDialogForNpc(playerSkin));
         }
     }
+
+    public void StartDialogue(NPC npcType)
+    {
+        dialogController.ShowDialog(view.GetCurrentSprite(), npcData.GetDialogForNpc(npcType));
+    }
     public override void Transform(PlayerController playerController = null)
     {
         base.Transform();
         if (playerController != null)
         {
-            playerController.ChangeSkin(npcData);
-            view.SetBoolAnimation(Constants.ANIM_SCARRY, true);
-
-            if (this.TryGetComponent<NPCBaseController>(out NPCBaseController npcController))
+            if(npcData.npcType != NPC.Guard)
             {
-                npcController.StunNPC();
+                playerController.ChangeSkin(npcData);
+                view.SetBoolAnimation(Constants.ANIM_SCARRY, true);
+
+                if (this.TryGetComponent<NPCBaseController>(out NPCBaseController npcController))
+                {
+                    npcController.StunNPC();
+                }
             }
         }
     }

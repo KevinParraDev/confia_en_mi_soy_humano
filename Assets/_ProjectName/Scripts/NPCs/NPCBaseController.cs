@@ -22,6 +22,7 @@ public abstract class NPCBaseController : MonoBehaviour
 
     // Provisional Method
     protected Transform playerTransform;
+    protected PlayerController playerController;
 
     private bool isAlarmed;
     public bool IsAlarmed { get { return isAlarmed; } }
@@ -57,7 +58,7 @@ public abstract class NPCBaseController : MonoBehaviour
         // TODO : Pass Player Transform Dynamically
 
         playerTransform = _player.transform;
-
+        playerController = _player;
         SetupStateMachine();
 
         // Initialize

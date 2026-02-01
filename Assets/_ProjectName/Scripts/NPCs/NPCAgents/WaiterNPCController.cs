@@ -86,7 +86,7 @@ public class WaiterNPCController : NPCBaseController
         }
         else
         {
-            onSuspiciosAction?.Invoke(40, SuspicionType.FoodLack);
+            onSuspiciosAction?.Invoke(5, SuspicionType.FoodLack);
         }
     }
 
@@ -96,6 +96,7 @@ public class WaiterNPCController : NPCBaseController
         {
             if (this.IsAlarmed)
             {
+                Debug.Log("In Panic");
                 stateMachine.ChangeState(NPCState.Panic);
             }
         }
@@ -104,6 +105,7 @@ public class WaiterNPCController : NPCBaseController
         {
             if (!this.IsAlarmed)
             {
+                Debug.Log("Out Of Panic");
                 stateMachine.ChangeState(NPCState.Idle);
             }
         }
