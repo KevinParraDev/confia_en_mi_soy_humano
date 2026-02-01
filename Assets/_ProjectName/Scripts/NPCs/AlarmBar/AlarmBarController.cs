@@ -8,11 +8,15 @@ public class AlarmBarController : MonoBehaviour
     private int panicLevel = 0;
 
     [SerializeField]
-    private float decreaseRatio = 1.0f;
-    private float timer = 0.0f;
     private bool inGame = false;
 
+    private bool isInAlarm = false;
+
+    private float alarmTimer = 0f;
+
     private AlarmBarView view;
+
+    public int currentGuardsChasing = 0;
 
     public void Initialize()
     {
@@ -29,12 +33,25 @@ public class AlarmBarController : MonoBehaviour
 
         // Suspucios Actions from NPCS
         NPCBaseController.onSuspiciosAction += IncreaseAlarmBar;
-
+        GuardNPCController.onGuardChase += IncreaseGuardsChasing;
+        GuardNPCController.onGuardStopChase += DecreaseGuardsChasing;
     }
 
     public void Conclude()
     {
         NPCBaseController.onSuspiciosAction -= IncreaseAlarmBar;
+        GuardNPCController.onGuardChase -= IncreaseGuardsChasing;
+        GuardNPCController.onGuardStopChase -= DecreaseGuardsChasing;
+    }
+
+    private void IncreaseGuardsChasing()
+    {
+        currentGuardsChasing++;
+    }
+
+    private void DecreaseGuardsChasing()
+    {
+        currentGuardsChasing--;
     }
 
     public void IncreaseAlarmBar(int increaseAmount, SuspicionType type)
@@ -42,10 +59,12 @@ public class AlarmBarController : MonoBehaviour
         panicLevel = Mathf.Min(increaseAmount + panicLevel, 100);
 
         // Update Bar View
-        view.UpdateAlarmBar(panicLevel, 100);
-        if(panicLevel == 100)
+        view.IncreaseAlarmBar(panicLevel, 100, type);
+        if(panicLevel == 100 && !isInAlarm)
         {
             onPanicAlarm?.Invoke();
+            Debug.Log("In Alarm");
+            isInAlarm = true;
         }
     }
 
@@ -53,16 +72,18 @@ public class AlarmBarController : MonoBehaviour
     {
         if (inGame)
         {
-            if (panicLevel > 0)
+            if (isInAlarm)
             {
-                timer += Time.deltaTime;
-                if (timer > decreaseRatio)
+                alarmTimer += Time.deltaTime;
+                if (alarmTimer >= 2f)
                 {
-                    //panicLevel = Mathf.Max(0, panicLevel - 1);
-
-                    // Update Bar View
-                    view.UpdateAlarmBar(panicLevel, 100);
-                    Debug.Log(panicLevel);
+                    if (currentGuardsChasing == 0)
+                    {
+                        isInAlarm = false;
+                        panicLevel = 0;
+                        view.UpdateAlarmBar(panicLevel, 100);
+                        alarmTimer = 0f;
+                    }
                 }
             }
         }

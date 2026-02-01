@@ -30,6 +30,36 @@ public class AlarmBarView : MonoBehaviour
         UpdateBarColor(fillAmount);
     }
 
+    public void IncreaseAlarmBar(float newHealth, float maxHealth, SuspicionType type)
+    {
+        //TODO Bar Message depending of type
+        string message = "";
+        switch (type)
+        {
+            case SuspicionType.FoodLack:
+                message = "Los Humanos necesitan Comida!";
+                break;
+            case SuspicionType.WrongZone:
+                message = "Parece que no debo estar aquí!";
+                break;
+            case SuspicionType.WrongInteraction:
+                message = "No debí hacer eso!";
+                break;
+            case SuspicionType.VisibleTransformation:
+                message = "Parece que fui descubierto";
+                break;
+            default:
+                message = "Alert!";
+                break;
+        }
+
+        float fillAmount = newHealth / maxHealth;
+
+        healthFillImage.fillAmount = fillAmount;
+        UpdateBarColor(fillAmount);
+    }
+
+
     /// <summary>
     /// Obtiene el color correspondiente según el porcentaje de vida
     /// </summary>
@@ -48,6 +78,16 @@ public class AlarmBarView : MonoBehaviour
             float t = fillPercentage * 2f; // Normalizar a 0-1
             return Color.Lerp(lowBarColor, midBarColor, t);
         }
+    }
+
+    public void InAlarmAnimation()
+    {
+        // TODO Animate Alarm
+    }
+
+    public void StopAlarmAnimation()
+    {
+        // TODO stop Animation Alarm
     }
 
     /// <summary>

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GuardNPCController : NPCBaseController
@@ -15,7 +16,8 @@ public class GuardNPCController : NPCBaseController
 
     private bool playerInRange;
 
-    
+    public static Action onGuardChase;
+    public static Action onGuardStopChase;
 
     protected override void SetupStateMachine()
     {
@@ -35,6 +37,9 @@ public class GuardNPCController : NPCBaseController
             if (this.IsAlarmed)
             {
                 stateMachine.ChangeState(NPCState.Chase);
+
+                onGuardChase?.Invoke();
+
                 currentFovAngle = ChaseFovAngle;
                 currentFovViewDistance = chaseFovDistance;
                 npcFov.SetNewFOV(currentFovAngle, currentFovViewDistance);
@@ -46,11 +51,15 @@ public class GuardNPCController : NPCBaseController
     {
         base.StopChase();
         this.StopMovement();
-        // Stop Alarm Mode
-        AlarmOffNPC();
+        
+
         stateMachine.ChangeState(NPCState.Idle);
         currentFovAngle = fovAngle;
         currentFovViewDistance = fovViewDistance;
         npcFov.SetNewFOV(currentFovAngle, currentFovViewDistance);
+
+        // Stop Alarm Mode
+        AlarmOffNPC();
+        onGuardStopChase?.Invoke();
     }
 }

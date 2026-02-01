@@ -97,7 +97,6 @@ public abstract class NPCBaseController : MonoBehaviour
     public virtual void AlarmOnNPC()
     {
         isAlarmed = true;
-        Debug.Log("NPCAlarmed");
     }
 
     public virtual void AlarmOffNPC()
