@@ -23,6 +23,7 @@ public abstract class NPCBaseController : MonoBehaviour
     // Provisional Method
     protected Transform playerTransform;
     protected PlayerController playerController;
+    [SerializeField] private CharacterView characterView;
 
     private bool isAlarmed;
     public bool IsAlarmed { get { return isAlarmed; } }
@@ -32,6 +33,7 @@ public abstract class NPCBaseController : MonoBehaviour
 
     private void Awake()
     {
+        characterView = GetComponentInChildren<CharacterView>();
         Initialize(FindAnyObjectByType<PlayerController>());
     }
     public void Initialize(PlayerController _player)
@@ -128,11 +130,14 @@ public abstract class NPCBaseController : MonoBehaviour
     {
         agent.velocity = Vector3.zero;
         agent.isStopped = true;
+        characterView.SetBoolAnimation(Constants.ANIM_MOVING, false);
     }
 
     public void ResumeMovement()
     {
+        Debug.Log("aaa");
         agent.isStopped = false;
+        characterView.SetBoolAnimation(Constants.ANIM_MOVING, true);
     }
 
     public bool HasReachedDestination(float thresholdDistance = 0.1f)
@@ -148,6 +153,7 @@ public abstract class NPCBaseController : MonoBehaviour
     private Vector3 GetAimDirection()
     {
         Vector3 direction = agent.velocity.normalized;
+        characterView.Turn(direction.x);
         if(direction == Vector3.zero)
         {
             direction = transform.up;
