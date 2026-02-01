@@ -27,7 +27,10 @@ public abstract class NPCBaseController : MonoBehaviour
     private bool isAlarmed;
     public bool IsAlarmed { get { return isAlarmed; } }
 
-    protected void Awake()
+    // Do Alarm Increase Event
+    public static Action<int, SuspicionType> onSuspiciosAction; // Bar Increase Amount, SuspicionAction
+
+    public void Initialize(PlayerController _player)
     {
         agent = GetComponent<NavMeshAgent>();
         stateMachine = GetComponent<StateMachine>();
@@ -54,7 +57,7 @@ public abstract class NPCBaseController : MonoBehaviour
         }
 
         // TODO : Pass Player Transform Dynamically
-        playerTransform = FindFirstObjectByType<PlayerController>()?.transform;
+        playerTransform = _player.transform;
 
         SetupStateMachine();
 
@@ -68,12 +71,19 @@ public abstract class NPCBaseController : MonoBehaviour
         detectionController.Initialize(playerTransform.transform, this.transform);
 
 
+        // Alarm Config
         AlarmOffNPC();
+        AlarmBarController.onPanicAlarm += AlarmOnNPC;
 
         // Agent Config
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.speed = moveSpeed;
+    }
+
+    public void Conclude()
+    {
+        AlarmBarController.onPanicAlarm -= AlarmOnNPC;
     }
 
     private void Update()
@@ -89,6 +99,7 @@ public abstract class NPCBaseController : MonoBehaviour
     public virtual void AlarmOnNPC()
     {
         isAlarmed = true;
+        Debug.Log("NPCAlarmed");
     }
 
     public virtual void AlarmOffNPC()

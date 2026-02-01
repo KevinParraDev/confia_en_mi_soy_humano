@@ -32,7 +32,7 @@ public class GuardNPCController : NPCBaseController
     {
         if(stateMachine.GetCurrentStateType() == NPCState.Idle)
         {
-            if (detectionController.IsPlayerInRange)
+            if (this.IsAlarmed)
             {
                 stateMachine.ChangeState(NPCState.Chase);
                 currentFovAngle = ChaseFovAngle;
@@ -46,6 +46,8 @@ public class GuardNPCController : NPCBaseController
     {
         base.StopChase();
         this.StopMovement();
+        // Stop Alarm Mode
+        AlarmOffNPC();
         stateMachine.ChangeState(NPCState.Idle);
         currentFovAngle = fovAngle;
         currentFovViewDistance = fovViewDistance;

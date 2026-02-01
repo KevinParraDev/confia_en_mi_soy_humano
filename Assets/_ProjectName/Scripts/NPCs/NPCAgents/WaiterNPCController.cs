@@ -76,5 +76,9 @@ public class WaiterNPCController : NPCBaseController
             }
             this.ResumeMovement();
         }
+        else
+        {
+            onSuspiciosAction.Invoke(40, SuspicionType.FoodLack);
+        }
     }
 }

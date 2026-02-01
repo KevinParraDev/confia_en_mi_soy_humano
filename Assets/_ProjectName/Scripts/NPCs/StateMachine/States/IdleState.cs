@@ -29,7 +29,6 @@ public class IdleState : IState
         if (npcController.HasReachedDestination())
         {
             npcController.StopMovement();
-            Debug.Log("Moving to original position");
         }
         else
         {
