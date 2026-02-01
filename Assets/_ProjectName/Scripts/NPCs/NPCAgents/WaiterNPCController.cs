@@ -16,6 +16,10 @@ public class WaiterNPCController : NPCBaseController
     [SerializeField] private Transform idlePosition;
     [SerializeField] private float idleCheckInterval = 5f;
 
+    [Header("Panic Configuration")]
+    [SerializeField] private Transform panicRoomPosition;
+    [SerializeField] private bool goToPanicRoomOnAlarm = false;
+
     protected override void SetupStateMachine()
     {
 
@@ -23,9 +27,13 @@ public class WaiterNPCController : NPCBaseController
         InteractState serveState = new InteractState(this, servingDuration);
         PatrolState patrolState = new PatrolState(this, patrolPoints, waitTimeAtWaypoint);
         IdleState idleState = new IdleState(this, idlePosition, idleCheckInterval, false);
+        StunState stunState = new StunState(this, 3f);
+        PanicState panicState = new PanicState(this, panicRoomPosition, goToPanicRoomOnAlarm);
         stateMachine.AddState(NPCState.Interact, serveState);
         stateMachine.AddState(NPCState.Patrol, patrolState);
         stateMachine.AddState(NPCState.Idle, idleState);
+        stateMachine.AddState(NPCState.Stun, stunState);
+        stateMachine.AddState(NPCState.Panic, panicState);
         stateMachine.ChangeState(NPCState.Idle);
     }
 
@@ -79,6 +87,25 @@ public class WaiterNPCController : NPCBaseController
         else
         {
             onSuspiciosAction?.Invoke(40, SuspicionType.FoodLack);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (stateMachine.GetCurrentStateType() == NPCState.Idle)
+        {
+            if (this.IsAlarmed)
+            {
+                stateMachine.ChangeState(NPCState.Panic);
+            }
+        }
+
+        if (stateMachine.GetCurrentStateType() == NPCState.Panic)
+        {
+            if (!this.IsAlarmed)
+            {
+                stateMachine.ChangeState(NPCState.Idle);
+            }
         }
     }
 }
