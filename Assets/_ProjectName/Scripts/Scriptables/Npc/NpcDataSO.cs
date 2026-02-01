@@ -8,6 +8,7 @@ public class NpcDataSO : ScriptableObject
     public NPC npcType;
     public RuntimeAnimatorController animatorSkin;
     public List<NpcDialog> dialogs;
+    public Sprite maskIcon;
 
     public string GetDialogForNpc(NPC npc)
     {

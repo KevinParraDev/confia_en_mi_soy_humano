@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
     private PlayerInteractableController interactableController;
     private CharacterView view;
     [SerializeField] private NpcDataSO currentNPC;
+
+    private bool onboardingSeen;
     private void Awake()
     {
         movementController = GetComponent<PlayerMovementController>();
@@ -14,11 +16,15 @@ public class PlayerController : MonoBehaviour
     }
     public void Initialize()
     {
-        movementController?.Initialize();
         interactableController?.Initialize();
     }
     public void ChangeSkin(NpcDataSO npc)
     {
+        if(!onboardingSeen)
+        {
+            onboardingSeen = true;
+            movementController?.Initialize();
+        }
         currentNPC = npc;
         view.ChangeSkin(currentNPC.animatorSkin);
     }

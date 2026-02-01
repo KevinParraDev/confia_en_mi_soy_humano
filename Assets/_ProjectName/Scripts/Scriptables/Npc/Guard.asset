@@ -27,3 +27,4 @@ MonoBehaviour:
   - npcToResponse: 4
     dialogs:
     - "\xBFQuien eres t\xFA? \xBFComo hiciste eso?!"
+  maskIcon: {fileID: 6762795778854255744, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}

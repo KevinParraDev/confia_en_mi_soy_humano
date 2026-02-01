@@ -24,3 +24,4 @@ MonoBehaviour:
   - npcToResponse: 2
     dialogs:
     - "Los burocratas est\xE1n esperando su comida!"
+  maskIcon: {fileID: -5104567295708027523, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}

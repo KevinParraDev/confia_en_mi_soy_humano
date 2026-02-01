@@ -20,7 +20,10 @@ public class NpcInteractableController : InteractableBaseController
             dialogController.Close();
         }
     }
-
+    public NpcDataSO GetData()
+    {
+        return npcData;
+    }
     public override void Interact(PlayerController playerController = null)
     {
         if (playerController != null)

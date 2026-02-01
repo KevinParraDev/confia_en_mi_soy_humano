@@ -49,9 +49,9 @@ public class PlayerInteractableController : MonoBehaviour
     {
         if (interactableInRange == null && collision.TryGetComponent<InteractableBaseController>(out interactableInRange))
         {
-            if (interactableInRange is NpcInteractableController)
+            if (interactableInRange is NpcInteractableController npc)
             {
-                playerCanvasController?.SetActiveButtons(true);
+                playerCanvasController?.SetActiveButtons(true, npc.GetData().maskIcon);
             }
             interactableInRange.Hover(true);
         }
@@ -61,9 +61,9 @@ public class PlayerInteractableController : MonoBehaviour
     {
         if (collision.TryGetComponent<InteractableBaseController>(out InteractableBaseController exitInteractable) && interactableInRange == exitInteractable)
         {
-            if (interactableInRange is NpcInteractableController)
+            if (interactableInRange is NpcInteractableController npc)
             {
-                playerCanvasController?.SetActiveButtons(false);
+                playerCanvasController?.SetActiveButtons(false, npc.GetData().maskIcon);
             }
             interactableInRange.Hover(false);
             interactableInRange = null;
