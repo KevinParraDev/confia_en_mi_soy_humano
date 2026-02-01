@@ -20,7 +20,7 @@ public class IdleState : IState
     public void Enter()
     {
         npcController.SetNewDestination(idlePosition.position);
-
+        npcController.ResumeMovement();
         Debug.Log("Enter Idle");
     }
 

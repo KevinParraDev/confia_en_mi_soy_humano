@@ -36,6 +36,11 @@ public class NpcInteractableController : InteractableBaseController
         if (playerController != null)
         {
             playerController.ChangeSkin(npcData);
+
+            if(this.TryGetComponent<NPCBaseController>(out NPCBaseController npcController))
+            {
+                npcController.StunNPC();
+            }
         }
     }
 }

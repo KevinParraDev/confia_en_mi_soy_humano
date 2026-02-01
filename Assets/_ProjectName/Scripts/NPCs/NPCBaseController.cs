@@ -141,6 +141,16 @@ public abstract class NPCBaseController : MonoBehaviour
         return direction;
     }
 
+    public virtual void BackToIdle()
+    {
+        stateMachine.ChangeState(NPCState.Idle);
+    }
+
+    public virtual void StunNPC()
+    {
+        stateMachine.ChangeState(NPCState.Stun);
+    }
+
     public virtual void Interact() { }
 
     public virtual void StopInteract() { }

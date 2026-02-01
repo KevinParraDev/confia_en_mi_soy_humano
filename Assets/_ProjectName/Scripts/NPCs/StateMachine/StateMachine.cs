@@ -25,6 +25,11 @@ public class StateMachine : MonoBehaviour
             currentState.Exit();
         }
         currentState = states[newState];
+        if(currentState == null)
+        {
+            Debug.LogError($"StateMachine: State {newState} not found in states dictionary.");
+            return;
+        }
         currentState.Enter();
     }
 
@@ -68,5 +73,6 @@ public enum NPCState
     Patrol,
     Chase,
     Interact,
-    fear
+    Panic,
+    Stun
 }
