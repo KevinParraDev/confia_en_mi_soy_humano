@@ -10,17 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9d971bea71cd0b44b2c4e2fce537977, type: 3}
-  m_Name: Waiter
+  m_Name: Guard
   m_EditorClassIdentifier: 
-  npcType: 3
-  animatorSkin: {fileID: 22100000, guid: b8ea8e6df65079d45a60a26c57a08ad3, type: 2}
+  npcType: 4
+  animatorSkin: {fileID: 22100000, guid: 37439f5df9b91014da9e8099407d89b1, type: 2}
   dialogs:
   - npcToResponse: 1
     dialogs:
     - No me mates!
   - npcToResponse: 3
     dialogs:
-    - "\xBFQue eres?"
+    - "Creo que me estoy volviendo loco, jurar\xEDa que vi un extraterreste"
   - npcToResponse: 2
     dialogs:
-    - "Los burocratas est\xE1n esperando su comida!"
+    - "Creo que me estoy volviendo loco, jurar\xEDa que vi un extraterreste"
+  - npcToResponse: 4
+    dialogs:
+    - "\xBFQuien eres t\xFA? \xBFComo hiciste eso?!"

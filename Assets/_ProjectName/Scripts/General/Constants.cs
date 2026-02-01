@@ -17,6 +17,7 @@ public class Constants
 
     //Animations
     public const string ANIM_MOVING = "Moving";
+    public const string ANIM_SCARRY = "Scarry";
     public const string ANIM_PANNEL_APPEAR = "Appear";
 
 }

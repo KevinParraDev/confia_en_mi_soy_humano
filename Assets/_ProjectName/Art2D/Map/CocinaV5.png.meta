@@ -1,0 +1,643 @@
+fileFormatVersion: 2
+guid: 8e0ec75487078004f991e0acaa733a65
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1283764171179326977
+    second: CocinaV5_0
+  - first:
+      213: -4489879634067488470
+    second: CocinaV5_1
+  - first:
+      213: 2138404461770292633
+    second: CocinaV5_2
+  - first:
+      213: -2191983870890131976
+    second: CocinaV5_3
+  - first:
+      213: 1135817957995267810
+    second: CocinaV5_4
+  - first:
+      213: -8105550387668816432
+    second: CocinaV5_5
+  - first:
+      213: 2866282676124388092
+    second: CocinaV5_6
+  - first:
+      213: -239184039693422574
+    second: CocinaV5_7
+  - first:
+      213: 8270805345225218240
+    second: CocinaV5_8
+  - first:
+      213: 6428757912214668925
+    second: CocinaV5_9
+  - first:
+      213: -8253192431879239812
+    second: CocinaV5_10
+  - first:
+      213: -1995241607293037810
+    second: CocinaV5_11
+  - first:
+      213: 6767918635591828147
+    second: CocinaV5_12
+  - first:
+      213: 3678527222319623852
+    second: CocinaV5_13
+  - first:
+      213: 7721561669435427240
+    second: CocinaV5_14
+  - first:
+      213: 8839126399373739997
+    second: CocinaV5_15
+  - first:
+      213: 6559073784791838830
+    second: CocinaV5_16
+  - first:
+      213: -4709307053461440104
+    second: CocinaV5_17
+  - first:
+      213: 5561685955651385101
+    second: CocinaV5_18
+  - first:
+      213: -4472300351407934137
+    second: CocinaV5_19
+  - first:
+      213: 5658237185556115398
+    second: CocinaV5_20
+  - first:
+      213: 8923958718428295217
+    second: CocinaV5_21
+  - first:
+      213: 4458656285381902475
+    second: CocinaV5_22
+  - first:
+      213: 4688306500804768905
+    second: CocinaV5_23
+  - first:
+      213: 2925791182597568609
+    second: CocinaV5_24
+  - first:
+      213: -585973941520824187
+    second: CocinaV5_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 190
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CocinaV5_0
+      rect:
+        serializedVersion: 2
+        x: 5064
+        y: 2226
+        width: 6
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10e748646b8d0d110800000000000000
+      internalID: 1283764171179326977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_1
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 347
+        width: 3444
+        height: 1818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21852fd24eb0b1c0800000000000000
+      internalID: -4489879634067488470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_2
+      rect:
+        serializedVersion: 2
+        x: 3776
+        y: 346
+        width: 1220
+        height: 1820
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99dbde937832dad10800000000000000
+      internalID: 2138404461770292633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_3
+      rect:
+        serializedVersion: 2
+        x: 4072
+        y: 2200
+        width: 50
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd353678428491e0800000000000000
+      internalID: -2191983870890131976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_4
+      rect:
+        serializedVersion: 2
+        x: 5167
+        y: 1629
+        width: 1320
+        height: 534
+      alignment: 9
+      pivot: {x: 0.5016317, y: 0.26607555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e641db3a6c33cf00800000000000000
+      internalID: 1135817957995267810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_5
+      rect:
+        serializedVersion: 2
+        x: 5171
+        y: 2138
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd68f11edc438f80800000000000000
+      internalID: -8105550387668816432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_6
+      rect:
+        serializedVersion: 2
+        x: 6477
+        y: 1895
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa004068e417c720800000000000000
+      internalID: 2866282676124388092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_7
+      rect:
+        serializedVersion: 2
+        x: 6406
+        y: 1633
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2107126126f3eacf0800000000000000
+      internalID: -239184039693422574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_13
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 1448
+        width: 33
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae27fed401cc0330800000000000000
+      internalID: 3678527222319623852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_14
+      rect:
+        serializedVersion: 2
+        x: 5235
+        y: 1112
+        width: 186
+        height: 459
+      alignment: 9
+      pivot: {x: 0.51157963, y: 0.19969958}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a988f18d6f782b60800000000000000
+      internalID: 7721561669435427240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_17
+      rect:
+        serializedVersion: 2
+        x: 5540
+        y: 1269
+        width: 186
+        height: 299
+      alignment: 9
+      pivot: {x: 0.5, y: 0.30551708}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89970349f2e25aeb0800000000000000
+      internalID: -4709307053461440104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_18
+      rect:
+        serializedVersion: 2
+        x: 5780
+        y: 1269
+        width: 186
+        height: 299
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3055171}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0731ead8e31f2d40800000000000000
+      internalID: 5561685955651385101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_19
+      rect:
+        serializedVersion: 2
+        x: 6026
+        y: 1392
+        width: 186
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745b97196823fe1c0800000000000000
+      internalID: -4472300351407934137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_21
+      rect:
+        serializedVersion: 2
+        x: 5593
+        y: 1137
+        width: 103
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1303b2a5c2548db70800000000000000
+      internalID: 8923958718428295217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_22
+      rect:
+        serializedVersion: 2
+        x: 5747
+        y: 1120
+        width: 140
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8040c1c44450ed30800000000000000
+      internalID: 4458656285381902475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_23
+      rect:
+        serializedVersion: 2
+        x: 5909
+        y: 1121
+        width: 140
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9847f9a3ce5301140800000000000000
+      internalID: 4688306500804768905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_24
+      rect:
+        serializedVersion: 2
+        x: 6054
+        y: 1123
+        width: 109
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168b2bd349f7a9820800000000000000
+      internalID: 2925791182597568609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CocinaV5_25
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 1086
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58804080ec33ed7f0800000000000000
+      internalID: -585973941520824187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 56ed58a9eb3acc644a5c5686bf21f6a4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CocinaV5_0: 1283764171179326977
+      CocinaV5_1: -4489879634067488470
+      CocinaV5_10: -8253192431879239812
+      CocinaV5_11: -1995241607293037810
+      CocinaV5_12: 6767918635591828147
+      CocinaV5_13: 3678527222319623852
+      CocinaV5_14: 7721561669435427240
+      CocinaV5_15: 8839126399373739997
+      CocinaV5_16: 6559073784791838830
+      CocinaV5_17: -4709307053461440104
+      CocinaV5_18: 5561685955651385101
+      CocinaV5_19: -4472300351407934137
+      CocinaV5_2: 2138404461770292633
+      CocinaV5_20: 5658237185556115398
+      CocinaV5_21: 8923958718428295217
+      CocinaV5_22: 4458656285381902475
+      CocinaV5_23: 4688306500804768905
+      CocinaV5_24: 2925791182597568609
+      CocinaV5_25: -585973941520824187
+      CocinaV5_3: -2191983870890131976
+      CocinaV5_4: 1135817957995267810
+      CocinaV5_5: -8105550387668816432
+      CocinaV5_6: 2866282676124388092
+      CocinaV5_7: -239184039693422574
+      CocinaV5_8: 8270805345225218240
+      CocinaV5_9: 6428757912214668925
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

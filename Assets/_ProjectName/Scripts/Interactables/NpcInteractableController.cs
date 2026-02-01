@@ -36,8 +36,9 @@ public class NpcInteractableController : InteractableBaseController
         if (playerController != null)
         {
             playerController.ChangeSkin(npcData);
+            view.SetBoolAnimation(Constants.ANIM_SCARRY, true);
 
-            if(this.TryGetComponent<NPCBaseController>(out NPCBaseController npcController))
+            if (this.TryGetComponent<NPCBaseController>(out NPCBaseController npcController))
             {
                 npcController.StunNPC();
             }
