@@ -78,7 +78,7 @@ public class WaiterNPCController : NPCBaseController
         }
         else
         {
-            onSuspiciosAction.Invoke(40, SuspicionType.FoodLack);
+            onSuspiciosAction?.Invoke(40, SuspicionType.FoodLack);
         }
     }
 }

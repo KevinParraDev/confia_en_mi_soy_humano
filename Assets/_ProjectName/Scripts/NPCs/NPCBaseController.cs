@@ -10,7 +10,6 @@ public abstract class NPCBaseController : MonoBehaviour
 
     protected NavMeshAgent agent;
     protected StateMachine stateMachine;
-    protected NPCBaseView npcView;
 
     [Header("NPC FOV Config")]
     [SerializeField] protected NPCFOVController npcFov;
@@ -30,11 +29,14 @@ public abstract class NPCBaseController : MonoBehaviour
     // Do Alarm Increase Event
     public static Action<int, SuspicionType> onSuspiciosAction; // Bar Increase Amount, SuspicionAction
 
+    private void Awake()
+    {
+        Initialize(FindAnyObjectByType<PlayerController>());
+    }
     public void Initialize(PlayerController _player)
     {
         agent = GetComponent<NavMeshAgent>();
         stateMachine = GetComponent<StateMachine>();
-        npcView = GetComponentInChildren<NPCBaseView>();
 
         detectionController = GetComponent<NPCDetectionController>();
 
@@ -46,10 +48,6 @@ public abstract class NPCBaseController : MonoBehaviour
         {
             Debug.LogWarning("Statem Machine Component Not Set");
         }
-        if (npcView == null)
-        {
-            Debug.LogWarning("NPCView Component Not Set");
-        }
 
         if (detectionController == null)
         {
@@ -57,12 +55,12 @@ public abstract class NPCBaseController : MonoBehaviour
         }
 
         // TODO : Pass Player Transform Dynamically
+
         playerTransform = _player.transform;
 
         SetupStateMachine();
 
         // Initialize
-        npcView.Initialize();
         stateMachine.Initialize();
 
         currentFovAngle = fovAngle;
