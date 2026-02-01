@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: f94f50e2df0db4c4d990786e30bed845
+guid: aa1685e7dc620bf47990b57c9a9fe582
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8395264089192773737
-    second: Sala_de_CV2_0
+      213: -3166411803953037233
+    second: dialog_pannel_v2_0
   - first:
-      213: 5979908007297321971
-    second: Sala_de_CV2_1
+      213: -4471151464043566279
+    second: dialog_pannel_v2_1
   - first:
-      213: -5162235816240284616
-    second: Sala_de_CV2_2
+      213: 1918485488475798540
+    second: dialog_pannel_v2_2
   - first:
-      213: 5822025270646431071
-    second: Sala_de_CV2_3
+      213: -3685135988860375622
+    second: dialog_pannel_v2_3
   - first:
-      213: -2497500891009943601
-    second: Sala_de_CV2_4
+      213: 1723586913225150002
+    second: dialog_pannel_v2_4
   - first:
-      213: 8613021603933207656
-    second: Sala_de_CV2_5
-  - first:
-      213: 5611596086704584043
-    second: Sala_de_CV2_6
+      213: 7771322334071829694
+    second: dialog_pannel_v2_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -69,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 260
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -144,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sala_de_CV2_0
+      name: dialog_pannel_v2_2
       rect:
         serializedVersion: 2
-        x: 286
-        y: 377
-        width: 1916
-        height: 3092
+        x: 0
+        y: 727
+        width: 1027
+        height: 313
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,118 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79742187ac70e7b80800000000000000
-      internalID: -8395264089192773737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sala_de_CV2_1
-      rect:
-        serializedVersion: 2
-        x: 2504
-        y: 2051
-        width: 592
-        height: 1408
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3fb887456a6ecf250800000000000000
-      internalID: 5979908007297321971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sala_de_CV2_2
-      rect:
-        serializedVersion: 2
-        x: 2413
-        y: 1349
-        width: 791
-        height: 510
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 83cf23630ed0c58b0800000000000000
-      internalID: -5162235816240284616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sala_de_CV2_3
-      rect:
-        serializedVersion: 2
-        x: 2927
-        y: 1268
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f5d5a32232dfbc050800000000000000
-      internalID: 5822025270646431071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sala_de_CV2_4
-      rect:
-        serializedVersion: 2
-        x: 2885
-        y: 1192
-        width: 8
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fc771250c28175dd0800000000000000
-      internalID: -2497500891009943601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sala_de_CV2_5
-      rect:
-        serializedVersion: 2
-        x: 2500
-        y: 699
-        width: 202
-        height: 453
-      alignment: 9
-      pivot: {x: 0.50840837, y: 0.15320687}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 86c3439d389978770800000000000000
-      internalID: 8613021603933207656
+      spriteID: c0c775f1364df9a10800000000000000
+      internalID: 1918485488475798540
       vertices: []
       indices: 
       edges: []
@@ -279,7 +166,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0ac3ad83cb17b5146b5c6d935ce6fbed
+    spriteID: a5cec971b43c90a40803017543213374
     internalID: 0
     vertices: []
     indices: 
@@ -289,13 +176,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sala_de_CV2_0: -8395264089192773737
-      Sala_de_CV2_1: 5979908007297321971
-      Sala_de_CV2_2: -5162235816240284616
-      Sala_de_CV2_3: 5822025270646431071
-      Sala_de_CV2_4: -2497500891009943601
-      Sala_de_CV2_5: 8613021603933207656
-      Sala_de_CV2_6: 5611596086704584043
+      dialog_pannel_v2_0: -3166411803953037233
+      dialog_pannel_v2_1: -4471151464043566279
+      dialog_pannel_v2_2: 1918485488475798540
+      dialog_pannel_v2_3: -3685135988860375622
+      dialog_pannel_v2_4: 1723586913225150002
+      dialog_pannel_v2_5: 7771322334071829694
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
