@@ -15,6 +15,7 @@ public class InteractState : IState
     public void Enter()
     {
         interactionTimer = 0f;
+        npcController.StopMovement();
     }
 
     public void Execute()

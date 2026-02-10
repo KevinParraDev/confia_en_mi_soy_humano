@@ -135,12 +135,11 @@ public abstract class NPCBaseController : MonoBehaviour
 
     public void ResumeMovement()
     {
-        Debug.Log("aaa");
         agent.isStopped = false;
         characterView.SetBoolAnimation(Constants.ANIM_MOVING, true);
     }
 
-    public bool HasReachedDestination(float thresholdDistance = 0.1f)
+    public bool HasReachedDestination(float thresholdDistance = 0.01f)
     {
         if(!agent.pathPending && agent.remainingDistance < thresholdDistance)
         {

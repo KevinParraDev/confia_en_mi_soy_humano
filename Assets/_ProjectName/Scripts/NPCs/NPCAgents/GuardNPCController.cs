@@ -12,6 +12,7 @@ public class GuardNPCController : NPCBaseController
     [SerializeField]
     private float chaseDuration;
 
+    [Header("BackToIdle Configuration")]
     [SerializeField]
     private Transform IdlePlace;
 
@@ -31,19 +32,39 @@ public class GuardNPCController : NPCBaseController
 
     protected override void SetupStateMachine()
     {
-        IdleState idleState = new IdleState(this, IdlePlace, 0f, true);
+        BackToIdleState backToIdleState = new BackToIdleState(this, IdlePlace);
+        IdleState idleState = new IdleState(this, 0f, true);
         ChaseState chaseState = new ChaseState(this, detectionController, playerTransform, chaseDuration);
 
         stateMachine.AddState(NPCState.Idle, idleState);
         stateMachine.AddState(NPCState.Chase, chaseState);
+        stateMachine.AddState(NPCState.BackToIdle, backToIdleState);
 
         stateMachine.ChangeState(NPCState.Idle);
     }
 
     private void FixedUpdate()
     {
+        if(stateMachine.GetCurrentStateType() != NPCState.Chase)
+        {
+            if (this.IsAlarmed)
+            {
+                if (detectionController.IsPlayerInRange)
+                {
+                    StartChase();
+                }
+
+                return;
+            }
+        }
+
         if (stateMachine.GetCurrentStateType() == NPCState.Idle)
         {
+            if (this.IsAlarmed)
+            {
+                return;
+            }
+
             if(isInDialogue)
             {
                 dialogueTimer += Time.fixedDeltaTime;
@@ -56,21 +77,10 @@ public class GuardNPCController : NPCBaseController
                     return;
                 }
             }
-
-            if (this.IsAlarmed)
-            {
-                stateMachine.ChangeState(NPCState.Chase);
-
-                onGuardChase?.Invoke();
-
-                currentFovAngle = ChaseFovAngle;
-                currentFovViewDistance = chaseFovDistance;
-                npcFov.SetNewFOV(currentFovAngle, currentFovViewDistance);
-            }
             
-            else if (!this.IsAlarmed && detectionController.IsPlayerInRange && this.HasReachedDestination())
+            else if (detectionController.IsPlayerInRange && this.HasReachedDestination())
             {
-                // Apply A Dump to the player, launch a dialogue & Trigger the menace level if not is the allowed type
+                // launch a dialogue & Trigger the menace level if not is the allowed type
                 if (playerController.GetCurrentSkin() != npcAllowed)
                 {
                     isInDialogue = true;
@@ -86,7 +96,7 @@ public class GuardNPCController : NPCBaseController
                     doorCollider.SetActive(false);
                 }
             }
-            else if(!this.IsAlarmed && HasReachedDestination() && !doorCollider.activeSelf)
+            else if((stateMachine.GetCurrentStateType() == NPCState.Idle) && !doorCollider.activeSelf)
             {
                 doorCollider.SetActive(true);
             }
@@ -98,6 +108,23 @@ public class GuardNPCController : NPCBaseController
         }
     }
 
+    public override void AlarmOnNPC()
+    {
+        base.AlarmOnNPC();
+        StartChase();
+    }
+
+    private void StartChase()
+    {
+        stateMachine.ChangeState(NPCState.Chase);
+
+        onGuardChase?.Invoke();
+
+        currentFovAngle = ChaseFovAngle;
+        currentFovViewDistance = chaseFovDistance;
+        npcFov.SetNewFOV(currentFovAngle, currentFovViewDistance);
+    }
+
     public override void StopChase()
     {
         base.StopChase();
@@ -107,10 +134,8 @@ public class GuardNPCController : NPCBaseController
         this.StopMovement();
         
 
-        stateMachine.ChangeState(NPCState.Idle);
+        stateMachine.ChangeState(NPCState.BackToIdle);
 
-        // Stop Alarm Mode
-        AlarmOffNPC();
         onGuardStopChase?.Invoke();
     }
 }

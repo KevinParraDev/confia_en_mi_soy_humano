@@ -75,5 +75,6 @@ public enum NPCState
     Interact,
     Panic,
     Stun,
-    InBath
+    InBath,
+    BackToIdle,
 }

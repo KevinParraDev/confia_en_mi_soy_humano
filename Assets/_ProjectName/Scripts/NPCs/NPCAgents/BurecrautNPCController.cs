@@ -3,8 +3,10 @@ using UnityEngine;
 public class BurecrautNPCController : NPCBaseController
 {
 
-    [Header("Idle Configuration")]
+    [Header("Back To Idle Configuration")]
     [SerializeField] private Transform idlePosition;
+
+    [Header("Idle Configuration")]
     [SerializeField] private float idleCheckInterval = 5f;
 
     [Header("Panic Configuration")]
@@ -17,7 +19,8 @@ public class BurecrautNPCController : NPCBaseController
 
     protected override void SetupStateMachine()
     {
-        IdleState idleState = new IdleState(this, idlePosition, idleCheckInterval, true);
+        BackToIdleState backToIdleState = new BackToIdleState(this, idlePosition);
+        IdleState idleState = new IdleState(this, idleCheckInterval, true);
         PanicState panicState = new PanicState(this, panicRoomPosition, goToPanicRoomOnAlarm);
         StunState stunState = new StunState(this, 3f);
         BathState bathState = new BathState(this, bathPosition, inBathDuration);
@@ -25,6 +28,7 @@ public class BurecrautNPCController : NPCBaseController
         stateMachine.AddState(NPCState.Panic, panicState);
         stateMachine.AddState(NPCState.Stun, stunState);
         stateMachine.AddState(NPCState.InBath, bathState);
+        stateMachine.AddState(NPCState.BackToIdle, backToIdleState);
 
         stateMachine.ChangeState(NPCState.Idle);
     }
@@ -43,7 +47,7 @@ public class BurecrautNPCController : NPCBaseController
         {
             if (!this.IsAlarmed)
             {
-                stateMachine.ChangeState(NPCState.Idle);
+                stateMachine.ChangeState(NPCState.BackToIdle);
             }
         }
     }

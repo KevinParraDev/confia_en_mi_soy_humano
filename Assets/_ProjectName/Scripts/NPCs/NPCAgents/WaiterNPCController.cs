@@ -12,8 +12,10 @@ public class WaiterNPCController : NPCBaseController
     [SerializeField] private float servingDuration = 1f;
     [SerializeField] private float interactionDistance = 1f;
 
-    [Header("Idle Configuration")]
+    [Header("Back To Idle Configuration")]
     [SerializeField] private Transform idlePosition;
+
+    [Header("Idle Configuration")]
     [SerializeField] private float idleCheckInterval = 5f;
 
     [Header("Panic Configuration")]
@@ -26,7 +28,8 @@ public class WaiterNPCController : NPCBaseController
 
         InteractState serveState = new InteractState(this, servingDuration);
         PatrolState patrolState = new PatrolState(this, patrolPoints, waitTimeAtWaypoint);
-        IdleState idleState = new IdleState(this, idlePosition, idleCheckInterval, false);
+        BackToIdleState backToIdleState = new BackToIdleState(this, idlePosition);
+        IdleState idleState = new IdleState(this, idleCheckInterval, false);
         StunState stunState = new StunState(this, 3f);
         PanicState panicState = new PanicState(this, panicRoomPosition, goToPanicRoomOnAlarm);
         stateMachine.AddState(NPCState.Interact, serveState);
@@ -34,6 +37,8 @@ public class WaiterNPCController : NPCBaseController
         stateMachine.AddState(NPCState.Idle, idleState);
         stateMachine.AddState(NPCState.Stun, stunState);
         stateMachine.AddState(NPCState.Panic, panicState);
+        stateMachine.AddState(NPCState.BackToIdle, backToIdleState);
+
         stateMachine.ChangeState(NPCState.Idle);
     }
 
@@ -42,20 +47,6 @@ public class WaiterNPCController : NPCBaseController
         if (Vector3.Distance(transform.position, servingStation.transform.position) < interactionDistance)
         {
             stateMachine.ChangeState(NPCState.Interact);
-            this.StopMovement();
-        }
-
-        if (stateMachine.GetCurrentState() is PatrolState patrolState)
-        {
-            if(patrolState.GetCurrentWaypointIndex() == patrolPoints.Length - 1)
-            {
-                // TODO: Disapear Dishes in the plate
-
-                if (servingStation.GetDishCount() < patrolPoints.Length - 1)
-                {
-                    stateMachine.ChangeState(NPCState.Idle);
-                }
-            }
         }
     }
 
@@ -68,7 +59,7 @@ public class WaiterNPCController : NPCBaseController
         }
         else
         {
-            stateMachine.ChangeState(NPCState.Idle);
+            stateMachine.ChangeState(NPCState.BackToIdle);
         }
         this.ResumeMovement();
     }
