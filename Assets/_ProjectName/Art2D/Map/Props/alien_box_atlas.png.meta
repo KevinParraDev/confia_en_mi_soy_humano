@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: e0bd0a7b38c437943813fcb6c52e2fc3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7740864952622968964
+    second: alien_box_atlas_0
+  - first:
+      213: 8496734601884273467
+    second: alien_box_atlas_1
+  - first:
+      213: -4493518321048655060
+    second: alien_box_atlas_2
+  - first:
+      213: 2333201117817887370
+    second: alien_box_atlas_3
+  - first:
+      213: -5815019035097114266
+    second: alien_box_atlas_4
+  - first:
+      213: -8762113196304175764
+    second: alien_box_atlas_5
+  - first:
+      213: -6325418118912790338
+    second: alien_box_atlas_6
+  - first:
+      213: -5880968099923271078
+    second: alien_box_atlas_7
+  - first:
+      213: 4179492005345569664
+    second: alien_box_atlas_8
+  - first:
+      213: -6355609767065003559
+    second: alien_box_atlas_9
+  - first:
+      213: -5908351919415457960
+    second: alien_box_atlas_10
+  - first:
+      213: 8402559894645983850
+    second: alien_box_atlas_11
+  - first:
+      213: -3773549105360872080
+    second: alien_box_atlas_12
+  - first:
+      213: 3991434105453912177
+    second: alien_box_atlas_13
+  - first:
+      213: -315334911661196588
+    second: alien_box_atlas_14
+  - first:
+      213: 536115426440921869
+    second: alien_box_atlas_15
+  - first:
+      213: -2545507136169934131
+    second: alien_box_atlas_16
+  - first:
+      213: 2591972250864554402
+    second: alien_box_atlas_17
+  - first:
+      213: 8904006335577128769
+    second: alien_box_atlas_18
+  - first:
+      213: -3685370267829273982
+    second: alien_box_atlas_19
+  - first:
+      213: 6187769652947201682
+    second: alien_box_atlas_20
+  - first:
+      213: 4258780038698425127
+    second: alien_box_atlas_21
+  - first:
+      213: 1873252622651639864
+    second: alien_box_atlas_22
+  - first:
+      213: 6370380452808688711
+    second: alien_box_atlas_23
+  - first:
+      213: -4435060654364784268
+    second: alien_box_atlas_24
+  - first:
+      213: -8423879847332163296
+    second: alien_box_atlas_25
+  - first:
+      213: 4949843152890585695
+    second: alien_box_atlas_26
+  - first:
+      213: -4273118103080885232
+    second: alien_box_atlas_27
+  - first:
+      213: 8659686091942176204
+    second: alien_box_atlas_28
+  - first:
+      213: 2466607658947479667
+    second: alien_box_atlas_29
+  - first:
+      213: 1493892100669026761
+    second: alien_box_atlas_30
+  - first:
+      213: -5168464055227121643
+    second: alien_box_atlas_31
+  - first:
+      213: 6398439513304561956
+    second: alien_box_atlas_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 120
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: alien_box_atlas_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1701
+        width: 450
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 480fc5b59a31d6b60800000000000000
+      internalID: 7740864952622968964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_box_atlas_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1701
+        width: 450
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3b05105a177ae570800000000000000
+      internalID: 8496734601884273467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_box_atlas_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1701
+        width: 450
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2b6f2a05e0d3a1c0800000000000000
+      internalID: -4493518321048655060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_box_atlas_3
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1701
+        width: 450
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a54190e02316020800000000000000
+      internalID: 2333201117817887370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_box_atlas_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1134
+        width: 450
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 669d6e23ff6ec4fa0800000000000000
+      internalID: -5815019035097114266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_box_atlas_5
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1134
+        width: 450
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6de68cb878b66680800000000000000
+      internalID: -8762113196304175764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_box_atlas_6
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1134
+        width: 450
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb0326efbb99738a0800000000000000
+      internalID: -6325418118912790338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_box_atlas_7
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1134
+        width: 450
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a526bacfbaa926ea0800000000000000
+      internalID: -5880968099923271078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_box_atlas_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 567
+        width: 450
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b2530c5d9800a30800000000000000
+      internalID: 4179492005345569664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_box_atlas_9
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 567
+        width: 450
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d9561f17965cc7a0800000000000000
+      internalID: -6355609767065003559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_box_atlas_10
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 567
+        width: 450
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8578e3bab31510ea0800000000000000
+      internalID: -5908351919415457960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_box_atlas_11
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 567
+        width: 450
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a415c94b3eb9470800000000000000
+      internalID: 8402559894645983850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_box_atlas_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 450
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07dd870f419a1abc0800000000000000
+      internalID: -3773549105360872080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_box_atlas_13
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 450
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 170a5ffdb2c646730800000000000000
+      internalID: 3991434105453912177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_box_atlas_14
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 450
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dab72d8194bf9bf0800000000000000
+      internalID: -315334911661196588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 21eb44105cfee5845b28f3e78dd195ab
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      alien_box_atlas_0: 7740864952622968964
+      alien_box_atlas_1: 8496734601884273467
+      alien_box_atlas_10: -5908351919415457960
+      alien_box_atlas_11: 8402559894645983850
+      alien_box_atlas_12: -3773549105360872080
+      alien_box_atlas_13: 3991434105453912177
+      alien_box_atlas_14: -315334911661196588
+      alien_box_atlas_2: -4493518321048655060
+      alien_box_atlas_3: 2333201117817887370
+      alien_box_atlas_4: -5815019035097114266
+      alien_box_atlas_5: -8762113196304175764
+      alien_box_atlas_6: -6325418118912790338
+      alien_box_atlas_7: -5880968099923271078
+      alien_box_atlas_8: 4179492005345569664
+      alien_box_atlas_9: -6355609767065003559
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9d971bea71cd0b44b2c4e2fce537977, type: 3}
-  m_Name: Bureaucrat
+  m_Name: Bureaucrat_1
   m_EditorClassIdentifier: 
   npcType: 5
-  animatorSkin: {fileID: 22100000, guid: 37439f5df9b91014da9e8099407d89b1, type: 2}
+  animatorSkin: {fileID: 22100000, guid: 14e8d3f05a400d34bbacc7b44ba77ec1, type: 2}
   dialogs:
   - npcToResponse: 0
     dialogs: []
@@ -29,3 +29,4 @@ MonoBehaviour:
   - npcToResponse: 5
     dialogs:
     - Que bella es la burocracia
+  maskIcon: {fileID: -243836231375830197, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}
