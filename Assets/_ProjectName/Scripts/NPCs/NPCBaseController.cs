@@ -133,15 +133,16 @@ public abstract class NPCBaseController : MonoBehaviour
         stateMachine.ChangeState(NPCState.Stun);
     }
 
-    public virtual void SetToInitialDialogue() { }
+    public virtual void BackToPatrol()
+    {
+        stateMachine.ChangeState(NPCState.Patrol);
+    }
 
-    public virtual void ShowInitialDialogue() { }
+    public virtual void SetToDialogue() { }
 
-    public virtual void CloseInitialDialogue() { }
+    public virtual void ShowDialogue() { }
 
-    public virtual void Interact() { }
-
-    public virtual void StopInteract() { }
+    public virtual void CloseDialogue() { }
 
     public virtual void StopIdleCheck() { }
 

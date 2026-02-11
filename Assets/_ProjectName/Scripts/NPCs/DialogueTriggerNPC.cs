@@ -9,7 +9,7 @@ public class DialogueTriggerNPC : MonoBehaviour
     {
         if (collision.TryGetComponent(out PlayerController _))
         {
-            npcBaseController.SetToInitialDialogue();
+            npcBaseController.SetToDialogue();
             gameObject.SetActive(false);
         }
     }

@@ -19,7 +19,7 @@ public class ChefNpcController : NPCBaseController
         stateMachine.ChangeState(NPCState.GoToDialogue);
     }
 
-    public override void ShowInitialDialogue()
+    public override void ShowDialogue()
     {
         if(TryGetComponent(out NpcInteractableController npcInteractable))
         {
@@ -27,7 +27,7 @@ public class ChefNpcController : NPCBaseController
         }
     }
 
-    public override void CloseInitialDialogue()
+    public override void CloseDialogue()
     {
         if (TryGetComponent(out NpcInteractableController npcInteractable))
         {

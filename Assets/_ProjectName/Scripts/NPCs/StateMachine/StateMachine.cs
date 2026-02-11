@@ -72,7 +72,7 @@ public enum NPCState
     Idle,
     Patrol,
     Chase,
-    Interact,
+    Recolect,
     Panic,
     Stun,
     InBath,

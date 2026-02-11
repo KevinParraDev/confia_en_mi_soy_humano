@@ -31,7 +31,7 @@ public class InitialDialogueState : IState
             dialogueTimer += Time.deltaTime;
             if (dialogueTimer >= dialogueDuration)
             {
-                npcController.CloseInitialDialogue();
+                npcController.CloseDialogue();
             }
 
             return;
@@ -40,7 +40,7 @@ public class InitialDialogueState : IState
         if (npcController.HasReachedDestination() && !isDialogueShown)
         {
             npcController.StopMovement();
-            npcController.ShowInitialDialogue();
+            npcController.ShowDialogue();
             isDialogueShown = true;
 
             return;

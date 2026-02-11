@@ -8,18 +8,21 @@ public class PatrolState : IState
     private float waitTimeAtPoint = 2f;
     private float timer = 0f;
     private bool isWaiting = false;
+    private bool isAlwaysPatrolling = false;
 
-    public PatrolState(NPCBaseController npc, Transform[] waypoints, float waitTime = 2f)
+    public PatrolState(NPCBaseController npc, Transform[] waypoints, float waitTime = 2f, bool isAlwaysPatrolling = false)
     {
         this.npc = npc;
         this.waypoints = waypoints;
         this.waitTimeAtPoint = waitTime;
+        this.isAlwaysPatrolling = isAlwaysPatrolling;
     }
 
     public void Enter()
     {
         if (waypoints != null && waypoints.Length > 0)
         {
+            currentWaypointIndex = 0;
             MoveToWaypoint();
         }
     }
@@ -35,13 +38,14 @@ public class PatrolState : IState
             {
                 isWaiting = false;
                 NextWaypoint();
+                return;
             }
+            npc.StopMovement();
         }
         else if (npc.HasReachedDestination())
         {
             isWaiting = true;
             timer = 0f;
-            OnReachedWaypoint();
         }
     }
 
@@ -50,17 +54,26 @@ public class PatrolState : IState
     private void MoveToWaypoint()
     {
         npc.SetNewDestination(waypoints[currentWaypointIndex].position);
+        npc.ResumeMovement();
     }
 
     private void NextWaypoint()
     {
-        currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
-        MoveToWaypoint();
-    }
+        if(isAlwaysPatrolling)
+        {
+            currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
+            MoveToWaypoint();
+            return;
+        }
 
-    private void OnReachedWaypoint()
-    {
-        npc.Interact();
+        if(currentWaypointIndex == waypoints.Length - 1)
+        {
+            npc.BackToIdle();
+            return;
+        }
+
+        currentWaypointIndex++;
+        MoveToWaypoint();
     }
 
     public void ResetPatrol()
