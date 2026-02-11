@@ -44,7 +44,7 @@ public class WaiterNPCController : NPCBaseController
         IdleState idleState = new IdleState(this, idleCheckInterval, false);
         StunState stunState = new StunState(this, 3f, true);
         PanicState panicState = new PanicState(this, panicRoomPosition, goToPanicRoomOnAlarm);
-        InitialDialogueState initialDialogue = new InitialDialogueState(this, initialDialoguePosition);
+        DialogueState initialDialogue = new DialogueState(this, initialDialoguePosition);
 
         stateMachine.AddState(NPCState.Recolect, serveState);
         stateMachine.AddState(NPCState.Patrol, patrolState);
@@ -106,6 +106,7 @@ public class WaiterNPCController : NPCBaseController
             if(dishesToRecolect <= 0)
             {
                 npcInteractable.StartDialogue(serviceFinishedDialogue);
+                isWaitingForDishes = false;
             } else if(dishesToRecolect >= 0 && isWaitingForDishes)
             {
                 npcInteractable.StartDialogue(waitingDialogue);
@@ -121,7 +122,7 @@ public class WaiterNPCController : NPCBaseController
     {
         if (isWaitingForDishes)
         {
-            onSuspiciosAction?.Invoke(5, SuspicionType.FoodLack);
+            onSuspiciosAction?.Invoke(15, SuspicionType.FoodLack);
         }
 
         if (TryGetComponent(out NpcInteractableController npcInteractable))

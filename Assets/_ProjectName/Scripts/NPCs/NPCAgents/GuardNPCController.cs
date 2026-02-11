@@ -146,6 +146,7 @@ public class GuardNPCController : NPCBaseController
     private Vector3 GetAimDirection()
     {
         Vector3 direction = agent.velocity.normalized;
+        characterView.Turn(direction.x);
         if (direction == Vector3.zero)
         {
             direction = transform.up;

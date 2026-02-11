@@ -10,7 +10,7 @@ public class ChefNpcController : NPCBaseController
 
     protected override void SetupStateMachine()
     {
-        InitialDialogueState initialDialogueState = new InitialDialogueState(this, initialDialoguePosition);
+        DialogueState initialDialogueState = new DialogueState(this, initialDialoguePosition);
         StunState stunState = new StunState(this, 5f, true);
 
         stateMachine.AddState(NPCState.GoToDialogue, initialDialogueState);

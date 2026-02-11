@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class InitialDialogueState : IState
+public class DialogueState : IState
 {
     NPCBaseController npcController;
     Transform dialogueStartPosition;
@@ -9,7 +9,7 @@ public class InitialDialogueState : IState
 
     float dialogueTimer = 0f;
 
-    public InitialDialogueState(NPCBaseController npcController, Transform dialogueStartPosition)
+    public DialogueState(NPCBaseController npcController, Transform dialogueStartPosition)
     {
         this.npcController = npcController;
         this.dialogueStartPosition = dialogueStartPosition;
