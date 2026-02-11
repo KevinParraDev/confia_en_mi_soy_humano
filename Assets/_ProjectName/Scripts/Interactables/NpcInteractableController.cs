@@ -42,6 +42,18 @@ public class NpcInteractableController : InteractableBaseController
     {
         dialogController.ShowDialog(view.GetCurrentSprite(), npcData.GetDialogForNpc(npcType));
     }
+
+    public void StartDialogue(string dialogText)
+    {
+        dialogController.ShowDialog(view.GetCurrentSprite(), dialogText);
+    }
+
+    public void CloseDialogue()
+    {
+        dialogController.Close();
+    }
+
+    [ContextMenu("Transform")]
     public override void Transform(PlayerController playerController = null)
     {
         base.Transform();

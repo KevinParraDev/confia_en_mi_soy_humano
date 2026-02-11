@@ -22,7 +22,7 @@ public class BurecrautNPCController : NPCBaseController
         BackToIdleState backToIdleState = new BackToIdleState(this, idlePosition);
         IdleState idleState = new IdleState(this, idleCheckInterval, true);
         PanicState panicState = new PanicState(this, panicRoomPosition, goToPanicRoomOnAlarm);
-        StunState stunState = new StunState(this, 3f);
+        StunState stunState = new StunState(this, 3f, true);
         BathState bathState = new BathState(this, bathPosition, inBathDuration);
         stateMachine.AddState(NPCState.Idle, idleState);
         stateMachine.AddState(NPCState.Panic, panicState);

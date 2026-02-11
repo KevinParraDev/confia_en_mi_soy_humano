@@ -11,6 +11,7 @@ public class WaiterNPCController : NPCBaseController
     [SerializeField] private DishesDeskInteractable servingStation;
     [SerializeField] private float servingDuration = 1f;
     [SerializeField] private float interactionDistance = 1f;
+    private bool isWaitingForDishes = false;
 
     [Header("Back To Idle Configuration")]
     [SerializeField] private Transform idlePosition;
@@ -22,6 +23,11 @@ public class WaiterNPCController : NPCBaseController
     [SerializeField] private Transform panicRoomPosition;
     [SerializeField] private bool goToPanicRoomOnAlarm = false;
 
+    [Header("InitialDialogue State")]
+    [SerializeField] private Transform initialDialoguePosition;
+    [TextArea(3, 5)]
+    [SerializeField] private string dialogueText;
+
     protected override void SetupStateMachine()
     {
 
@@ -30,14 +36,17 @@ public class WaiterNPCController : NPCBaseController
         PatrolState patrolState = new PatrolState(this, patrolPoints, waitTimeAtWaypoint);
         BackToIdleState backToIdleState = new BackToIdleState(this, idlePosition);
         IdleState idleState = new IdleState(this, idleCheckInterval, false);
-        StunState stunState = new StunState(this, 3f);
+        StunState stunState = new StunState(this, 3f, true);
         PanicState panicState = new PanicState(this, panicRoomPosition, goToPanicRoomOnAlarm);
+        InitialDialogueState initialDialogue = new InitialDialogueState(this, initialDialoguePosition);
+
         stateMachine.AddState(NPCState.Interact, serveState);
         stateMachine.AddState(NPCState.Patrol, patrolState);
         stateMachine.AddState(NPCState.Idle, idleState);
         stateMachine.AddState(NPCState.Stun, stunState);
         stateMachine.AddState(NPCState.Panic, panicState);
         stateMachine.AddState(NPCState.BackToIdle, backToIdleState);
+        stateMachine.AddState(NPCState.GoToDialogue, initialDialogue);
 
         stateMachine.ChangeState(NPCState.Idle);
     }
@@ -59,13 +68,16 @@ public class WaiterNPCController : NPCBaseController
         }
         else
         {
-            stateMachine.ChangeState(NPCState.BackToIdle);
+            stateMachine.ChangeState(NPCState.GoToDialogue);
         }
         this.ResumeMovement();
     }
 
     public override void StopIdleCheck()
     {
+        if (!isWaitingForDishes)
+            return;
+
         if (servingStation.GetDishCount() >= patrolPoints.Length - 1)
         {
             stateMachine.ChangeState(NPCState.Patrol);
@@ -75,9 +87,10 @@ public class WaiterNPCController : NPCBaseController
             }
             this.ResumeMovement();
         }
+
         else
         {
-            onSuspiciosAction?.Invoke(5, SuspicionType.FoodLack);
+            SetToInitialDialogue();
         }
     }
 
@@ -87,7 +100,6 @@ public class WaiterNPCController : NPCBaseController
         {
             if (this.IsAlarmed)
             {
-                Debug.Log("In Panic");
                 stateMachine.ChangeState(NPCState.Panic);
             }
         }
@@ -96,9 +108,38 @@ public class WaiterNPCController : NPCBaseController
         {
             if (!this.IsAlarmed)
             {
-                Debug.Log("Out Of Panic");
                 stateMachine.ChangeState(NPCState.Idle);
             }
         }
+    }
+
+    public override void SetToInitialDialogue()
+    {
+        stateMachine.ChangeState(NPCState.GoToDialogue);
+    }
+
+    public override void ShowInitialDialogue()
+    {
+        if (TryGetComponent(out NpcInteractableController npcInteractable))
+        {
+            npcInteractable.StartDialogue(dialogueText);
+        }
+    }
+
+    public override void CloseInitialDialogue()
+    {
+        if (isWaitingForDishes)
+        {
+            onSuspiciosAction?.Invoke(5, SuspicionType.FoodLack);
+        }
+
+        if (TryGetComponent(out NpcInteractableController npcInteractable))
+        {
+            npcInteractable.CloseDialogue();
+        }
+
+        stateMachine.ChangeState(NPCState.BackToIdle);
+
+        isWaitingForDishes = true;
     }
 }

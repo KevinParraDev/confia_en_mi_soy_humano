@@ -77,4 +77,5 @@ public enum NPCState
     Stun,
     InBath,
     BackToIdle,
+    GoToDialogue
 }

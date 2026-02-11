@@ -19,7 +19,6 @@ public class PanicState : IState
         {
             npcController.SetNewDestination(panicRoomPosition.position);
         }
-        Debug.Log("Enter Panic");
     }
 
     public void Execute()

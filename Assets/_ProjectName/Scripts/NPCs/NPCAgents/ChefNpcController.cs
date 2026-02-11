@@ -1,42 +1,40 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ChefNpcController : NPCBaseController
 {
-    [Header("Patrol Config")]
-    [SerializeField] private Transform[] patrolWaypoints;
-    [SerializeField] private float waitTimeAtWaypoint = 3f;
-
-    [Header("Cooking Interaction Config")]
-    [SerializeField] private InteractableBaseController cookingStation;
-    [SerializeField] private DishesDeskInteractable servingStation;
-    [SerializeField] private float cookingDuration = 5f;
-    [SerializeField] private float interactionDistance = 1f;
+    [Header("InitialDialogue State")]
+    [SerializeField] private Transform initialDialoguePosition;
+    [TextArea(3, 5)]
+    [SerializeField] private string dialogueText;
 
     protected override void SetupStateMachine()
     {
-        InteractState cookState = new InteractState(this, cookingDuration);
-        PatrolState patrolState = new PatrolState(this, patrolWaypoints, waitTimeAtWaypoint);
+        InitialDialogueState initialDialogueState = new InitialDialogueState(this, initialDialoguePosition);
+        StunState stunState = new StunState(this, 5f, true);
 
-        stateMachine.AddState(NPCState.Interact, cookState);
-        stateMachine.AddState(NPCState.Patrol, patrolState);
+        stateMachine.AddState(NPCState.GoToDialogue, initialDialogueState);
+        stateMachine.AddState(NPCState.Stun, stunState);
 
-        stateMachine.ChangeState(NPCState.Patrol);
+        stateMachine.ChangeState(NPCState.GoToDialogue);
     }
 
-    public override void Interact()
+    public override void ShowInitialDialogue()
     {
-        if(Vector3.Distance(transform.position, cookingStation.transform.position) < interactionDistance)
+        if(TryGetComponent(out NpcInteractableController npcInteractable))
         {
-            stateMachine.ChangeState(NPCState.Interact);
-            this.StopMovement();
+            npcInteractable.StartDialogue(dialogueText);
         }
     }
 
-    public override void StopInteract()
+    public override void CloseInitialDialogue()
     {
-        servingStation.AddDish();
-        servingStation.AddDish();
-        stateMachine.ChangeState(NPCState.Patrol);
-        this.ResumeMovement();
+        if (TryGetComponent(out NpcInteractableController npcInteractable))
+        {
+            npcInteractable.CloseDialogue();
+        }
+
+        characterView.SetBoolAnimation(Constants.ANIM_SCARRY, true);
+        stateMachine.ChangeState(NPCState.Stun);
     }
 }

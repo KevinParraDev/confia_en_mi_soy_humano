@@ -67,7 +67,6 @@ public class AlarmBarController : MonoBehaviour
         if(panicLevel == 100 && !isInAlarm)
         {
             onPanicAlarm?.Invoke();
-            Debug.Log("In Alarm");
             isInAlarm = true;
         }
     }
@@ -83,7 +82,6 @@ public class AlarmBarController : MonoBehaviour
                 {
                     if (currentGuardsChasing == 0)
                     {
-                        Debug.Log("Out Of Alarm");
                         isInAlarm = false;
                         onAlarmStopped?.Invoke();
                         panicLevel = 0;

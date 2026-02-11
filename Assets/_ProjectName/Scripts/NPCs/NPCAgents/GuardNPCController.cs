@@ -12,6 +12,15 @@ public class GuardNPCController : NPCBaseController
     [SerializeField]
     private float chaseDuration;
 
+    [Header("NPC FOV Config")]
+    [SerializeField] protected NPCFOVController npcFov;
+    [SerializeField] protected float fovAngle = 90f;
+    [SerializeField] protected float fovViewDistance = 3f;
+    protected NPCDetectionController detectionController;
+
+    protected float currentFovAngle;
+    protected float currentFovViewDistance;
+
     [Header("BackToIdle Configuration")]
     [SerializeField]
     private Transform IdlePlace;
@@ -30,8 +39,25 @@ public class GuardNPCController : NPCBaseController
     public static Action onGuardChase;
     public static Action onGuardStopChase;
 
+    private void InitiaizeFOV()
+    {
+        detectionController = GetComponent<NPCDetectionController>();
+
+        if (detectionController == null)
+        {
+            Debug.LogWarning("NPCDetectionController Component Not Set");
+        }
+
+        currentFovAngle = fovAngle;
+        currentFovViewDistance = fovViewDistance;
+        npcFov.Initialize(currentFovAngle, currentFovViewDistance);
+        detectionController.Initialize(playerTransform.transform, this.transform);
+    }
+
     protected override void SetupStateMachine()
     {
+        InitiaizeFOV();
+
         BackToIdleState backToIdleState = new BackToIdleState(this, IdlePlace);
         IdleState idleState = new IdleState(this, 0f, true);
         ChaseState chaseState = new ChaseState(this, detectionController, playerTransform, chaseDuration);
@@ -41,6 +67,8 @@ public class GuardNPCController : NPCBaseController
         stateMachine.AddState(NPCState.BackToIdle, backToIdleState);
 
         stateMachine.ChangeState(NPCState.Idle);
+
+        
     }
 
     private void FixedUpdate()
@@ -106,6 +134,23 @@ public class GuardNPCController : NPCBaseController
         {
             doorCollider.SetActive(false);
         }
+    }
+
+    private void Update()
+    {
+        npcFov.SetAimDirection(GetAimDirection());
+        npcFov.SetOrigin(transform.position);
+        detectionController.FindPlayer(GetAimDirection(), currentFovViewDistance, currentFovAngle);
+    }
+
+    private Vector3 GetAimDirection()
+    {
+        Vector3 direction = agent.velocity.normalized;
+        if (direction == Vector3.zero)
+        {
+            direction = transform.up;
+        }
+        return direction;
     }
 
     public override void AlarmOnNPC()
