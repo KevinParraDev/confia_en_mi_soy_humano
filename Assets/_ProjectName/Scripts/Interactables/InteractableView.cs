@@ -25,5 +25,6 @@ public class InteractableView : MonoBehaviour
 
         outlineMaterial.SetFloat(outlineThicknessProp, active ? outlineThickness : 0.0f);
         outlineMaterial.SetColor(outlineColorProp, active ? outlineColor : Color.black);
+        SoundManager.Instance.PlaySFXByName(Constants.SFX_HOVER);
     }
 }
