@@ -50,8 +50,13 @@ public class PlayerInteractableController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (interactableInRange == null && collision.TryGetComponent<InteractableBaseController>(out interactableInRange))
+        if (collision.TryGetComponent<InteractableBaseController>(out InteractableBaseController entranceInteractable))
         {
+            if (interactableInRange != null)
+                interactableInRange.Hover(false);
+
+            interactableInRange = entranceInteractable;
+
             if (interactableInRange is NpcInteractableController npc)
             {
                 playerCanvasController?.SetActiveButtons(true, npc.GetData().maskIcon);

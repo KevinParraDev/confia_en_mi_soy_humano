@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reversed: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1267660859267261096
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,12 +705,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3.5
-  npcFov: {fileID: 1981974612670455335}
-  fovAngle: 360
-  fovViewDistance: 2
   ChaseFovAngle: 90
   chaseFovDistance: 4
   chaseDuration: 5
+  npcFov: {fileID: 1981974612670455335}
+  fovAngle: 360
+  fovViewDistance: 2
   IdlePlace: {fileID: 5816033635414380887}
   doorCollider: {fileID: 1267660859267261096}
   npcAllowed: 5

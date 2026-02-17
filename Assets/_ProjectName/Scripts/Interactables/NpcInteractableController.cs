@@ -17,9 +17,10 @@ public class NpcInteractableController : InteractableBaseController
     }
     public override void Hover(bool active, PlayerController playerController = null)
     {
-        hoverGO.SetActive(active);
+        //hoverGO.SetActive(active);
+        view.Hover(active);
 
-        if(!active)
+        if (!active)
         {
             dialogController.Close();
         }
