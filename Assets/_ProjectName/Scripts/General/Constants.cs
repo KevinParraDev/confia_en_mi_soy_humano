@@ -20,4 +20,19 @@ public class Constants
     public const string ANIM_SCARRY = "Scarry";
     public const string ANIM_PANNEL_APPEAR = "Appear";
 
+
+    //Music
+    public const string MUSIC_MAIN = "song_main";
+    public const string MUSIC_SONG_1 = "song_1";
+    public const string MUSIC_SONG_2 = "song_2";
+    public const string MUSIC_SONG_3 = "song_3";
+
+    //SFX
+    public const string SFX_SCARE = "scare";
+    public const string SFX_WOOSH_1 = "woosh_1";
+    public const string SFX_ACTION_1 = "action_1";
+    public const string SFX_ALARM = "alarm";
+    public const string SFX_HOVER = "hover_1";
+    public const string SFX_CLICK = "click";
+
 }

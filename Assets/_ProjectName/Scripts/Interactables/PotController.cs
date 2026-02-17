@@ -5,18 +5,20 @@ public class PotController : InteractableBaseController
     [SerializeField] private GameObject hoverGO;
     [SerializeField] private DishesDeskInteractable dishDesk;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         hoverGO?.SetActive(false);
     }
     public override void Hover(bool active, PlayerController playerController = null)
     {
         hoverGO?.SetActive(active);
+        view?.Hover(active);
     }
 
     public override void Interact(PlayerController playerController = null)
     {
-        if(playerController != null)
+        if (playerController != null)
         {
             if(playerController.GetCurrentSkin() == NPC.Chef)
             {

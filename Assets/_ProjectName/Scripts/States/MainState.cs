@@ -14,6 +14,7 @@ public class MainState : GameStateBase
     {
         base.EnterState();
 
+        SoundManager.Instance.PlaySongByName(Constants.MUSIC_MAIN, 0);
         settingsManager?.Initialize();
         main?.Initialize();
         main.PlayActivated += OnPressPlay;

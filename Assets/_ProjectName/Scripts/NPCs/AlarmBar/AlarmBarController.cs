@@ -66,6 +66,7 @@ public class AlarmBarController : MonoBehaviour
         view.IncreaseAlarmBar(panicLevel, 100, type);
         if(panicLevel == 100 && !isInAlarm)
         {
+            SoundManager.Instance.PlaySFXByName(Constants.SFX_ALARM);
             onPanicAlarm?.Invoke();
             isInAlarm = true;
         }

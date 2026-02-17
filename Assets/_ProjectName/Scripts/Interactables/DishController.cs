@@ -4,12 +4,14 @@ public class DishController : InteractableBaseController
 {
     [SerializeField] private GameObject hoverGO;
     [SerializeField] private bool poison = false;
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         hoverGO.SetActive(false);
     }
     public override void Hover(bool active, PlayerController playerController = null)
     {
+        view?.Hover(active);
         hoverGO.SetActive(active);
     }
 

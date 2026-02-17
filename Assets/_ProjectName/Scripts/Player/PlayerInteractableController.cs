@@ -31,6 +31,7 @@ public class PlayerInteractableController : MonoBehaviour
     {
         if (interactableInRange != null)
         {
+            SoundManager.Instance.PlaySFXByName(Constants.SFX_CLICK);
             interactableInRange.Interact(playerController);
         }
     }
@@ -41,6 +42,8 @@ public class PlayerInteractableController : MonoBehaviour
             interactableInRange.Transform(playerController);
             if (interactableInRange is NpcInteractableController)
             {
+                SoundManager.Instance.PlaySFXByName(Constants.SFX_ACTION_1);
+                SoundManager.Instance.PlaySFXByName(Constants.SFX_WOOSH_1);
                 playerCanvasController?.PlayChangeSkinAnimation();
             }
         }
