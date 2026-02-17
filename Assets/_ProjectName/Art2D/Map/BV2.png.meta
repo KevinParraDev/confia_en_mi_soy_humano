@@ -175,9 +175,9 @@ TextureImporter:
       name: BV2_2
       rect:
         serializedVersion: 2
-        x: 3011
-        y: 1101
-        width: 375
+        x: 3005
+        y: 147
+        width: 589
         height: 818
       alignment: 9
       pivot: {x: 0.5437005, y: 0.23494074}
@@ -238,23 +238,23 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BV2_6
+      name: BV2_1
       rect:
         serializedVersion: 2
-        x: 3091
-        y: 1070
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3011
+        y: 1101
+        width: 375
+        height: 818
+      alignment: 9
+      pivot: {x: 0.5437005, y: 0.23494074}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8eb96fe67edeec500800000000000000
-      internalID: 418533393646918632
+      spriteID: f1792017ed1348142ad1796648e98dbf
+      internalID: -3504842955358231627
       vertices: []
       indices: 
       edges: []
