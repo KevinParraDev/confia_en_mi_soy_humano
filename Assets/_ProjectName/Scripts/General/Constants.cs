@@ -26,6 +26,7 @@ public class Constants
     public const string MUSIC_SONG_1 = "song_1";
     public const string MUSIC_SONG_2 = "song_2";
     public const string MUSIC_SONG_3 = "song_3";
+    public const string MUSIC_SPACE = "song_space";
 
     //SFX
     public const string SFX_SCARE = "scare";
@@ -34,5 +35,7 @@ public class Constants
     public const string SFX_ALARM = "alarm";
     public const string SFX_HOVER = "hover_1";
     public const string SFX_CLICK = "click";
+    public const string SFX_ALERT = "alert";
+    public const string SFX_EXPLOTION = "explotion";
 
 }

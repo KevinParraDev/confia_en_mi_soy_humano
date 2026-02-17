@@ -3,9 +3,11 @@ using UnityEngine;
 public class RedButton : InteractableBaseController
 {
     [SerializeField] private GameObject hoverGO;
+    [SerializeField] private WinScreenView winScreen;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         hoverGO?.SetActive(false);
     }
     public override void Hover(bool active, PlayerController playerController = null)
@@ -30,6 +32,9 @@ public class RedButton : InteractableBaseController
     private void PressButton()
     {
         Debug.Log("EndGame");
+        winScreen.Appear();
+
+        SoundManager.Instance.PlaySFXByNameIndex(Constants.SFX_ALERT, 0);
     }
 }
 
