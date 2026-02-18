@@ -37,6 +37,7 @@ public class AlarmBarController : MonoBehaviour
 
         // Suspucios Actions from NPCS
         NPCBaseController.onSuspiciosAction += IncreaseAlarmBar;
+        ZoneDetectionController.onPlayerDetected += IncreaseAlarmBar;
         GuardNPCController.onGuardChase += IncreaseGuardsChasing;
         GuardNPCController.onGuardStopChase += DecreaseGuardsChasing;
     }
@@ -44,6 +45,7 @@ public class AlarmBarController : MonoBehaviour
     public void Conclude()
     {
         NPCBaseController.onSuspiciosAction -= IncreaseAlarmBar;
+        ZoneDetectionController.onPlayerDetected -= IncreaseAlarmBar;
         GuardNPCController.onGuardChase -= IncreaseGuardsChasing;
         GuardNPCController.onGuardStopChase -= DecreaseGuardsChasing;
     }

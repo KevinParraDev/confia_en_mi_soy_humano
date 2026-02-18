@@ -12,9 +12,17 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 7190396156339591123, guid: a0cbf1a0f2e56d64a988a36430b478d7, type: 3}
+    - target: {fileID: 451237339380545437, guid: 9fbd0d8fbd0f91246940b7be5543f16e, type: 3}
+      propertyPath: poisonDialogue
+      value: "\xBFQue rayos ten\xEDa la comida?"
+      objectReference: {fileID: 0}
     - target: {fileID: 499395180747979442, guid: 9fbd0d8fbd0f91246940b7be5543f16e, type: 3}
       propertyPath: m_Name
       value: BureaucratNPC White
+      objectReference: {fileID: 0}
+    - target: {fileID: 582057066433621769, guid: 9fbd0d8fbd0f91246940b7be5543f16e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 913649863829451947, guid: 9fbd0d8fbd0f91246940b7be5543f16e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56,10 +64,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2372789146955264809, guid: 9fbd0d8fbd0f91246940b7be5543f16e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2372789146955264809, guid: 9fbd0d8fbd0f91246940b7be5543f16e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2782262610377026382, guid: 9fbd0d8fbd0f91246940b7be5543f16e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 2782262610377026382, guid: 9fbd0d8fbd0f91246940b7be5543f16e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.46
+      objectReference: {fileID: 0}
     - target: {fileID: 3808064313202190244, guid: 9fbd0d8fbd0f91246940b7be5543f16e, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: 24d8faf9442376e49a2b5b8a659d6ac6, type: 2}
+    - target: {fileID: 3810152298873334109, guid: 9fbd0d8fbd0f91246940b7be5543f16e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926735089205591938, guid: 9fbd0d8fbd0f91246940b7be5543f16e, type: 3}
+      propertyPath: npcData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1587f80946f600b4da39f811e52ff79f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
