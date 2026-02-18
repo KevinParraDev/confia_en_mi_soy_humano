@@ -19,6 +19,7 @@ public class Constants
     public const string ANIM_MOVING = "Moving";
     public const string ANIM_SCARRY = "Scarry";
     public const string ANIM_PANNEL_APPEAR = "Appear";
+    public const string ANIM_PANNEL_SHAKE = "Shake";
 
 
     //Music
@@ -37,5 +38,6 @@ public class Constants
     public const string SFX_CLICK = "click";
     public const string SFX_ALERT = "alert";
     public const string SFX_EXPLOTION = "explotion";
+    public const string SFX_WRONG = "wrong";
 
 }

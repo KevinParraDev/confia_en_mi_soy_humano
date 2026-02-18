@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe6de396e7ac724190e2a5c188da4cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 2318666459701631144}
   lightOffColor: {r: 0.25490198, g: 0.25490198, b: 0.25490198, a: 1}
   lightOnColor: {r: 0.25490198, g: 0.25490198, b: 0.25490198, a: 0}
 --- !u!61 &2365630465548063804

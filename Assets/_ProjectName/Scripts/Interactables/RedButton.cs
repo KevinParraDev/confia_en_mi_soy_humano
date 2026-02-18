@@ -8,11 +8,12 @@ public class RedButton : InteractableBaseController
     protected override void Awake()
     {
         base.Awake();
-        hoverGO?.SetActive(false);
+        hoverGO?.SetActive(true);
     }
     public override void Hover(bool active, PlayerController playerController = null)
     {
         hoverGO?.SetActive(active);
+        hoverGO.GetComponent<Animator>().SetBool(Constants.ANIM_PANNEL_APPEAR, active);
     }
 
     public override void Interact(PlayerController playerController = null)
@@ -22,10 +23,14 @@ public class RedButton : InteractableBaseController
             if (playerController.GetCurrentSkin() == NPC.Trun)
             {
                 PressButton();
+                SoundManager.Instance.PlaySFXByName(Constants.SFX_CLICK);
+                SoundManager.Instance.PlaySFXByName(Constants.SFX_ACTION_1, 0.5f);
             }
             else
             {
                 Debug.Log("Tú no eres el presidente");
+                hoverGO.GetComponent<Animator>().SetTrigger(Constants.ANIM_PANNEL_SHAKE);
+                SoundManager.Instance.PlaySFXByName(Constants.SFX_WRONG);
             }
         }
     }

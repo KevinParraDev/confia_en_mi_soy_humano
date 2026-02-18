@@ -7,12 +7,13 @@ public class DishController : InteractableBaseController
     protected override void Awake()
     {
         base.Awake();
-        hoverGO.SetActive(false);
+        hoverGO.SetActive(true);
     }
     public override void Hover(bool active, PlayerController playerController = null)
     {
         view?.Hover(active);
-        hoverGO.SetActive(active);
+        //hoverGO.SetActive(active);
+        hoverGO.GetComponent<Animator>().SetBool(Constants.ANIM_PANNEL_APPEAR, active);
     }
 
     public override void Interact(PlayerController playerController = null)
@@ -22,10 +23,13 @@ public class DishController : InteractableBaseController
             if (playerController.GetCurrentSkin() == NPC.Waiter)
             {
                 Debug.Log("Tomar plato");
+                gameObject.SetActive(false);
             }
             else
             {
                 Debug.Log("Solo puedes llevar platos si eres mesero");
+                hoverGO.GetComponent<Animator>().SetTrigger(Constants.ANIM_PANNEL_SHAKE);
+                SoundManager.Instance.PlaySFXByName(Constants.SFX_WRONG);
             }
         }
     }

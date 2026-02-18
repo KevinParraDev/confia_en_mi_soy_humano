@@ -4,13 +4,14 @@ public class TrunDoorController : InteractableBaseController
 {
     [SerializeField] private GameObject hoverGO;
     [SerializeField] private GameObject doorGO;
-    private void Awake()
+    protected override void Awake()
     {
-        hoverGO.SetActive(false);
+        base.Awake();
+        hoverGO.SetActive(true);
     }
     public override void Hover(bool active, PlayerController playerController = null)
     {
-        hoverGO.SetActive(active);
+        hoverGO.GetComponent<Animator>().SetBool(Constants.ANIM_PANNEL_APPEAR, active);
     }
 
     public override void Interact(PlayerController playerController = null)
@@ -21,10 +22,13 @@ public class TrunDoorController : InteractableBaseController
             {
                 Debug.Log("Abrir puerta");
                 doorGO?.SetActive(false);
+                SoundManager.Instance.PlaySFXByName(Constants.SFX_ACTION_1);
             }
             else
             {
                 Debug.Log("Solo puedes llevar platos si eres mesero");
+                hoverGO.GetComponent<Animator>().SetTrigger(Constants.ANIM_PANNEL_SHAKE);
+                SoundManager.Instance.PlaySFXByName(Constants.SFX_WRONG);
             }
         }
     }
