@@ -14,6 +14,7 @@ public class NpcInteractableController : InteractableBaseController
     {
         view = GetComponentInChildren<CharacterView>();
         hoverGO.SetActive(false);
+        dialogController.OnConversationEnded += Panic;
     }
     public override void Hover(bool active, PlayerController playerController = null)
     {
@@ -31,17 +32,31 @@ public class NpcInteractableController : InteractableBaseController
     }
     public override void Interact(PlayerController playerController = null)
     {
-        if (playerController != null)
-        {
-            NPC playerSkin = playerController.GetCurrentSkin();
+        if (playerController == null) return;
 
-            dialogController.ShowDialog(view.GetCurrentSprite(), npcData.GetDialogForNpc(playerSkin));
+        NPC playerSkin = playerController.GetCurrentSkin();
+
+        DialogNode startNode = npcData.GetStartNode(playerSkin);
+
+        if (startNode != null)
+        {
+            dialogController.StartConversation(view.GetCurrentSprite(), startNode, npcData);
         }
     }
-
+    public void Panic()
+    {
+        view.SetBoolAnimation(Constants.ANIM_SCARRY, true);
+    }
     public void StartDialogue(NPC npcType)
     {
-        dialogController.ShowDialog(view.GetCurrentSprite(), npcData.GetDialogForNpc(npcType));
+        DialogNode startNode = npcData.GetStartNode(npcType);
+
+        if (startNode != null)
+        {
+            dialogController.StartConversation(view.GetCurrentSprite(), startNode, npcData);
+        }
+
+        //dialogController.ShowDialog(view.GetCurrentSprite(), npcData.GetDialogForNpc(npcType));
     }
 
     public void StartDialogue(string dialogText)

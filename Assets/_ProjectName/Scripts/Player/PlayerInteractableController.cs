@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerInteractableController : MonoBehaviour
 {
+    public event Action SkinChanged;
     [SerializeField] private PlayerController playerController;
     [SerializeField] private InteractableBaseController interactableInRange;
     [SerializeField] private PlayerCanvasController playerCanvasController;
@@ -45,6 +47,7 @@ public class PlayerInteractableController : MonoBehaviour
                 SoundManager.Instance.PlaySFXByName(Constants.SFX_ACTION_1);
                 SoundManager.Instance.PlaySFXByName(Constants.SFX_WOOSH_1);
                 playerCanvasController?.PlayChangeSkinAnimation();
+                SkinChanged?.Invoke();
             }
         }
     }

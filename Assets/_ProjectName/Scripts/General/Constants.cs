@@ -39,5 +39,6 @@ public class Constants
     public const string SFX_ALERT = "alert";
     public const string SFX_EXPLOTION = "explotion";
     public const string SFX_WRONG = "wrong";
+    public const string SFX_POP = "pop";
 
 }

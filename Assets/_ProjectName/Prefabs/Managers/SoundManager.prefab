@@ -2463,6 +2463,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d1b93f8a85aeeb244afa90948978510c, type: 2}
   - {fileID: 11400000, guid: 99737e56a6f67b14b973dc7d3af16ec2, type: 2}
   - {fileID: 11400000, guid: 22d0fac41d964ff489d743e32a122286, type: 2}
+  - {fileID: 11400000, guid: 48cca22c2c5e5784e9db9c74091b5524, type: 2}
   songGroups:
   - {fileID: 11400000, guid: d607e6ec9e47de94f866fa1954f14062, type: 2}
   - {fileID: 11400000, guid: 6526221acb533e44b85749e6ca8691e3, type: 2}

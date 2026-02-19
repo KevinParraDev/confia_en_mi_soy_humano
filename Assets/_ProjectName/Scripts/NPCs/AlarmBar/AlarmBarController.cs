@@ -5,6 +5,7 @@ public class AlarmBarController : MonoBehaviour
 {
     public static Action onPanicAlarm;
     public static Action onAlarmStopped;
+    public static Action<int, SuspicionType> IncreasedPanic;
 
     private int panicLevel = 0;
 
@@ -40,6 +41,8 @@ public class AlarmBarController : MonoBehaviour
         ZoneDetectionController.onPlayerDetected += IncreaseAlarmBar;
         GuardNPCController.onGuardChase += IncreaseGuardsChasing;
         GuardNPCController.onGuardStopChase += DecreaseGuardsChasing;
+
+        IncreasedPanic += IncreaseAlarmBar;
     }
 
     public void Conclude()
@@ -48,6 +51,8 @@ public class AlarmBarController : MonoBehaviour
         ZoneDetectionController.onPlayerDetected -= IncreaseAlarmBar;
         GuardNPCController.onGuardChase -= IncreaseGuardsChasing;
         GuardNPCController.onGuardStopChase -= DecreaseGuardsChasing;
+
+        IncreasedPanic -= IncreaseAlarmBar;
     }
 
     private void IncreaseGuardsChasing()

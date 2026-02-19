@@ -125,7 +125,7 @@ public class SoundManager : MonoBehaviour
         //PlayerPrefs.Save();
     }
 
-    public void PlaySFXByName(string groupName, float volume = 1)
+    public void PlaySFXByName(string groupName, float volume = 1f, float minPitch = 1f, float maxPitch = 1f)
     {
         if (!Globals.SFXActivated) return;
 
@@ -140,6 +140,7 @@ public class SoundManager : MonoBehaviour
                 source.clip = clip;
                 source.loop = false;
                 source.volume = volume;
+                source.pitch = Random.Range(minPitch, maxPitch); ;
 
                 source.Play();
             }

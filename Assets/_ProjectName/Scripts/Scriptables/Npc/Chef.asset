@@ -14,14 +14,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcType: 2
   animatorSkin: {fileID: 22100000, guid: 37439f5df9b91014da9e8099407d89b1, type: 2}
-  dialogs:
-  - npcToResponse: 1
-    dialogs:
-    - No me mates!
-  - npcToResponse: 3
-    dialogs:
-    - "Creo que me estoy volviendo loco, jurar\xEDa que vi un extraterreste"
-  - npcToResponse: 2
-    dialogs:
-    - "\xBFQuien eres t\xFA? \xBFComo hiciste eso?!"
+  conversations:
+  - skinRequired: 1
+    dialogNodes:
+    - id: start
+      text: "\xBF\xA1Qu\xE9 demonios eres t\xFA!? \xBFC\xF3mo entraste aqu\xED?"
+      options:
+      - text: Soy el nuevo ayudante.
+        nextNodeId: lie_1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 1
+      - text: No soy una amenaza.
+        nextNodeId: 
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "... *ruido alien\xEDgena*"
+        nextNodeId: 
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+    - id: lie_1
+      text: "\xBFAyudante? \xA1Yo no contrat\xE9 a nadie con esa... cara!"
+      options:
+      - text: "Es una condici\xF3n m\xE9dica."
+        nextNodeId: panic_1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 1
+      - text: "Me envi\xF3 el presidente"
+        nextNodeId: 
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+    - id: panic_1
+      text: "\"\xA1Guardias! \xA1Hay algo aqu\xED!\""
+      options: []
+      endsConversation: 1
   maskIcon: {fileID: 4866018130364743319, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}

@@ -7,21 +7,20 @@ public class NpcDataSO : ScriptableObject
 {
     public NPC npcType;
     public RuntimeAnimatorController animatorSkin;
-    public List<NpcDialog> dialogs;
+    public List<SkinConversation> conversations;
     public Sprite maskIcon;
 
-    public string GetDialogForNpc(NPC npc)
+    public DialogNode GetStartNode(NPC playerSkin)
     {
-        var dialogData = dialogs.Find(d => d.npcToResponse == npc);
+        var conversation = conversations.Find(c => c.skinRequired == playerSkin);
 
-        if (dialogData == null || dialogData.dialogs == null || dialogData.dialogs.Count == 0)
+        if (conversation == null || conversation.dialogNodes == null || conversation.dialogNodes.Count == 0)
         {
-            Debug.LogWarning($"No hay diálogos para el NPC {npc} en {name}");
-            return "...";
+            Debug.LogWarning($"No hay conversación para {playerSkin} en {name}");
+            return null;
         }
 
-        int index = UnityEngine.Random.Range(0, dialogData.dialogs.Count);
-        return dialogData.dialogs[index];
+        return conversation.dialogNodes[0]; // primer nodo como inicio
     }
 }
 
@@ -31,6 +30,33 @@ public class NpcDialog
     public NPC npcToResponse;
     public List<string> dialogs;
 }
+
+[Serializable]
+public class SkinConversation
+{
+    public NPC skinRequired;
+    public List<DialogNode> dialogNodes;
+}
+
+[Serializable]
+public class DialogNode
+{
+    public string id;
+    public string text;
+    public List<DialogOption> options;
+    public bool endsConversation;
+}
+
+[Serializable]
+public class DialogOption
+{
+    public string text;
+    public string nextNodeId;
+    public NPC requiredSkin; // opcional
+    public int suspicionChange;
+    public bool isLie;
+}
+
 public enum NPC
 {
     None,

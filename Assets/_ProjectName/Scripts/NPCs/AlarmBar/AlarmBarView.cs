@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,6 +6,7 @@ public class AlarmBarView : MonoBehaviour
 {
     [Header("Configuración de la Barra")]
     private Image healthFillImage;
+    [SerializeField] private RectTransform alertRT;
 
     [Header("Colores de la Barra")]
     [SerializeField] private Color lowBarColor = Color.green;    // Verde cuando está llena
@@ -54,8 +56,9 @@ public class AlarmBarView : MonoBehaviour
         }
 
         float fillAmount = newHealth / maxHealth;
-
-        healthFillImage.fillAmount = fillAmount;
+        alertRT.DOShakeAnchorPos(0.25f, 50, 20);
+        healthFillImage.DOFillAmount(fillAmount, 0.5f);
+        //healthFillImage.fillAmount = fillAmount;
         UpdateBarColor(fillAmount);
     }
 

@@ -28,7 +28,7 @@ public class KevinTestState : GameStateBase
     {
         SoundManager.Instance.PlaySongByName(Constants.MUSIC_SONG_2, 0, 1, 1);
 
-        playerController?.Initialize();
+        //playerController?.Initialize();
         alarmBarController?.Initialize();
     }
 
