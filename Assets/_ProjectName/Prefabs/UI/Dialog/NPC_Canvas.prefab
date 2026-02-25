@@ -451,6 +451,8 @@ MonoBehaviour:
   playerIcon: {fileID: 6963565516882092124}
   optionsContainer: {fileID: 3417812295290276976}
   buttonPrefab: {fileID: -7347373104602962670, guid: 3a9b8a89d74a2b840857f706bafdd655, type: 3}
+  typingSpeed: 0.03
+  playerInput: {fileID: 0}
 --- !u!225 &1801685023157631295
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -459,7 +461,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5246123321166713938}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

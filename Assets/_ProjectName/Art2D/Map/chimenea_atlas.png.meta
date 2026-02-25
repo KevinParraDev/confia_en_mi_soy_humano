@@ -1,28 +1,16 @@
 fileFormatVersion: 2
-guid: 4c8996810926d954ea09b3d8226ac5fe
+guid: 8bb400d3b0bf70044819e5725766c9b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5104567295708027523
-    second: mask_atlas_0
+      213: 8759326179324818806
+    second: chimenea_atlas_0
   - first:
-      213: 4866018130364743319
-    second: mask_atlas_1
+      213: 36509985618067732
+    second: chimenea_atlas_1
   - first:
-      213: 3224611297109525153
-    second: mask_atlas_2
-  - first:
-      213: -243836231375830197
-    second: mask_atlas_3
-  - first:
-      213: -6664124353167381402
-    second: mask_atlas_4
-  - first:
-      213: 6762795778854255744
-    second: mask_atlas_5
-  - first:
-      213: -1328083175605189295
-    second: mask_atlas_6
+      213: -8237458692656112595
+    second: chimenea_atlas_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -69,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -90,7 +78,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -144,177 +132,265 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mask_atlas_0
+      name: chimenea_atlas_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1818
-        width: 790
-        height: 909
-      alignment: 9
-      pivot: {x: 0.5, y: 0.3}
+        y: 1742
+        width: 748
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d752f37f61fe829b0800000000000000
-      internalID: -5104567295708027523
+      spriteID: 6757f6e40c06f8970800000000000000
+      internalID: 8759326179324818806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mask_atlas_1
+      name: chimenea_atlas_1
       rect:
         serializedVersion: 2
-        x: 790
-        y: 1818
-        width: 790
-        height: 909
-      alignment: 9
-      pivot: {x: 0.5, y: 0.3}
+        x: 748
+        y: 1742
+        width: 748
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79e300355b1978340800000000000000
-      internalID: 4866018130364743319
+      spriteID: 411058373a5b18000800000000000000
+      internalID: 36509985618067732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mask_atlas_2
+      name: chimenea_atlas_2
       rect:
         serializedVersion: 2
-        x: 1580
-        y: 1818
-        width: 790
-        height: 909
-      alignment: 9
-      pivot: {x: 0.5, y: 0.3}
+        x: 1496
+        y: 1742
+        width: 748
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1a2cce6d3ee10cc20800000000000000
-      internalID: 3224611297109525153
+      spriteID: d2c574486faaead80800000000000000
+      internalID: -8237458692656112595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mask_atlas_3
+      name: chimenea_atlas_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 909
-        width: 790
-        height: 909
-      alignment: 9
-      pivot: {x: 0.5, y: 0.3}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b43497d4d38bd9cf0800000000000000
-      internalID: -243836231375830197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mask_atlas_4
-      rect:
-        serializedVersion: 2
-        x: 790
-        y: 909
-        width: 790
-        height: 909
-      alignment: 9
-      pivot: {x: 0.5, y: 0.3}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 66cad6675364483a0800000000000000
-      internalID: -6664124353167381402
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mask_atlas_5
-      rect:
-        serializedVersion: 2
-        x: 1580
-        y: 909
-        width: 790
-        height: 909
-      alignment: 9
-      pivot: {x: 0.5, y: 0.3}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 08c7e171ee64add50800000000000000
-      internalID: 6762795778854255744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mask_atlas_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 790
-        height: 909
-      alignment: 9
-      pivot: {x: 0.5, y: 0.3}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 15541e56363b19de0800000000000000
-      internalID: -1328083175605189295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mask_atlas_7
-      rect:
-        serializedVersion: 2
-        x: 790
-        y: 0
-        width: 790
-        height: 909
-      alignment: 9
-      pivot: {x: 0.5, y: 0.3}
+        x: 2244
+        y: 1742
+        width: 748
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0b0468856da4764babe41c9b1958d05
-      internalID: 1288535066
+      spriteID: a09f80d3c178c6043b4e6b372402af2e
+      internalID: 1245069555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chimenea_atlas_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 871
+        width: 748
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86216b04e9b3c7045957c52b0462eea7
+      internalID: -506770417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chimenea_atlas_5
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 871
+        width: 748
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e462f0c6b3bf741a7ee33ecba571d9
+      internalID: -478598224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chimenea_atlas_6
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 871
+        width: 748
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f0600ea8012d74ca7a49f0b56a3d20
+      internalID: 1066617972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chimenea_atlas_7
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 871
+        width: 748
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c497e2c77e89c645a4f77696c4088d6
+      internalID: -1135820967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chimenea_atlas_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 748
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bbfaae6da2a85746ab0b26c5888ec73
+      internalID: -1376282088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chimenea_atlas_9
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 0
+        width: 748
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e71165c20198ce468b283009f513b50
+      internalID: 1666560240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chimenea_atlas_10
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 0
+        width: 748
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f095fdd237d3e747994c5f8f9878306
+      internalID: 2124789153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chimenea_atlas_11
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 0
+        width: 748
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0d3c2a5a951fb408bdccb7c21e2f46
+      internalID: -388963642
       vertices: []
       indices: 
       edges: []
@@ -323,7 +399,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 349cc1faf4a4de0499c890271f05153d
+    spriteID: 3b26a425ba27f2e458af3f2f47209d07
     internalID: 0
     vertices: []
     indices: 
@@ -333,14 +409,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mask_atlas_0: -5104567295708027523
-      mask_atlas_1: 4866018130364743319
-      mask_atlas_2: 3224611297109525153
-      mask_atlas_3: -243836231375830197
-      mask_atlas_4: -6664124353167381402
-      mask_atlas_5: 6762795778854255744
-      mask_atlas_6: -1328083175605189295
-      mask_atlas_7: 1288535066
+      chimenea_atlas_0: 8759326179324818806
+      chimenea_atlas_1: 36509985618067732
+      chimenea_atlas_10: 2124789153
+      chimenea_atlas_11: -388963642
+      chimenea_atlas_2: -8237458692656112595
+      chimenea_atlas_3: 1245069555
+      chimenea_atlas_4: -506770417
+      chimenea_atlas_5: -478598224
+      chimenea_atlas_6: 1066617972
+      chimenea_atlas_7: -1135820967
+      chimenea_atlas_8: -1376282088
+      chimenea_atlas_9: 1666560240
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

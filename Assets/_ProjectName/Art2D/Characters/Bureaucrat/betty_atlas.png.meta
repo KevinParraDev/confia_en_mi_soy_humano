@@ -1,34 +1,28 @@
 fileFormatVersion: 2
-guid: 1d945ec2b499fe24985ff3558038cd51
+guid: fc219b00e1caab04586dedbc302ab775
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2607244588567993594
-    second: BV2_0
+      213: -3903906619465131596
+    second: betty_atlas_0
   - first:
-      213: -3504842955358231627
-    second: BV2_1
+      213: 1834837508657412722
+    second: betty_atlas_1
   - first:
-      213: 3719246651032124246
-    second: BV2_2
+      213: 2761355731154537627
+    second: betty_atlas_2
   - first:
-      213: 8485145372423870723
-    second: BV2_3
+      213: -1409074355241976577
+    second: betty_atlas_3
   - first:
-      213: 6292030001287781376
-    second: BV2_4
+      213: 3886752313883055012
+    second: betty_atlas_4
   - first:
-      213: -5999813010713608261
-    second: BV2_5
+      213: -4404786264072606449
+    second: betty_atlas_5
   - first:
-      213: 418533393646918632
-    second: BV2_6
-  - first:
-      213: 888967430423148930
-    second: BV2_7
-  - first:
-      213: -2167964832844614756
-    second: BV2_8
+      213: -1721981000020717881
+    second: betty_atlas_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 230
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,7 +90,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -150,111 +144,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BV2_0
+      name: betty_atlas_0
       rect:
         serializedVersion: 2
-        x: 179
-        y: 184
-        width: 2561
-        height: 1749
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 0
+        y: 2918
+        width: 1080
+        height: 1459
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60368d74cd431dbd0800000000000000
-      internalID: -2607244588567993594
+      spriteID: 4b91c760d9982d9c0800000000000000
+      internalID: -3903906619465131596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BV2_2
+      name: betty_atlas_1
       rect:
         serializedVersion: 2
-        x: 3005
-        y: 147
-        width: 589
-        height: 818
+        x: 1080
+        y: 2918
+        width: 1080
+        height: 1459
       alignment: 9
-      pivot: {x: 0.5437005, y: 0.23494074}
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65bb4daaf1b6d9330800000000000000
-      internalID: 3719246651032124246
+      spriteID: 27a76142ef6a67910800000000000000
+      internalID: 1834837508657412722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BV2_3
+      name: betty_atlas_2
       rect:
         serializedVersion: 2
-        x: 3567
-        y: 1081
-        width: 461
-        height: 837
+        x: 2160
+        y: 2918
+        width: 1080
+        height: 1459
       alignment: 9
-      pivot: {x: 0.5191415, y: 0.25149998}
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 309dfde82ca41c570800000000000000
-      internalID: 8485145372423870723
+      spriteID: b9c84fd386e425620800000000000000
+      internalID: 2761355731154537627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BV2_4
+      name: betty_atlas_3
       rect:
         serializedVersion: 2
-        x: 4191
-        y: 1099
-        width: 146
-        height: 714
+        x: 0
+        y: 1459
+        width: 1080
+        height: 1459
       alignment: 9
-      pivot: {x: 0.49058887, y: 0.08817751}
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00cdbd613f7c15750800000000000000
-      internalID: 6292030001287781376
+      spriteID: ffc70b9e656f17ce0800000000000000
+      internalID: -1409074355241976577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BV2_1
+      name: betty_atlas_4
       rect:
         serializedVersion: 2
-        x: 3011
-        y: 1101
-        width: 375
-        height: 818
+        x: 1080
+        y: 1459
+        width: 1080
+        height: 1459
       alignment: 9
-      pivot: {x: 0.5437005, y: 0.23494074}
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f1792017ed1348142ad1796648e98dbf
-      internalID: -3504842955358231627
+      spriteID: 4a35de6f2a480f530800000000000000
+      internalID: 3886752313883055012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: betty_atlas_5
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1459
+        width: 1080
+        height: 1459
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0dae6afa3e0fd2c0800000000000000
+      internalID: -4404786264072606449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: betty_atlas_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1080
+        height: 1459
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ce0bc7676b4a18e0800000000000000
+      internalID: -1721981000020717881
       vertices: []
       indices: 
       edges: []
@@ -263,7 +301,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b7fe8a1afe56c1145a9be4e4264c5e98
+    spriteID: f0ded66e6617afd4dacdb5df4f284925
     internalID: 0
     vertices: []
     indices: 
@@ -273,15 +311,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BV2_0: -2607244588567993594
-      BV2_1: -3504842955358231627
-      BV2_2: 3719246651032124246
-      BV2_3: 8485145372423870723
-      BV2_4: 6292030001287781376
-      BV2_5: -5999813010713608261
-      BV2_6: 418533393646918632
-      BV2_7: 888967430423148930
-      BV2_8: -2167964832844614756
+      betty_atlas_0: -3903906619465131596
+      betty_atlas_1: 1834837508657412722
+      betty_atlas_2: 2761355731154537627
+      betty_atlas_3: -1409074355241976577
+      betty_atlas_4: 3886752313883055012
+      betty_atlas_5: -4404786264072606449
+      betty_atlas_6: -1721981000020717881
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

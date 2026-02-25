@@ -30,7 +30,7 @@ public class GuardNPCController : NPCBaseController
     private GameObject doorCollider;
 
     [SerializeField]
-    private NPC npcAllowed = NPC.Bureaucrat;
+    private NPC npcAllowed = NPC.Bureaucrat_1;
 
     private bool isInDialogue = false;
     private float dialogueDuration = 2f;

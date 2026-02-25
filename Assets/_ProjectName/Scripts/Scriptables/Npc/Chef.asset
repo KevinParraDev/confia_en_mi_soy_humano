@@ -18,40 +18,192 @@ MonoBehaviour:
   - skinRequired: 1
     dialogNodes:
     - id: start
-      text: "\xBF\xA1Qu\xE9 demonios eres t\xFA!? \xBFC\xF3mo entraste aqu\xED?"
+      text: "¿¡Qué demonios eres tú!? ¿Cómo saliste de esa caja?"
       options:
-      - text: Soy el nuevo ayudante.
-        nextNodeId: lie_1
+      - text: "Soy el nuevo ayudante."
+        nextNodeId: lie1
         requiredSkin: 0
-        suspicionChange: 0
+        suspicionChange: 10
         isLie: 1
-      - text: No soy una amenaza.
-        nextNodeId: 
+      - text: "No soy una amenaza."
+        nextNodeId: calm1
         requiredSkin: 0
-        suspicionChange: 0
+        suspicionChange: 10
         isLie: 0
-      - text: "... *ruido alien\xEDgena*"
-        nextNodeId: 
+      - text: "*ruido alienígena incomprensible*"
+        nextNodeId: panic1
         requiredSkin: 0
-        suspicionChange: 0
+        suspicionChange: 15
         isLie: 0
       endsConversation: 0
-    - id: lie_1
-      text: "\xBFAyudante? \xA1Yo no contrat\xE9 a nadie con esa... cara!"
+    - id: lie1
+      text: "¿Ayudante? ¡Yo no contraté a nadie con esa... cosa!"
       options:
-      - text: "Es una condici\xF3n m\xE9dica."
-        nextNodeId: panic_1
+      - text: "Me envió el presidente."
+        nextNodeId: panic1
         requiredSkin: 0
-        suspicionChange: 0
+        suspicionChange: 15
         isLie: 1
-      - text: "Me envi\xF3 el presidente"
-        nextNodeId: 
+      - text: "Puedo cocinar."
+        nextNodeId: panic1
         requiredSkin: 0
-        suspicionChange: 0
-        isLie: 0
+        suspicionChange: 10
+        isLie: 1
       endsConversation: 0
-    - id: panic_1
-      text: "\"\xA1Guardias! \xA1Hay algo aqu\xED!\""
+    - id: calm1
+      text: "¡Claro que eres una amenaza! ¡Voy a llamar a seguridad!"
       options: []
       endsConversation: 1
+    - id: panic1
+      text: "¡Guardias! ¡Hay una cosa horrible en la despensa!"
+      options: []
+      endsConversation: 1
+  - skinRequired: 2
+    dialogNodes:
+    - id: start
+      text: "¿Qué haces parado ahí? ¡Tenemos órdenes presidenciales que cumplir!"
+      options:
+      - text: "Ya estoy preparando los platos."
+        nextNodeId: good1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "El mesero está presionando demasiado."
+        nextNodeId: neutral1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "No pienso cocinar nada."
+        nextNodeId: bad1
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 1
+      endsConversation: 0
+    - id: good1
+      text: "Eso quiero oír. Muévete."
+      options: []
+      endsConversation: 1
+    - id: neutral1
+      text: "Que presione lo que quiera. Nosotros cocinamos."
+      options: []
+      endsConversation: 1
+    - id: bad1
+      text: "¿Cómo que no? ¡Nos despedirán a los dos!"
+      options: []
+      endsConversation: 1
+  - skinRequired: 3
+    dialogNodes:
+    - id: start
+      text: "¿Ya entregaste los platos o vienes a molestar?"
+      options:
+      - text: "Estoy esperando que estén listos."
+        nextNodeId: good1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "Los burócratas están perdiendo la paciencia."
+        nextNodeId: neutral1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "No hay pedidos hoy."
+        nextNodeId: bad1
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 1
+      endsConversation: 0
+    - id: good1
+      text: "Entonces espera afuera y no estorbes."
+      options: []
+      endsConversation: 1
+    - id: neutral1
+      text: "Que esperen. Aquí se cocina con dignidad."
+      options: []
+      endsConversation: 1
+    - id: bad1
+      text: "¿Cómo que no hay pedidos? ¡Estás delirando!"
+      options: []
+      endsConversation: 1
+  - skinRequired: 5
+    dialogNodes:
+    - id: start
+      text: "¿Qué hace un burócrata en mi cocina?"
+      options:
+      - text: "Inspección rápida y me voy."
+        nextNodeId: good1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "Vengo a supervisar personalmente."
+        nextNodeId: neutral1
+        requiredSkin: 0
+        suspicionChange: 5
+        isLie: 1
+      - text: "No confío en usted."
+        nextNodeId: bad1
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 0
+      endsConversation: 0
+    - id: good1
+      text: "Hazlo rápido. No toques nada."
+      options: []
+      endsConversation: 1
+    - id: neutral1
+      text: "Nadie me avisó de eso..."
+      options: []
+      endsConversation: 1
+    - id: bad1
+      text: "¿Perdón?"
+      options: []
+      endsConversation: 1
+  - skinRequired: 7
+    dialogNodes:
+    - id: start
+      text: "¿Otro burócrata? Esto parece desfile."
+      options:
+      - text: "Solo revisando inventario."
+        nextNodeId: good1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "Busco algo específico."
+        nextNodeId: neutral1
+        requiredSkin: 0
+        suspicionChange: 5
+        isLie: 1
+      endsConversation: 0
+    - id: good1
+      text: "Mientras no toques mis cuchillos."
+      options: []
+      endsConversation: 1
+    - id: neutral1
+      text: "Eso suena sospechoso."
+      options: []
+      endsConversation: 1
+  - skinRequired: 8
+    dialogNodes:
+    - id: start
+      text: "Señorita Bety, este no es lugar para usted."
+      options:
+      - text: "Solo vine a verificar el protocolo."
+        nextNodeId: good1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "Estoy buscando a Trun."
+        nextNodeId: bad1
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 0
+      endsConversation: 0
+    - id: good1
+      text: "Entonces verifique rápido."
+      options: []
+      endsConversation: 1
+    - id: bad1
+      text: "Trun no baja a la cocina."
+      options: []
+      endsConversation: 1
+  maskIcon: {fileID: 4866018130364743319, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}
   maskIcon: {fileID: 4866018130364743319, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}

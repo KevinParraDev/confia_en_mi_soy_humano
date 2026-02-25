@@ -1,34 +1,10 @@
 fileFormatVersion: 2
-guid: 1d945ec2b499fe24985ff3558038cd51
+guid: 340266c10c0e14d44958f3d5845fc3a7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2607244588567993594
-    second: BV2_0
-  - first:
-      213: -3504842955358231627
-    second: BV2_1
-  - first:
-      213: 3719246651032124246
-    second: BV2_2
-  - first:
-      213: 8485145372423870723
-    second: BV2_3
-  - first:
-      213: 6292030001287781376
-    second: BV2_4
-  - first:
-      213: -5999813010713608261
-    second: BV2_5
-  - first:
-      213: 418533393646918632
-    second: BV2_6
-  - first:
-      213: 888967430423148930
-    second: BV2_7
-  - first:
-      213: -2167964832844614756
-    second: BV2_8
+      213: 917977651036274287
+    second: lavavo_atlas_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -150,111 +126,199 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BV2_0
+      name: lavavo_atlas_0
       rect:
         serializedVersion: 2
-        x: 179
-        y: 184
-        width: 2561
-        height: 1749
+        x: 0
+        y: 858
+        width: 351
+        height: 429
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60368d74cd431dbd0800000000000000
-      internalID: -2607244588567993594
+      spriteID: f6eb3c95fcf4dbc00800000000000000
+      internalID: 917977651036274287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BV2_2
+      name: lavavo_atlas_1
       rect:
         serializedVersion: 2
-        x: 3005
-        y: 147
-        width: 589
-        height: 818
-      alignment: 9
-      pivot: {x: 0.5437005, y: 0.23494074}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 65bb4daaf1b6d9330800000000000000
-      internalID: 3719246651032124246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BV2_3
-      rect:
-        serializedVersion: 2
-        x: 3567
-        y: 1081
-        width: 461
-        height: 837
-      alignment: 9
-      pivot: {x: 0.5191415, y: 0.25149998}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 309dfde82ca41c570800000000000000
-      internalID: 8485145372423870723
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BV2_4
-      rect:
-        serializedVersion: 2
-        x: 4191
-        y: 1099
-        width: 146
-        height: 714
-      alignment: 9
-      pivot: {x: 0.49058887, y: 0.08817751}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 00cdbd613f7c15750800000000000000
-      internalID: 6292030001287781376
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BV2_1
-      rect:
-        serializedVersion: 2
-        x: 3011
-        y: 1101
-        width: 375
-        height: 818
-      alignment: 9
-      pivot: {x: 0.5437005, y: 0.23494074}
+        x: 351
+        y: 858
+        width: 351
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1792017ed1348142ad1796648e98dbf
-      internalID: -3504842955358231627
+      spriteID: 123ba36617b9e744fbae4bc8fb05092a
+      internalID: 583416520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavavo_atlas_2
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 858
+        width: 351
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81dbc50b08a041f48a65326fef5b97c1
+      internalID: 2110859982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavavo_atlas_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 429
+        width: 351
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73fd51b25138b84f9fc02907551345b
+      internalID: -1660630894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavavo_atlas_4
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 429
+        width: 351
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 564de0a421897d34691f2cb57ba662fb
+      internalID: 1258014522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavavo_atlas_5
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 429
+        width: 351
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421ea1009f3e2ec4ea65a7e439f7e8f3
+      internalID: 1843110440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavavo_atlas_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 351
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b36540cedb025409c69b714b1f368b
+      internalID: 1191888415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavavo_atlas_7
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 0
+        width: 351
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228ac4cc72e1f7b41b906a31e332fea9
+      internalID: -1205786346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavavo_atlas_8
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 0
+        width: 351
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b11c8960c32a1f44aa7b36cfa4df1930
+      internalID: 2034368003
       vertices: []
       indices: 
       edges: []
@@ -263,7 +327,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b7fe8a1afe56c1145a9be4e4264c5e98
+    spriteID: 18ad5f046cf461f46919b01d56a6cc10
     internalID: 0
     vertices: []
     indices: 
@@ -273,15 +337,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BV2_0: -2607244588567993594
-      BV2_1: -3504842955358231627
-      BV2_2: 3719246651032124246
-      BV2_3: 8485145372423870723
-      BV2_4: 6292030001287781376
-      BV2_5: -5999813010713608261
-      BV2_6: 418533393646918632
-      BV2_7: 888967430423148930
-      BV2_8: -2167964832844614756
+      lavavo_atlas_0: 917977651036274287
+      lavavo_atlas_1: 583416520
+      lavavo_atlas_2: 2110859982
+      lavavo_atlas_3: -1660630894
+      lavavo_atlas_4: 1258014522
+      lavavo_atlas_5: 1843110440
+      lavavo_atlas_6: 1191888415
+      lavavo_atlas_7: -1205786346
+      lavavo_atlas_8: 2034368003
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

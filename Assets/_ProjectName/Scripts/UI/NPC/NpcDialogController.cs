@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class NpcDialogController : AnimatorControllerBase
 {
@@ -18,18 +19,18 @@ public class NpcDialogController : AnimatorControllerBase
     [SerializeField] private Transform optionsContainer;
     [SerializeField] private Button buttonPrefab;
 
-    private bool open = false;
-
     [SerializeField] private float typingSpeed = 0.03f;
+
     private Coroutine typingCoroutine;
     private bool isTyping;
-    public void ShowDialog(Sprite icon, string dialog)
-    {
-        playerIcon.sprite = icon;
-        dialogText.text = dialog;
+    private bool open = false;
 
-        open = !open;
-        SetBoolAnimation(Constants.ANIM_PANNEL_APPEAR, open);
+    [SerializeField] private PlayerInput playerInput;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        playerInput = FindAnyObjectByType<PlayerInput>();
     }
 
     public void StartConversation(Sprite npcSprite, DialogNode startNode, NpcDataSO npcData)
@@ -38,19 +39,33 @@ public class NpcDialogController : AnimatorControllerBase
         currentNpcData = npcData;
         currentNode = startNode;
 
+        Open();
         ShowNode();
     }
+    public void ShowDialog(Sprite icon, string dialog)
+    {
+        playerIcon.sprite = icon;
+        dialogText.text = dialog;
+
+        open = !open;
+        SetBoolAnimation(Constants.ANIM_PANNEL_APPEAR, open);
+    }
+    private void Open()
+    {
+        open = true;
+        SetBoolAnimation(Constants.ANIM_PANNEL_APPEAR, true);
+        if (playerInput != null)
+            playerInput.SwitchCurrentActionMap("UI");
+    }
+
     private void EndConversation()
     {
         ClearOptions();
-
         Close();
-
         currentNode = null;
-        AlarmBarController.IncreasedPanic?.Invoke(15, SuspicionType.WrongInteraction);
-
         OnConversationEnded?.Invoke();
     }
+
     private void ShowNode()
     {
         if (typingCoroutine != null)
@@ -62,7 +77,7 @@ public class NpcDialogController : AnimatorControllerBase
 
         if (currentNode.endsConversation)
         {
-            Invoke(nameof(EndConversation), 1f);
+            StartCoroutine(WaitAndEndAfterTyping());
             return;
         }
 
@@ -70,9 +85,17 @@ public class NpcDialogController : AnimatorControllerBase
         {
             CreateOptionButton(option);
         }
-
-        SetBoolAnimation(Constants.ANIM_PANNEL_APPEAR, true);
     }
+
+    private IEnumerator WaitAndEndAfterTyping()
+    {
+        while (isTyping)
+            yield return null;
+
+        yield return new WaitForSeconds(0.5f);
+        EndConversation();
+    }
+
     private void ClearOptions()
     {
         foreach (Transform child in optionsContainer)
@@ -80,17 +103,21 @@ public class NpcDialogController : AnimatorControllerBase
             Destroy(child.gameObject);
         }
     }
+
     private void CreateOptionButton(DialogOption option)
     {
         Button btn = Instantiate(buttonPrefab, optionsContainer);
-        EventSystem.current.SetSelectedGameObject(btn.gameObject);
-
         btn.GetComponentInChildren<TMP_Text>().text = option.text;
 
         btn.onClick.AddListener(() =>
         {
+            if (option.suspicionChange > 0)
+                AlarmBarController.IncreasedPanic?.Invoke(option.suspicionChange, SuspicionType.WrongInteraction);
+
             GoToNode(option.nextNodeId);
         });
+
+        EventSystem.current.SetSelectedGameObject(btn.gameObject);
     }
 
     private void GoToNode(string nodeId)
@@ -111,6 +138,7 @@ public class NpcDialogController : AnimatorControllerBase
         Debug.LogWarning("Nodo no encontrado: " + id);
         return null;
     }
+
     private IEnumerator TypeText(string fullText)
     {
         isTyping = true;
@@ -118,16 +146,19 @@ public class NpcDialogController : AnimatorControllerBase
 
         foreach (char letter in fullText)
         {
-            SoundManager.Instance.PlaySFXByName(Constants.SFX_POP, 0.5f);
+            SoundManager.Instance.PlaySFXByName(Constants.SFX_POP, 0.5f, 0.95f, 1.05f);
             dialogText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
 
         isTyping = false;
     }
+
     public void Close()
     {
         open = false;
         SetBoolAnimation(Constants.ANIM_PANNEL_APPEAR, false);
+        if (playerInput != null)
+            playerInput.SwitchCurrentActionMap("Player");
     }
 }
