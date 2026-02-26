@@ -13,6 +13,8 @@ public class PlayerMovementController : MonoBehaviour
     private PlayerInput playerInput;
     private CharacterView view;
 
+    private bool movementAllowed = true;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -32,6 +34,8 @@ public class PlayerMovementController : MonoBehaviour
     }
     private void BeginAction(InputAction.CallbackContext context)
     {
+        if (!movementAllowed) return;
+
         moveDirection = context.ReadValue<Vector2>().normalized;
         view.SetBoolAnimation(Constants.ANIM_MOVING, true);
         view.Turn(moveDirection.x);
@@ -54,6 +58,20 @@ public class PlayerMovementController : MonoBehaviour
         moveAction.performed -= BeginAction;
         moveAction.canceled -= EndAction;
     }
+
+    public void StopMovement()
+    {
+        movementAllowed = false;
+        moveDirection = Vector2.zero;
+        view.SetBoolAnimation(Constants.ANIM_MOVING, false);
+    }
+
+    public void ResumeMovement()
+    {
+        movementAllowed = true;
+
+    }
+
     public void Conclude()
     {
         RemoveListeners();

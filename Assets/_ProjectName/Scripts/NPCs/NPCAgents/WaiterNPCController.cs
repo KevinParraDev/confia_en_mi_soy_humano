@@ -115,6 +115,11 @@ public class WaiterNPCController : NPCBaseController
             {
                 npcInteractable.StartDialogue(startDialogue);
             }
+
+            if(playerController.TryGetComponent(out PlayerMovementController playerMovement))
+            {
+                playerMovement.StopMovement();
+            }
         }
     }
 
@@ -128,6 +133,12 @@ public class WaiterNPCController : NPCBaseController
         if (TryGetComponent(out NpcInteractableController npcInteractable))
         {
             npcInteractable.CloseDialogue();
+
+            if (playerController.TryGetComponent(out PlayerMovementController playerMovement))
+            {
+                playerMovement.ResumeMovement();
+            }
+
         }
 
         if(dishesToRecolect <= 0)
@@ -142,6 +153,12 @@ public class WaiterNPCController : NPCBaseController
 
             isWaitingForDishes = true;
         } 
+    }
+
+    public override void StunNPC()
+    {
+        base.StunNPC();
+        kitchenDoor.SetActive(false);
     }
 
     public void RecolectDish()
