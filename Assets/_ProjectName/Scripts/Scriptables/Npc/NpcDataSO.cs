@@ -7,20 +7,37 @@ public class NpcDataSO : ScriptableObject
 {
     public NPC npcType;
     public RuntimeAnimatorController animatorSkin;
+
     public List<SkinConversation> conversations;
+
+    public List<DialogNode> defaultConversation;
+    public List<DialogNode> scaredConversation;
+    public List<DialogNode> shortAfterFirstTalkConversation;
+
+    [NonSerialized] public bool hasSpoken;
+    [NonSerialized] public bool isScared;
+
+
     public Sprite maskIcon;
 
     public DialogNode GetStartNode(NPC playerSkin)
     {
+        if (isScared && scaredConversation != null && scaredConversation.Count > 0)
+            return scaredConversation[0];
+
+        if (hasSpoken && shortAfterFirstTalkConversation != null && shortAfterFirstTalkConversation.Count > 0)
+            return shortAfterFirstTalkConversation[0];
+
         var conversation = conversations.Find(c => c.skinRequired == playerSkin);
 
-        if (conversation == null || conversation.dialogNodes == null || conversation.dialogNodes.Count == 0)
-        {
-            Debug.LogWarning($"No hay conversación para {playerSkin} en {name}");
-            return null;
-        }
+        if (conversation != null && conversation.dialogNodes != null && conversation.dialogNodes.Count > 0)
+            return conversation.dialogNodes[0];
 
-        return conversation.dialogNodes[0]; // primer nodo como inicio
+        if (defaultConversation != null && defaultConversation.Count > 0)
+            return defaultConversation[0];
+
+        Debug.LogWarning($"No hay conversación válida para {playerSkin} en {name}");
+        return null;
     }
 }
 

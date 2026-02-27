@@ -64,6 +64,7 @@ public class NpcDialogController : AnimatorControllerBase
         Close();
         currentNode = null;
         OnConversationEnded?.Invoke();
+        currentNpcData.hasSpoken = true;
     }
 
     private void ShowNode()

@@ -14,14 +14,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcType: 3
   animatorSkin: {fileID: 22100000, guid: b8ea8e6df65079d45a60a26c57a08ad3, type: 2}
-  dialogs:
-  - npcToResponse: 1
-    dialogs:
-    - No me mates!
-  - npcToResponse: 3
-    dialogs:
-    - "\xBFQue eres?"
-  - npcToResponse: 2
-    dialogs:
-    - "Los burocratas est\xE1n esperando su comida!"
+  conversations:
+  - skinRequired: 2
+    dialogNodes:
+    - id: start
+      text: "Uf… por fin terminé. Esos burócratas comen como si fuera el fin del mundo."
+      options:
+      - text: "¿Quién era el más importante?"
+        nextNodeId: info1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "¿Quién puede pasar al pasillo?"
+        nextNodeId: info2
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "Deberías trabajar más rápido."
+        nextNodeId: bad1
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 0
+      endsConversation: 0
+    - id: info1
+      text: "El Burócrata_1. Es el único que tiene acceso directo al pasillo presidencial."
+      options: []
+      endsConversation: 1
+    - id: info2
+      text: "Solo el Burócrata_1. Los guardias solo lo dejan pasar a él."
+      options: []
+      endsConversation: 1
+    - id: bad1
+      text: "Oye, yo corro todo el día. No me vengas con eso."
+      options: []
+      endsConversation: 1
+  defaultConversation:
+  - id: start
+    text: "Estoy ocupado."
+    options: []
+    endsConversation: 1
+  scaredConversation:
+  - id: start
+    text: "¡¿Dónde está mi cara?! ¡¿Qué me hiciste?!"
+    options: []
+    endsConversation: 1
+  shortAfterFirstTalkConversation:
+  - id: start
+    text: "Ya te dije todo lo que sé."
+    options: []
+    endsConversation: 1
   maskIcon: {fileID: -5104567295708027523, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}

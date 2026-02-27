@@ -14,7 +14,9 @@ public class NpcInteractableController : InteractableBaseController
     {
         view = GetComponentInChildren<CharacterView>();
         hoverGO.SetActive(false);
-        dialogController.OnConversationEnded += Panic;
+
+        if(npcData.npcType == NPC.Chef)
+            dialogController.OnConversationEnded += Panic;
     }
     public override void Hover(bool active, PlayerController playerController = null)
     {
@@ -80,6 +82,7 @@ public class NpcInteractableController : InteractableBaseController
                 playerController.ChangeSkin(npcData);
                 onNPCIsCopied?.Invoke();
                 view.SetBoolAnimation(Constants.ANIM_SCARRY, true);
+                npcData.isScared = true;
 
                 if (this.TryGetComponent<NPCBaseController>(out NPCBaseController npcController))
                 {

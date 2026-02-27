@@ -23,37 +23,33 @@ MonoBehaviour:
       - text: "Soy el nuevo ayudante."
         nextNodeId: lie1
         requiredSkin: 0
-        suspicionChange: 10
+        suspicionChange: 15
         isLie: 1
       - text: "No soy una amenaza."
-        nextNodeId: calm1
-        requiredSkin: 0
-        suspicionChange: 10
-        isLie: 0
-      - text: "*ruido alienígena incomprensible*"
         nextNodeId: panic1
         requiredSkin: 0
         suspicionChange: 15
         isLie: 0
+      - text: "*ruido alienígena extraño*"
+        nextNodeId: panic1
+        requiredSkin: 0
+        suspicionChange: 20
+        isLie: 0
       endsConversation: 0
     - id: lie1
-      text: "¿Ayudante? ¡Yo no contraté a nadie con esa... cosa!"
+      text: "¡Yo no contraté a ninguna cosa verde!"
       options:
       - text: "Me envió el presidente."
         nextNodeId: panic1
         requiredSkin: 0
-        suspicionChange: 15
+        suspicionChange: 20
         isLie: 1
       - text: "Puedo cocinar."
         nextNodeId: panic1
         requiredSkin: 0
-        suspicionChange: 10
+        suspicionChange: 15
         isLie: 1
       endsConversation: 0
-    - id: calm1
-      text: "¡Claro que eres una amenaza! ¡Voy a llamar a seguridad!"
-      options: []
-      endsConversation: 1
     - id: panic1
       text: "¡Guardias! ¡Hay una cosa horrible en la despensa!"
       options: []
@@ -61,47 +57,47 @@ MonoBehaviour:
   - skinRequired: 2
     dialogNodes:
     - id: start
-      text: "¿Qué haces parado ahí? ¡Tenemos órdenes presidenciales que cumplir!"
+      text: "¿Qué haces ahí parado? Tenemos órdenes presidenciales."
       options:
-      - text: "Ya estoy preparando los platos."
+      - text: "Ya estoy cocinando."
         nextNodeId: good1
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
-      - text: "El mesero está presionando demasiado."
+      - text: "El mesero está exagerando."
         nextNodeId: neutral1
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
-      - text: "No pienso cocinar nada."
+      - text: "No voy a cocinar."
         nextNodeId: bad1
         requiredSkin: 0
         suspicionChange: 10
-        isLie: 1
+        isLie: 0
       endsConversation: 0
     - id: good1
       text: "Eso quiero oír. Muévete."
       options: []
       endsConversation: 1
     - id: neutral1
-      text: "Que presione lo que quiera. Nosotros cocinamos."
+      text: "Que presione lo que quiera. Aquí se cocina con orden."
       options: []
       endsConversation: 1
     - id: bad1
-      text: "¿Cómo que no? ¡Nos despedirán a los dos!"
+      text: "¿Te volviste loco?"
       options: []
       endsConversation: 1
   - skinRequired: 3
     dialogNodes:
     - id: start
-      text: "¿Ya entregaste los platos o vienes a molestar?"
+      text: "¿Ya entregaste todos los platos?"
       options:
-      - text: "Estoy esperando que estén listos."
+      - text: "Sí, ya descansé un momento."
         nextNodeId: good1
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
-      - text: "Los burócratas están perdiendo la paciencia."
+      - text: "Los burócratas se quejan demasiado."
         nextNodeId: neutral1
         requiredSkin: 0
         suspicionChange: 0
@@ -113,15 +109,15 @@ MonoBehaviour:
         isLie: 1
       endsConversation: 0
     - id: good1
-      text: "Entonces espera afuera y no estorbes."
+      text: "Bien. No quiero más presión hoy."
       options: []
       endsConversation: 1
     - id: neutral1
-      text: "Que esperen. Aquí se cocina con dignidad."
+      text: "Que se quejen. Nosotros trabajamos."
       options: []
       endsConversation: 1
     - id: bad1
-      text: "¿Cómo que no hay pedidos? ¡Estás delirando!"
+      text: "¿Cómo que no hay pedidos?"
       options: []
       endsConversation: 1
   - skinRequired: 5
@@ -129,81 +125,38 @@ MonoBehaviour:
     - id: start
       text: "¿Qué hace un burócrata en mi cocina?"
       options:
-      - text: "Inspección rápida y me voy."
-        nextNodeId: good1
-        requiredSkin: 0
-        suspicionChange: 0
-        isLie: 0
-      - text: "Vengo a supervisar personalmente."
-        nextNodeId: neutral1
-        requiredSkin: 0
-        suspicionChange: 5
-        isLie: 1
-      - text: "No confío en usted."
-        nextNodeId: bad1
-        requiredSkin: 0
-        suspicionChange: 10
-        isLie: 0
-      endsConversation: 0
-    - id: good1
-      text: "Hazlo rápido. No toques nada."
-      options: []
-      endsConversation: 1
-    - id: neutral1
-      text: "Nadie me avisó de eso..."
-      options: []
-      endsConversation: 1
-    - id: bad1
-      text: "¿Perdón?"
-      options: []
-      endsConversation: 1
-  - skinRequired: 7
-    dialogNodes:
-    - id: start
-      text: "¿Otro burócrata? Esto parece desfile."
-      options:
-      - text: "Solo revisando inventario."
+      - text: "Inspección rápida."
         nextNodeId: good1
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
       - text: "Busco algo específico."
-        nextNodeId: neutral1
-        requiredSkin: 0
-        suspicionChange: 5
-        isLie: 1
-      endsConversation: 0
-    - id: good1
-      text: "Mientras no toques mis cuchillos."
-      options: []
-      endsConversation: 1
-    - id: neutral1
-      text: "Eso suena sospechoso."
-      options: []
-      endsConversation: 1
-  - skinRequired: 8
-    dialogNodes:
-    - id: start
-      text: "Señorita Bety, este no es lugar para usted."
-      options:
-      - text: "Solo vine a verificar el protocolo."
-        nextNodeId: good1
-        requiredSkin: 0
-        suspicionChange: 0
-        isLie: 0
-      - text: "Estoy buscando a Trun."
         nextNodeId: bad1
         requiredSkin: 0
         suspicionChange: 10
         isLie: 0
       endsConversation: 0
     - id: good1
-      text: "Entonces verifique rápido."
+      text: "Hazlo rápido."
       options: []
       endsConversation: 1
     - id: bad1
-      text: "Trun no baja a la cocina."
+      text: "Eso no me gusta."
       options: []
       endsConversation: 1
-  maskIcon: {fileID: 4866018130364743319, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}
+  defaultConversation:
+  - id: start
+    text: "Estoy ocupado."
+    options: []
+    endsConversation: 1
+  scaredConversation:
+  - id: start
+    text: "¡¿Por qué tengo esta cara?! ¡¿Qué me hiciste?!"
+    options: []
+    endsConversation: 1
+  shortAfterFirstTalkConversation:
+  - id: start
+    text: "No tengo tiempo para repetir lo mismo."
+    options: []
+    endsConversation: 1
   maskIcon: {fileID: 4866018130364743319, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}
