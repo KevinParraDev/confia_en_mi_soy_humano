@@ -2469,6 +2469,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6526221acb533e44b85749e6ca8691e3, type: 2}
   - {fileID: 11400000, guid: 51d72a9f4c05f11488a0e151d872e424, type: 2}
   - {fileID: 11400000, guid: 7c92e6c80ac943745b15c5d1024030d2, type: 2}
+  - {fileID: 11400000, guid: 2e09ebef66843d54795f56ab4d8f03f7, type: 2}
   musicSourcesParent: {fileID: 7664552026557173402}
   preloadedClips: []
   audioMixer: {fileID: 24100000, guid: c01915d33218587478c805319e6b5843, type: 2}
