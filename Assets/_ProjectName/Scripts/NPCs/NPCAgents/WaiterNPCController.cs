@@ -82,6 +82,7 @@ public class WaiterNPCController : NPCBaseController
             if (this.IsAlarmed)
             {
                 stateMachine.ChangeState(NPCState.Panic);
+                isWaitingForDishes = false;
             }
         }
 
