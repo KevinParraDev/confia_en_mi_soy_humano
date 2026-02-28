@@ -20,6 +20,7 @@ public class Constants
     public const string ANIM_SCARRY = "Scarry";
     public const string ANIM_PANNEL_APPEAR = "Appear";
     public const string ANIM_PANNEL_SHAKE = "Shake";
+    public const string ANIM_PANNEL_Start = "Start";
 
 
     //Music

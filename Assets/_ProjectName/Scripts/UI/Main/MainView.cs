@@ -40,6 +40,7 @@ public class MainView : UIViewBase
     private void OnClickPlay()
     {
         mainController?.OnPlay();
+        animator.SetTrigger(Constants.ANIM_PANNEL_Start);
     }
     private void OnClickCredits()
     {

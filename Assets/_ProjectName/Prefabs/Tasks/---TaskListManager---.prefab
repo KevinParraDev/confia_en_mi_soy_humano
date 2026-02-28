@@ -71,7 +71,7 @@ MonoBehaviour:
     requiredCount: 1
     isProgressRequired: 0
   - type: 6
-    description: Llega a la sala presidencial
+    description: "\xA1Hora de exterminarlos!"
     requiredCount: 1
     isProgressRequired: 0
 --- !u!1 &1370919125858275220
