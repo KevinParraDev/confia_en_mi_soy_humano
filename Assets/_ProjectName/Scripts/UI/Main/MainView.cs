@@ -7,15 +7,21 @@ public class MainView : UIViewBase
 {
     private IMainController mainController;
     [SerializeField] private Button playButton;
+    [SerializeField] private Button CreditsButton;
+    [SerializeField] private Button BackButton;
+
+    private Animator animator;
 
     protected override void Awake()
     {
         id = UI.Main;
+        animator = GetComponent<Animator>();
     }
 
     public override void Initialize(params object[] parameters)
     {
         EventSystem.current.SetSelectedGameObject(playButton.gameObject);
+
         mainController = parameters[0] as IMainController;
         if (mainController == null)
             Debug.LogError($"MainController is missing in {gameObject.name}");
@@ -26,18 +32,32 @@ public class MainView : UIViewBase
     protected override void AddListeners()
     {
         base.AddListeners();
-        playButton.onClick.AddListener(OnClick);
+        playButton.onClick.AddListener(OnClickPlay);
+        CreditsButton.onClick.AddListener(OnClickCredits);
+        BackButton.onClick.AddListener(OnClickBack);
     }
 
-    private void OnClick()
+    private void OnClickPlay()
     {
         mainController?.OnPlay();
+    }
+    private void OnClickCredits()
+    {
+        animator.SetBool(Constants.ANIM_PANNEL_APPEAR, true);
+        EventSystem.current.SetSelectedGameObject(BackButton.gameObject);
+    }
+    private void OnClickBack()
+    {
+        animator.SetBool(Constants.ANIM_PANNEL_APPEAR, false);
+        EventSystem.current.SetSelectedGameObject(CreditsButton.gameObject);
     }
 
     protected override void RemoveListeners()
     {
         base.RemoveListeners();
-        playButton.onClick.RemoveListener(OnClick);
+        playButton.onClick.RemoveListener(OnClickPlay);
+        CreditsButton.onClick.RemoveListener(OnClickCredits);
+        BackButton.onClick.RemoveListener(OnClickBack);
     }
 
     public override void Conclude()

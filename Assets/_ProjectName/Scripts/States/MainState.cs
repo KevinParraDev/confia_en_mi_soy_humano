@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Video;
 
 public class MainState : GameStateBase
 {
     [SerializeField] private SettingsManager settingsManager;
     [SerializeField] private MainController main;
-
+    [SerializeField] private VideoPlayer video;
     public void Dependencies()
     {
 
@@ -20,6 +21,14 @@ public class MainState : GameStateBase
         main.PlayActivated += OnPressPlay;
     }
     public void OnPressPlay()
+    {
+        //nextState = States.KevinScene;
+        //ExitState();
+
+        video.Play();
+        video.loopPointReached += OnVideoFinished;
+    }
+    private void OnVideoFinished(VideoPlayer vp)
     {
         nextState = States.KevinScene;
         ExitState();

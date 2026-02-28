@@ -6,13 +6,16 @@ using UnityEngine.UI;
 
 public class TaskListView : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
     [SerializeField] private TMP_Text currentTaskText;
     [SerializeField] private Image mapImage;
+    private bool isOpen = false;
 
     private PlayerInput playerInput;
     private void Awake()
     {
-        HideMap();
+        isOpen = false;
+        animator.SetBool(Constants.ANIM_PANNEL_APPEAR, false);
 
         playerInput = FindAnyObjectByType<PlayerInput>();
         if (playerInput != null)
@@ -31,24 +34,8 @@ public class TaskListView : MonoBehaviour
 
     private void ToggleMap(InputAction.CallbackContext context)
     {
-        if (mapImage.rectTransform.localScale == Vector3.zero)
-        {
-            ShowMap();
-        }
-        else
-        {
-            HideMap();
-        }
-    }
-
-    private void ShowMap()
-    {
-        mapImage.rectTransform.localScale = Vector3.one; // Start with the map hidden
-    }
-
-    private void HideMap()
-    {
-        mapImage.rectTransform.localScale = Vector3.zero; // Start with the map hidden
+        isOpen = !isOpen;
+        animator.SetBool(Constants.ANIM_PANNEL_APPEAR, isOpen);
     }
 
     public void UpdateTask(string taskText)

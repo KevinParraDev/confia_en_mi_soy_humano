@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: dd9784d71ad12c6468d45d896e168ae0
+guid: 13f484aec96601d4cae071a555e8bc18
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8377148506636735765
-    second: Sala_de_trunv2_0
-  - first:
-      213: -2199504002392096103
-    second: Sala_de_trunv2_1
-  - first:
-      213: 5044663079016580155
-    second: Sala_de_trunv2_2
-  - first:
-      213: 2561524316474921003
-    second: Sala_de_trunv2_3
+      213: 7269784736887055359
+    second: Sombra_entradas_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 180
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -135,67 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sala_de_trunv2_0
+      name: Sombra_entradas_0
       rect:
         serializedVersion: 2
-        x: 327
-        y: 259
-        width: 2449
-        height: 2013
+        x: 670
+        y: 400
+        width: 470
+        height: 935
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bea293731d36ebb80800000000000000
-      internalID: -8377148506636735765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sala_de_trunv2_1
-      rect:
-        serializedVersion: 2
-        x: 3024
-        y: 1235
-        width: 915
-        height: 635
-      alignment: 9
-      pivot: {x: 0.49002466, y: 0.08316179}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9928e5763cac971e0800000000000000
-      internalID: -2199504002392096103
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sala_de_trunv2_2
-      rect:
-        serializedVersion: 2
-        x: 3439
-        y: 1137
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b34cf44b75e320640800000000000000
-      internalID: 5044663079016580155
+      spriteID: ff3a5b383b673e460800000000000000
+      internalID: 7269784736887055359
       vertices: []
       indices: 
       edges: []
@@ -204,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2256efb52809e1247ac27d5a5f05f23e
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -214,10 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sala_de_trunv2_0: -8377148506636735765
-      Sala_de_trunv2_1: -2199504002392096103
-      Sala_de_trunv2_2: 5044663079016580155
-      Sala_de_trunv2_3: 2561524316474921003
+      Sombra_entradas_0: 7269784736887055359
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
