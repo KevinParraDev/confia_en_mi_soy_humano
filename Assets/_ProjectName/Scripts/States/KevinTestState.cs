@@ -32,9 +32,10 @@ public class KevinTestState : GameStateBase
         alarmBarController?.Initialize();
     }
 
-    private void StartGameplay()
+    public void GoHome()
     {
-
+        nextState = States.Main;
+        ExitState();
     }
 
     private void GameOver()

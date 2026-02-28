@@ -1,12 +1,17 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class WinScreenView : MonoBehaviour
 {
     [SerializeField] private Animator anim;
-
+    [SerializeField] private GameObject homeButton;
     private void Awake()
     {
         anim = GetComponent<Animator>();
+    }
+    public void OnAppearButton()
+    {
+        EventSystem.current.SetSelectedGameObject(homeButton);
     }
     public void Appear()
     {
