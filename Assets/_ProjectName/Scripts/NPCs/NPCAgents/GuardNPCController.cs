@@ -12,6 +12,7 @@ public class GuardNPCController : NPCBaseController
     private float chaseFovDistance = 50;
     [SerializeField]
     private float chaseDuration;
+    [SerializeField] private KevinTestState kevinTestState;
 
     [Header("NPC FOV Config")]
     [SerializeField] protected NPCFOVController npcFov;
@@ -137,6 +138,7 @@ public class GuardNPCController : NPCBaseController
             if (agent.remainingDistance <= 0.5f && !agent.pathPending)
             {
                 Debug.Log("Guard has reached the player during chase.");
+                kevinTestState.GameOver();
             }
         }
     }

@@ -574,6 +574,10 @@ PrefabInstance:
       propertyPath: npcAllowed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7366668716393488446, guid: b0add0b262ff61c4da50c7949d2f8f71, type: 3}
+      propertyPath: kevinTestState
+      value: 
+      objectReference: {fileID: 1969567915}
     - target: {fileID: 8819146071525536217, guid: b0add0b262ff61c4da50c7949d2f8f71, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 10.222412
@@ -14123,7 +14127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1aa5600dc54c4c4bbb2d0a08b8535d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   homeButton: {fileID: 483250731}
+  playerInput: {fileID: 0}
 --- !u!1 &1269754749
 GameObject:
   m_ObjectHideFlags: 0
@@ -21254,6 +21260,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 3.7942963
       objectReference: {fileID: 0}
+    - target: {fileID: 7366668716393488446, guid: b0add0b262ff61c4da50c7949d2f8f71, type: 3}
+      propertyPath: kevinTestState
+      value: 
+      objectReference: {fileID: 1969567915}
     - target: {fileID: 8380068682148863723, guid: b0add0b262ff61c4da50c7949d2f8f71, type: 3}
       propertyPath: npcData
       value: 
@@ -24620,6 +24630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 920751833}
   alarmBarController: {fileID: 355849719}
+  loseScreen: {fileID: 1269714906}
 --- !u!1001 &1975799532
 PrefabInstance:
   m_ObjectHideFlags: 0
