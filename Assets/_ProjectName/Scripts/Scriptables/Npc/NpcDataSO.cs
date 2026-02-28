@@ -62,6 +62,7 @@ public class DialogNode
     public string text;
     public List<DialogOption> options;
     public bool endsConversation;
+    public string actionID;
 }
 
 [Serializable]

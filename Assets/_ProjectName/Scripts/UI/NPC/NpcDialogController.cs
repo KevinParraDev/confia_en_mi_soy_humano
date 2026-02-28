@@ -82,6 +82,12 @@ public class NpcDialogController : AnimatorControllerBase
             return;
         }
 
+        if(!string.IsNullOrEmpty(currentNode.actionID))
+        {
+            if (currentNode.actionID == "betty")
+                Debug.Log("Betty");
+        }
+
         foreach (var option in currentNode.options)
         {
             CreateOptionButton(option);
