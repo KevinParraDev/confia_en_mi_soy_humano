@@ -31,7 +31,7 @@ public class GuardNPCController : NPCBaseController
     private GameObject doorCollider;
 
     [SerializeField]
-    private List<NPC> npcAllowed = new List<NPC> { NPC.Bureaucrat_Bety, NPC.Trun, NPC.Bureaucrat_1};
+    private NPC npcAllowed = NPC.Bureaucrat_1;
 
     private bool isInDialogue = false;
     private float dialogueDuration = 2f;
@@ -110,7 +110,7 @@ public class GuardNPCController : NPCBaseController
             else if (detectionController.IsPlayerInRange && this.HasReachedDestination())
             {
                 // launch a dialogue & Trigger the menace level if not is the allowed type
-                if (npcAllowed.Contains(playerController.GetCurrentSkin()))
+                if (npcAllowed != playerController.GetCurrentSkin())
                 {
                     isInDialogue = true;
                     if(TryGetComponent(out NpcInteractableController npcInteractable))

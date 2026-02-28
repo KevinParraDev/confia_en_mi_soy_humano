@@ -65,6 +65,10 @@ MonoBehaviour:
         suspicionChange: 0
         isLie: 0
       endsConversation: 0
+    - id: doc1
+      text: "Ya voy se\xF1or"
+      options: []
+      endsConversation: 1
   - skinRequired: 6
     dialogNodes:
     - id: start
