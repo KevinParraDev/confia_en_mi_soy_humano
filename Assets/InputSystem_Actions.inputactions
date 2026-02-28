@@ -728,6 +728,45 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Tasks",
+            "id": "2649abcf-f95d-4558-a76f-f033451857b3",
+            "actions": [
+                {
+                    "name": "OpenMap",
+                    "type": "Button",
+                    "id": "849fa230-d89d-4c18-a290-83e6a034d293",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9feb02c4-6e05-44d8-b3e6-1ef2e7d4c0f8",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "OpenMap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0837a833-1d6f-4388-ae4a-e6b196620704",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "OpenMap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

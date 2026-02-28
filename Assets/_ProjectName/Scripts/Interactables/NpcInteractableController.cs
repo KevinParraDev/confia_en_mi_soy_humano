@@ -101,7 +101,7 @@ public class NpcInteractableController : InteractableBaseController
                     TaskListManager.Instance?.OnTaskEvent(TaskType.AislarPresidente, 1);
 
                     // Update Task To Next Task
-                    TaskListManager.Instance?.OnUpdateNextTask(TaskType.PrepararPlaneta);
+                    TaskListManager.Instance?.OnUpdateNextTask(TaskType.SalaPresidencial);
                 }
 
                 view.SetBoolAnimation(Constants.ANIM_SCARRY, true);

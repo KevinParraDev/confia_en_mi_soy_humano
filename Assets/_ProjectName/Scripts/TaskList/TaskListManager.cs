@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +10,7 @@ public enum TaskType
     AsimilarBurocrata,      // requiere 1
     EntrarSalaConferencias, // requiere 1
     AislarPresidente,       // requiere 1
+    SalaPresidencial,       // requiere 1
     PrepararPlaneta         // requiere 1
 }
 
@@ -75,7 +75,6 @@ public class TaskListManager : MonoBehaviour
     /// <param name="amount">Cantidad de progreso (por defecto 1)</param>
     public void OnTaskEvent(TaskType type, int amount = 1)
     {
-        Debug.Log($"Evento de tarea recibido: {type} con cantidad {amount}");
         if (currentTaskIndex >= tasks.Count)
         {
             Debug.LogWarning("Todas las tareas ya están completadas");
