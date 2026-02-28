@@ -1,13 +1,16 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class WinScreenView : MonoBehaviour
 {
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject homeButton;
+    [SerializeField] private PlayerInput playerInput;
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        playerInput = FindAnyObjectByType<PlayerInput>();
     }
     public void OnAppearButton()
     {
@@ -16,6 +19,8 @@ public class WinScreenView : MonoBehaviour
     public void Appear()
     {
         anim.SetTrigger(Constants.ANIM_PANNEL_APPEAR);
+        if (playerInput != null)
+            playerInput.SwitchCurrentActionMap("UI");
     }
     public void PlayExplotionSound()
     {

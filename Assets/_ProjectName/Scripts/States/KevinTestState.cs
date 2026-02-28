@@ -4,6 +4,7 @@ public class KevinTestState : GameStateBase
 {
     [SerializeField] private PlayerController playerController;
     [SerializeField] private AlarmBarController alarmBarController;
+    [SerializeField] private LoseScreenView loseScreen;
     protected override void Awake()
     {
         base.Awake();
@@ -38,9 +39,9 @@ public class KevinTestState : GameStateBase
         ExitState();
     }
 
-    private void GameOver()
+    public void GameOver()
     {
-
+        loseScreen.Appear();
     }
     public void Conclude()
     {
