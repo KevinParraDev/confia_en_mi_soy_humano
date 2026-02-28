@@ -14,17 +14,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcType: 4
   animatorSkin: {fileID: 22100000, guid: 0001a485652c8b24ea709218437d2400, type: 2}
-  dialogs:
-  - npcToResponse: 1
-    dialogs:
-    - No me mates!
-  - npcToResponse: 3
-    dialogs:
-    - "No tienes nada que hacer aqu\xED"
-  - npcToResponse: 2
-    dialogs:
-    - "\xBFNo deber\xEDas estar en la cocina?"
-  - npcToResponse: 4
-    dialogs:
-    - "\xBFQuien eres t\xFA? \xBFComo hiciste eso?!"
+  conversations:
+  - skinRequired: 2
+    dialogNodes:
+    - id: start
+      text: Vuelve a la cocina.
+      options: []
+      endsConversation: 1
+  - skinRequired: 3
+    dialogNodes:
+    - id: start
+      text: Este no es su sector.
+      options: []
+      endsConversation: 1
+  - skinRequired: 5
+    dialogNodes:
+    - id: start
+      text: Bienvenido
+      options: []
+      endsConversation: 1
+  - skinRequired: 6
+    dialogNodes:
+    - id: start
+      text: "Se\xF1or presidente."
+      options: []
+      endsConversation: 1
+  - skinRequired: 7
+    dialogNodes:
+    - id: start
+      text: "Usted no est\xE1 invitado a esta junta."
+      options: []
+      endsConversation: 1
+  - skinRequired: 8
+    dialogNodes:
+    - id: start
+      text: "\xBFNecesita algo?"
+      options: []
+      endsConversation: 1
+  defaultConversation:
+  - id: start
+    text: "Contin\xFAe."
+    options: []
+    endsConversation: 1
+  scaredConversation:
+  - id: start
+    text: "\xA1\xBFQu\xE9 me hizo?! \xA1Alto!"
+    options: []
+    endsConversation: 1
+  shortAfterFirstTalkConversation:
+  - id: start
+    text: Ya fue advertido.
+    options: []
+    endsConversation: 1
   maskIcon: {fileID: -1328083175605189295, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}

@@ -14,8 +14,152 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcType: 7
   animatorSkin: {fileID: 22100000, guid: 24d8faf9442376e49a2b5b8a659d6ac6, type: 2}
-  conversations: []
-  defaultConversation: []
-  scaredConversation: []
-  shortAfterFirstTalkConversation: []
-  maskIcon: {fileID: 3224611297109525153, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}
+  conversations:
+  - skinRequired: 2
+    dialogNodes:
+    - id: start
+      text: "¿Qué hace un chef aquí? Este pasillo no es la cocina."
+      options:
+      - text: "Traigo algo para la reunión."
+        nextNodeId: suspicious1
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 1
+      - text: "Me equivoqué de puerta."
+        nextNodeId: neutral1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+    - id: suspicious1
+      text: "Más le vale que sea verdad."
+      options: []
+      endsConversation: 1
+    - id: neutral1
+      text: "Entonces salga antes de que llame a seguridad."
+      options: []
+      endsConversation: 1
+  - skinRequired: 3
+    dialogNodes:
+    - id: start
+      text: "Mesero, no estoy para interrupciones."
+      options:
+      - text: "Vengo por su orden."
+        nextNodeId: angry1
+        requiredSkin: 0
+        suspicionChange: 5
+        isLie: 1
+      endsConversation: 0
+    - id: angry1
+      text: "No pedí nada. Retírese."
+      options: []
+      endsConversation: 1
+  - skinRequired: 4
+    dialogNodes:
+    - id: start
+      text: "Guardia, asegúrese de que nadie cruce sin autorización."
+      options:
+      - text: "Todo está bajo control."
+        nextNodeId: guard1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "Hubo un problema abajo."
+        nextNodeId: guard2
+        requiredSkin: 0
+        suspicionChange: 5
+        isLie: 1
+      endsConversation: 0
+    - id: guard1
+      text: "Eso espero."
+      options: []
+      endsConversation: 1
+    - id: guard2
+      text: "Si es mentira, será su cabeza."
+      options: []
+      endsConversation: 1
+  - skinRequired: 5
+    dialogNodes:
+    - id: start
+      text: "Ah... así que decidió aparecer."
+      options:
+      - text: "No me dé órdenes."
+        nextNodeId: clash1
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 0
+      - text: "Solo verificaba el protocolo."
+        nextNodeId: rivalry1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+    - id: clash1
+      text: "Recuerde su lugar."
+      options: []
+      endsConversation: 1
+    - id: rivalry1
+      text: "Entonces deje de estorbar."
+      options: []
+      endsConversation: 1
+  - skinRequired: 6
+    dialogNodes:
+    - id: start
+      text: "Presidente."
+      options:
+      - text: "Su actitud será evaluada."
+        nextNodeId: intimidated1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+    - id: intimidated1
+      text: "Por supuesto. Mis disculpas."
+      options: []
+      endsConversation: 1
+  - skinRequired: 7
+    dialogNodes:
+    - id: start
+      text: "..."
+      options:
+      - text: "..."
+        nextNodeId: mirror1
+        requiredSkin: 0
+        suspicionChange: 15
+        isLie: 1
+      endsConversation: 0
+    - id: mirror1
+      text: "Esto no tiene gracia."
+      options: []
+      endsConversation: 1
+  - skinRequired: 8
+    dialogNodes:
+    - id: start
+      text: "Señorita Bety, no se involucre en asuntos que no entiende."
+      options:
+      - text: "Solo cumplía órdenes."
+        nextNodeId: bety1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+    - id: bety1
+      text: "Procure no entorpecer."
+      options: []
+      endsConversation: 1
+  defaultConversation:
+    - id: start
+      text: "No tengo tiempo para esto."
+      options: []
+      endsConversation: 1
+  scaredConversation:
+    - id: start
+      text: "¡¿Qué demonios soy?! ¡Devuélvame mi rostro!"
+      options: []
+      endsConversation: 1
+  shortAfterFirstTalkConversation:
+    - id: start
+      text: "Ya dije lo que tenía que decir."
+      options: []
+      endsConversation: 1
+  maskIcon: {fileID: 0}

@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PresidentRoomZone Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3245404076045909658, guid: 0a7ddb95b6afaa34b875caa7ea7e3d1f, type: 3}
+      propertyPath: zone
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

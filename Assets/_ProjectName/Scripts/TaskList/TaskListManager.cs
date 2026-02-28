@@ -106,7 +106,7 @@ public class TaskListManager : MonoBehaviour
 
     public void OnUpdateNextTask(TaskType newTask)
     {
-        if (currentTaskIndex + 1 >= tasks.Count)
+        if (currentTaskIndex >= tasks.Count)
         {
             Debug.Log("¡Todas las tareas completadas!");
             return;

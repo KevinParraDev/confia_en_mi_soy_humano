@@ -14,14 +14,122 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcType: 6
   animatorSkin: {fileID: 22100000, guid: 7047bd1574c5303459dc7b9681d49bc1, type: 2}
-  dialogs:
-  - npcToResponse: 1
-    dialogs:
-    - No me mates!
-  - npcToResponse: 3
-    dialogs:
-    - "Creo que me estoy volviendo loco, jurar\xEDa que vi un extraterreste"
-  - npcToResponse: 2
-    dialogs:
-    - "\xBFQuien eres t\xFA? \xBFComo hiciste eso?!"
+  conversations:
+  - skinRequired: 2
+    dialogNodes:
+    - id: start
+      text: Espero una comida igual de grande que America
+      options:
+      - text: "Ser\xE1 inolvidable."
+        nextNodeId: chef1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: Es lo que hay.
+        nextNodeId: chef2
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 0
+      endsConversation: 0
+    - id: chef1
+      text: Eso me gusta. Grandes cosas.
+      options: []
+      endsConversation: 1
+    - id: chef2
+      text: "No me gusta esa actitud. \xBFAcaso eres latino?"
+      options: []
+      endsConversation: 1
+  - skinRequired: 3
+    dialogNodes:
+    - id: start
+      text: "Mesero. R\xE1pido. La gente espera liderazgo, no espera hambre."
+      options:
+      - text: "Enseguida, se\xF1or."
+        nextNodeId: waiter1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+    - id: waiter1
+      text: Bien. Eficiencia. Me agrada.
+      options: []
+      endsConversation: 1
+  - skinRequired: 5
+    dialogNodes:
+    - id: start
+      text: Necesito resultados enormes. Los mejores resultados.
+      options:
+      - text: "Todo est\xE1 bajo control."
+        nextNodeId: bur1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: Hay complicaciones.
+        nextNodeId: bur2
+        requiredSkin: 0
+        suspicionChange: 5
+        isLie: 0
+      endsConversation: 0
+    - id: bur1
+      text: Eso suena correcto.
+      options: []
+      endsConversation: 1
+    - id: bur2
+      text: No me gustan las complicaciones. Ni los Latinos.
+      options: []
+      endsConversation: 1
+  - skinRequired: 7
+    dialogNodes:
+    - id: start
+      text: "He o\xEDdo cosas. No me gustan las cosas que oigo."
+      options:
+      - text: Rumores sin importancia.
+        nextNodeId: bur3
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 1
+      - text: "Todo est\xE1 perfecto."
+        nextNodeId: bur4
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+    - id: bur3
+      text: Espero que sea cierto.
+      options: []
+      endsConversation: 1
+    - id: bur4
+      text: Perfecto es lo que me gusta.
+      options: []
+      endsConversation: 1
+  - skinRequired: 8
+    dialogNodes:
+    - id: start
+      text: "Oh Miss Betty, \xBFNo pensar\xE1 presentar los balances reales verdad?"
+      options:
+      - text: "N-No se\xF1or presidente."
+        nextNodeId: bety1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+    - id: bety1
+      text: Eso espero, no me haga llamar a ICE
+      options: []
+      endsConversation: 1
+  defaultConversation:
+  - id: start
+    text: Estoy ocupado haciendo cosas enormes, enormes como AMERICA.
+    options: []
+    endsConversation: 1
+  scaredConversation:
+  - id: start
+    text: "\xBFQu\xE9 es esto? \xA1Esto es terrible! \xA1Arreglen esto ahora!"
+    options: []
+    endsConversation: 1
+  shortAfterFirstTalkConversation:
+  - id: start
+    text: Ya hablamos. Grandes conversaciones.
+    options: []
+    endsConversation: 1
   maskIcon: {fileID: -6664124353167381402, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}

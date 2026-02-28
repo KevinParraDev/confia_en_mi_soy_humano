@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GuardNPCController : NPCBaseController
@@ -30,7 +31,7 @@ public class GuardNPCController : NPCBaseController
     private GameObject doorCollider;
 
     [SerializeField]
-    private NPC npcAllowed = NPC.Bureaucrat_1;
+    private List<NPC> npcAllowed = new List<NPC> { NPC.Bureaucrat_Bety, NPC.Trun, NPC.Bureaucrat_1};
 
     private bool isInDialogue = false;
     private float dialogueDuration = 2f;
@@ -109,7 +110,7 @@ public class GuardNPCController : NPCBaseController
             else if (detectionController.IsPlayerInRange && this.HasReachedDestination())
             {
                 // launch a dialogue & Trigger the menace level if not is the allowed type
-                if (playerController.GetCurrentSkin() != npcAllowed)
+                if (npcAllowed.Contains(playerController.GetCurrentSkin()))
                 {
                     isInDialogue = true;
                     if(TryGetComponent(out NpcInteractableController npcInteractable))
@@ -133,6 +134,10 @@ public class GuardNPCController : NPCBaseController
         if(stateMachine.GetCurrentStateType() == NPCState.Chase)
         {
             doorCollider.SetActive(false);
+            if (agent.remainingDistance <= 0.5f && !agent.pathPending)
+            {
+                Debug.Log("Guard has reached the player during chase.");
+            }
         }
     }
 

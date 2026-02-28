@@ -810,7 +810,7 @@ MonoBehaviour:
   fovViewDistance: 2
   IdlePlace: {fileID: 5816033635414380887}
   doorCollider: {fileID: 1267660859267261096}
-  npcAllowed: 5
+  npcAllowed: 000000000000000000000000
 --- !u!114 &8380068682148863723
 MonoBehaviour:
   m_ObjectHideFlags: 0

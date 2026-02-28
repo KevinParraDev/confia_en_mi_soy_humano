@@ -14,19 +14,113 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcType: 5
   animatorSkin: {fileID: 22100000, guid: 14e8d3f05a400d34bbacc7b44ba77ec1, type: 2}
-  dialogs:
-  - npcToResponse: 0
-    dialogs: []
-  - npcToResponse: 1
-    dialogs:
-    - Que Eres?
-  - npcToResponse: 2
-    dialogs:
-    - Vuelve a la cocina!
-  - npcToResponse: 3
-    dialogs:
-    - Que rayos me diste?
-  - npcToResponse: 5
-    dialogs:
-    - Que bella es la burocracia
+  conversations:
+  - skinRequired: 2
+    dialogNodes:
+    - id: start
+      text: "Buenos días, chef. Confío en que el almuerzo estará a la altura."
+      options:
+      - text: "Todo estará perfecto, señor."
+        nextNodeId: good1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "Coma lo que hay."
+        nextNodeId: bad1
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 0
+      endsConversation: 0
+    - id: good1
+      text: "Eso me tranquiliza."
+      options: []
+      endsConversation: 1
+    - id: bad1
+      text: "Qué respuesta tan poco profesional."
+      options: []
+      endsConversation: 1
+  - skinRequired: 3
+    dialogNodes:
+    - id: start
+      text: "Joven, tengo bastante hambre. ¿Mi plato está listo?"
+      options:
+      - text: "Aquí tiene su comida."
+        nextNodeId: food1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+    - id: food1
+      text: "Excelente. Después pasaré al pasillo presidencial."
+      options: []
+      endsConversation: 1
+  - skinRequired: 6
+    dialogNodes:
+    - id: start
+      text: "Señor presidente."
+      options:
+      - text: "Continúe con su trabajo."
+        nextNodeId: neutral1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+    - id: neutral1
+      text: "Por supuesto."
+      options: []
+      endsConversation: 1
+  - skinRequired: 7
+    dialogNodes:
+    - id: start
+      text: "Ah, colega."
+      options:
+      - text: "La reunión será pronto."
+        nextNodeId: good2
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "No confío en los guardias."
+        nextNodeId: bad2
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 0
+      endsConversation: 0
+    - id: good2
+      text: "Siempre tan puntual."
+      options: []
+      endsConversation: 1
+    - id: bad2
+      text: "Eso suena extraño viniendo de usted."
+      options: []
+      endsConversation: 1
+  - skinRequired: 8
+    dialogNodes:
+    - id: start
+      text: "Señorita Bety, todo está listo para la reunión."
+      options:
+      - text: "Perfecto."
+        nextNodeId: neutral2
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+    - id: neutral2
+      text: "El presidente espera."
+      options: []
+      endsConversation: 1
+  defaultConversation:
+    - id: start
+      text: "Disculpe, estoy ocupado."
+      options: []
+      endsConversation: 1
+  scaredConversation:
+    - id: start
+      text: "¡¿Qué me hizo?! ¡Mi rostro! ¡Esto es imposible!"
+      options: []
+      endsConversation: 1
+  shortAfterFirstTalkConversation:
+    - id: start
+      text: "Ya hemos hablado."
+      options: []
+      endsConversation: 1
   maskIcon: {fileID: -243836231375830197, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}

@@ -14,5 +14,109 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcType: 8
   animatorSkin: {fileID: 22100000, guid: ca689eed2c205794db3d58b448cc20d2, type: 2}
-  conversations: []
+  conversations:
+  - skinRequired: 2
+    dialogNodes:
+    - id: start
+      text: "O-Oh, chef... \xBFQue hace por aqu\xED?"
+      options:
+      - text: Traje la comida de Mr President personalmente
+        nextNodeId: chef1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: Busco a su lider
+        nextNodeId: chef2
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 1
+      endsConversation: 0
+    - id: chef1
+      text: "\xBFY de casualidad no me trajo alguito?"
+      options: []
+      endsConversation: 1
+    - id: chef2
+      text: "\xBFDon Armando?...Ay que pena, esto no es Ecomoda"
+      options: []
+      endsConversation: 1
+  - skinRequired: 3
+    dialogNodes:
+    - id: start
+      text: "M-Mesero... yo no ped\xED nada..."
+      options:
+      - text: "Es cortes\xEDa del doctor."
+        nextNodeId: waiter1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 1
+      endsConversation: 0
+    - id: waiter1
+      text: E-Entiendo... gracias.
+      options: []
+      endsConversation: 1
+  - skinRequired: 5
+    dialogNodes:
+    - id: start
+      text: "D-Doctor... traje los documentos que pidi\xF3."
+      options:
+      - text: "Est\xE1n incompletos, los dem\xE1s los dej\xF3 en el sal\xF3n principal."
+        nextNodeId: doc1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+  - skinRequired: 6
+    dialogNodes:
+    - id: start
+      text: "S-Se\xF1or presidente..."
+      options:
+      - text: "Todo est\xE1 en orden. Por cierto, \xBFNo eras Latina?"
+        nextNodeId: pres1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+    - id: pres1
+      text: "Ya tengo en tr\xE1mite los papeles..."
+      options: []
+      endsConversation: 1
+  - skinRequired: 7
+    dialogNodes:
+    - id: start
+      text: "D-Doctor... \xBFnecesita algo m\xE1s?"
+      options:
+      - text: No estorbe.
+        nextNodeId: doc3
+        requiredSkin: 0
+        suspicionChange: 5
+        isLie: 0
+      - text: "Qu\xE9dese aqu\xED."
+        nextNodeId: doc4
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+    - id: doc3
+      text: "P-Perd\xF3n, doctor."
+      options: []
+      endsConversation: 1
+    - id: doc4
+      text: "S-S\xED, doctor."
+      options: []
+      endsConversation: 1
+  defaultConversation:
+  - id: start
+    text: L-Lo siento... estoy ocupada.
+    options: []
+    endsConversation: 1
+  scaredConversation:
+  - id: start
+    text: "\xA1Mi rostro! \xA1\xBFQu\xE9 me pas\xF3?!"
+    options: []
+    endsConversation: 1
+  shortAfterFirstTalkConversation:
+  - id: start
+    text: "Y-Ya le respond\xED..."
+    options: []
+    endsConversation: 1
   maskIcon: {fileID: 1288535066, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}
