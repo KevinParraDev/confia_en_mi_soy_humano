@@ -26023,6 +26023,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestroyButton
       objectReference: {fileID: 0}
+    - target: {fileID: 6602296169329988272, guid: 50616682d921fed4aaed929dd657182c, type: 3}
+      propertyPath: homeButton
+      value: 
+      objectReference: {fileID: 635039343}
     - target: {fileID: 8939030814173372884, guid: 50616682d921fed4aaed929dd657182c, type: 3}
       propertyPath: hoverGO
       value: 
