@@ -17,6 +17,8 @@ public class LoseScreenView : MonoBehaviour
         anim.SetTrigger(Constants.ANIM_PANNEL_APPEAR);
         if (playerInput != null)
             playerInput.SwitchCurrentActionMap("UI");
+
+        SoundManager.Instance.PlaySongByName(Constants.MUSIC_GAMEOVER, 0);
     }
     public void OnAppearButton()
     {

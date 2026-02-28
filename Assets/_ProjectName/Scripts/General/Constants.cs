@@ -29,6 +29,7 @@ public class Constants
     public const string MUSIC_SONG_2 = "song_2";
     public const string MUSIC_SONG_3 = "song_3";
     public const string MUSIC_SPACE = "song_space";
+    public const string MUSIC_GAMEOVER = "song_gameover";
 
     //SFX
     public const string SFX_SCARE = "scare";
