@@ -77,6 +77,9 @@ public class WaiterNPCController : NPCBaseController
 
     private void FixedUpdate()
     {
+        if (stateMachine.GetCurrentStateType() == NPCState.Stun) return;
+
+
         if (stateMachine.GetCurrentStateType() != NPCState.Panic)
         {
             if (this.IsAlarmed)
@@ -117,7 +120,7 @@ public class WaiterNPCController : NPCBaseController
                 npcInteractable.StartDialogue(startDialogue);
 
                 // Update Task Progress
-                TaskListManager.Instance?.OnUpdateNextTask();
+                TaskListManager.Instance?.OnUpdateNextTask(TaskType.CocinarPlatos);
             }
 
             if (playerController.TryGetComponent(out PlayerMovementController playerMovement))
@@ -150,9 +153,6 @@ public class WaiterNPCController : NPCBaseController
             stateMachine.ChangeState(NPCState.Idle);
             kitchenDoor.SetActive(false);
             isWaitingForDishes = false;
-
-            // Update Task To Next Task
-            TaskListManager.Instance?.OnUpdateNextTask();
         }
         else
         {

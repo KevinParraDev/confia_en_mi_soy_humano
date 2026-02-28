@@ -86,7 +86,22 @@ public class NpcInteractableController : InteractableBaseController
                 {
                     // Update Task Progress
                     TaskListManager.Instance?.OnTaskEvent(TaskType.AsimilarBurocrata, 1);
-                    TaskListManager.Instance?.OnUpdateNextTask();
+                    TaskListManager.Instance?.OnUpdateNextTask(TaskType.EntrarSalaConferencias);
+                }
+
+                if (npcData.npcType == NPC.Waiter)
+                {
+                    // Update Task Progress
+                    TaskListManager.Instance?.OnUpdateNextTask(TaskType.AsimilarBurocrata);
+                }
+
+                if (npcData.npcType == NPC.Trun)
+                {
+                    // Update Task Progress
+                    TaskListManager.Instance?.OnTaskEvent(TaskType.AislarPresidente, 1);
+
+                    // Update Task To Next Task
+                    TaskListManager.Instance?.OnUpdateNextTask(TaskType.PrepararPlaneta);
                 }
 
                 view.SetBoolAnimation(Constants.ANIM_SCARRY, true);

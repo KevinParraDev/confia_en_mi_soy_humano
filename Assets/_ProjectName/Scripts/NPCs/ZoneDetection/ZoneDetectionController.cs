@@ -51,14 +51,7 @@ public class ZoneDetectionController : MonoBehaviour
                     TaskListManager.Instance?.OnTaskEvent(TaskType.EntrarSalaConferencias, 1);
 
                     // Update Task To Next Task
-                    TaskListManager.Instance?.OnUpdateNextTask();
-                    break;
-                case MapZone.PresidentRoom:
-                    // Update Task Progress
-                    TaskListManager.Instance?.OnTaskEvent(TaskType.PrepararPlaneta, 1);
-
-                    // Update Task To Next Task
-                    TaskListManager.Instance?.OnUpdateNextTask();
+                    TaskListManager.Instance?.OnUpdateNextTask(TaskType.AislarPresidente);
                     break;
             }
         }
@@ -75,7 +68,7 @@ public class ZoneDetectionController : MonoBehaviour
                 TaskListManager.Instance?.OnTaskEvent(TaskType.AislarPresidente, 1);
 
                 // Update Task To Next Task
-                TaskListManager.Instance?.OnUpdateNextTask();
+                TaskListManager.Instance?.OnUpdateNextTask(TaskType.PrepararPlaneta);
             }
         }
 

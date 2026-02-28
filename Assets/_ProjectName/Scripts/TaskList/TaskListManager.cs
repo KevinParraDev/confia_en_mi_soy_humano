@@ -105,16 +105,19 @@ public class TaskListManager : MonoBehaviour
         }
     }
 
-    public void OnUpdateNextTask()
+    public void OnUpdateNextTask(TaskType newTask)
     {
-        currentTaskIndex++;
-        if (currentTaskIndex >= tasks.Count)
+        if (currentTaskIndex + 1 >= tasks.Count)
         {
             Debug.Log("¡Todas las tareas completadas!");
             return;
         }
 
-        taskListView.UpdateTask(tasks[currentTaskIndex].GetTaskText());
+        if (tasks[currentTaskIndex + 1].type == newTask)
+        {
+            currentTaskIndex++;
+            taskListView.UpdateTask(tasks[currentTaskIndex].GetTaskText());
+        }
     }
 
     /// <summary>
