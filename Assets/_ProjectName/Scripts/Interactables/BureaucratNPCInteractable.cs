@@ -6,14 +6,14 @@ public class BureaucratNPCInteractable : NpcInteractableController
     {
         if (playerController != null)
         {
-            if(playerController.GetCurrentSkin() == NPC.Waiter)
-            {
-                if(this.TryGetComponent<NPCBaseController>(out NPCBaseController npcController))
-                {
-                    npcController.Poison();
-                    return;
-                }
-            }
+            //if(playerController.GetCurrentSkin() == NPC.Waiter)
+            //{
+            //    if(this.TryGetComponent<NPCBaseController>(out NPCBaseController npcController))
+            //    {
+            //        npcController.Poison();
+            //        return;
+            //    }
+            //}
 
             base.Interact(playerController);
         }

@@ -12,21 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9d971bea71cd0b44b2c4e2fce537977, type: 3}
   m_Name: Bureaucrat_2
   m_EditorClassIdentifier: 
-  npcType: 5
+  npcType: 7
   animatorSkin: {fileID: 22100000, guid: 24d8faf9442376e49a2b5b8a659d6ac6, type: 2}
-  dialogs:
-  - npcToResponse: 0
-    dialogs: []
-  - npcToResponse: 1
-    dialogs:
-    - Que Eres?
-  - npcToResponse: 2
-    dialogs:
-    - Vuelve a la cocina!
-  - npcToResponse: 3
-    dialogs:
-    - Que rayos me diste?
-  - npcToResponse: 5
-    dialogs:
-    - Que bella es la burocracia
+  conversations: []
+  defaultConversation: []
+  scaredConversation: []
+  shortAfterFirstTalkConversation: []
   maskIcon: {fileID: 3224611297109525153, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}

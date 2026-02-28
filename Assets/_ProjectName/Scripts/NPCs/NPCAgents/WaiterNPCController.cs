@@ -114,9 +114,12 @@ public class WaiterNPCController : NPCBaseController
             else
             {
                 npcInteractable.StartDialogue(startDialogue);
+
+                // Update Task Progress
+                TaskListManager.Instance?.OnUpdateNextTask();
             }
 
-            if(playerController.TryGetComponent(out PlayerMovementController playerMovement))
+            if (playerController.TryGetComponent(out PlayerMovementController playerMovement))
             {
                 playerMovement.StopMovement();
             }
@@ -146,6 +149,9 @@ public class WaiterNPCController : NPCBaseController
             stateMachine.ChangeState(NPCState.Idle);
             kitchenDoor.SetActive(false);
             isWaitingForDishes = false;
+
+            // Update Task To Next Task
+            TaskListManager.Instance?.OnUpdateNextTask();
         }
         else
         {
@@ -164,5 +170,8 @@ public class WaiterNPCController : NPCBaseController
     public void RecolectDish()
     {
         dishesToRecolect -= 1;
+
+        // Update Task Progress
+        TaskListManager.Instance?.OnTaskEvent(TaskType.CocinarPlatos, 1);
     }
 }

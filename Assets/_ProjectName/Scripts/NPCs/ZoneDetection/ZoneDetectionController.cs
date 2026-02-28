@@ -37,13 +37,30 @@ public class ZoneDetectionController : MonoBehaviour
         if (collision.CompareTag("NPC"))
         {
             zoneCurrentNPCs++;
-            Debug.Log($"NPC entered {zone} zone. Current NPCs: {zoneCurrentNPCs}");
         }
 
         if (collision.CompareTag("Player"))
         {
             isPlayerInZone = true;
             Debug.Log($"Player entered {zone} zone.");
+
+            switch (zone)
+            {
+                case MapZone.ConferenceRoom:
+                    // Update Task Progress
+                    TaskListManager.Instance?.OnTaskEvent(TaskType.EntrarSalaConferencias, 1);
+
+                    // Update Task To Next Task
+                    TaskListManager.Instance?.OnUpdateNextTask();
+                    break;
+                case MapZone.PresidentRoom:
+                    // Update Task Progress
+                    TaskListManager.Instance?.OnTaskEvent(TaskType.PrepararPlaneta, 1);
+
+                    // Update Task To Next Task
+                    TaskListManager.Instance?.OnUpdateNextTask();
+                    break;
+            }
         }
     }
 
@@ -51,13 +68,20 @@ public class ZoneDetectionController : MonoBehaviour
     {
         if (collision.CompareTag("NPC")) {
             zoneCurrentNPCs--;
-            Debug.Log($"NPC exited {zone} zone. Current NPCs: {zoneCurrentNPCs}");
+
+            if(zone == MapZone.ConferenceRoom && zoneCurrentNPCs == 0)
+            {
+                // Update Task Progress
+                TaskListManager.Instance?.OnTaskEvent(TaskType.AislarPresidente, 1);
+
+                // Update Task To Next Task
+                TaskListManager.Instance?.OnUpdateNextTask();
+            }
         }
 
         if (collision.CompareTag("Player"))
         {
             isPlayerInZone = false;
-            Debug.Log($"Player exited {zone} zone.");
         }
     }
 }

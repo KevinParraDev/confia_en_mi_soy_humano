@@ -81,6 +81,14 @@ public class NpcInteractableController : InteractableBaseController
             {
                 playerController.ChangeSkin(npcData);
                 onNPCIsCopied?.Invoke();
+
+                if (npcData.npcType == NPC.Bureaucrat_1)
+                {
+                    // Update Task Progress
+                    TaskListManager.Instance?.OnTaskEvent(TaskType.AsimilarBurocrata, 1);
+                    TaskListManager.Instance?.OnUpdateNextTask();
+                }
+
                 view.SetBoolAnimation(Constants.ANIM_SCARRY, true);
                 npcData.isScared = true;
 
