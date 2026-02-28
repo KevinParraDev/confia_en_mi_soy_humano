@@ -31,14 +31,17 @@ MonoBehaviour:
         suspicionChange: 10
         isLie: 1
       endsConversation: 0
+      actionID: 
     - id: chef1
       text: "\xBFY de casualidad no me trajo alguito?"
       options: []
       endsConversation: 1
+      actionID: 
     - id: chef2
       text: "\xBFDon Armando?...Ay que pena, esto no es Ecomoda"
       options: []
       endsConversation: 1
+      actionID: 
   - skinRequired: 3
     dialogNodes:
     - id: start
@@ -50,10 +53,12 @@ MonoBehaviour:
         suspicionChange: 0
         isLie: 1
       endsConversation: 0
+      actionID: 
     - id: waiter1
       text: E-Entiendo... gracias.
       options: []
       endsConversation: 1
+      actionID: 
   - skinRequired: 5
     dialogNodes:
     - id: start
@@ -65,10 +70,12 @@ MonoBehaviour:
         suspicionChange: 0
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: doc1
       text: "Ya voy se\xF1or"
       options: []
       endsConversation: 1
+      actionID: Moverse
   - skinRequired: 6
     dialogNodes:
     - id: start
@@ -80,10 +87,12 @@ MonoBehaviour:
         suspicionChange: 0
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: pres1
       text: "Ya tengo en tr\xE1mite los papeles..."
       options: []
       endsConversation: 1
+      actionID: 
   - skinRequired: 7
     dialogNodes:
     - id: start
@@ -100,27 +109,33 @@ MonoBehaviour:
         suspicionChange: 0
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: doc3
       text: "P-Perd\xF3n, doctor."
       options: []
       endsConversation: 1
+      actionID: 
     - id: doc4
       text: "S-S\xED, doctor."
       options: []
       endsConversation: 1
+      actionID: 
   defaultConversation:
   - id: start
     text: L-Lo siento... estoy ocupada.
     options: []
     endsConversation: 1
+    actionID: 
   scaredConversation:
   - id: start
     text: "\xA1Mi rostro! \xA1\xBFQu\xE9 me pas\xF3?!"
     options: []
     endsConversation: 1
+    actionID: 
   shortAfterFirstTalkConversation:
   - id: start
     text: "Y-Ya le respond\xED..."
     options: []
     endsConversation: 1
+    actionID: 
   maskIcon: {fileID: 1288535066, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}

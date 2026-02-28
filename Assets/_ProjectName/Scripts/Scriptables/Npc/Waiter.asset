@@ -18,49 +18,58 @@ MonoBehaviour:
   - skinRequired: 2
     dialogNodes:
     - id: start
-      text: "Uf… por fin terminé. Esos burócratas comen como si fuera el fin del mundo."
+      text: "Uf\u2026 por fin termin\xE9. Esos bur\xF3cratas comen como si fuera
+        el fin del mundo."
       options:
-      - text: "¿Quién era el más importante?"
+      - text: "\xBFQui\xE9n era el m\xE1s importante?"
         nextNodeId: info1
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
-      - text: "¿Quién puede pasar al pasillo?"
+      - text: "\xBFQui\xE9n puede pasar al pasillo?"
         nextNodeId: info2
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
-      - text: "Deberías trabajar más rápido."
+      - text: "Deber\xEDas trabajar m\xE1s r\xE1pido."
         nextNodeId: bad1
         requiredSkin: 0
         suspicionChange: 10
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: info1
-      text: "El Burócrata_1. Es el único que tiene acceso directo al pasillo presidencial."
+      text: "El de traje negro Es el \xFAnico que tiene acceso directo al pasillo
+        presidencial."
       options: []
       endsConversation: 1
+      actionID: 
     - id: info2
-      text: "Solo el Burócrata_1. Los guardias solo lo dejan pasar a él."
+      text: "Solo el de traje negro Los guardias solo lo dejan pasar a \xE9l."
       options: []
       endsConversation: 1
+      actionID: 
     - id: bad1
-      text: "Oye, yo corro todo el día. No me vengas con eso."
+      text: "Oye, yo corro todo el d\xEDa. No me vengas con eso."
       options: []
       endsConversation: 1
+      actionID: 
   defaultConversation:
   - id: start
-    text: "Estoy ocupado."
+    text: Estoy ocupado.
     options: []
     endsConversation: 1
+    actionID: 
   scaredConversation:
   - id: start
-    text: "¡¿Dónde está mi cara?! ¡¿Qué me hiciste?!"
+    text: "\xA1\xBFD\xF3nde est\xE1 mi cara?! \xA1\xBFQu\xE9 me hiciste?!"
     options: []
     endsConversation: 1
+    actionID: 
   shortAfterFirstTalkConversation:
   - id: start
-    text: "Ya te dije todo lo que sé."
+    text: "Ya te dije todo lo que s\xE9."
     options: []
     endsConversation: 1
+    actionID: 
   maskIcon: {fileID: -5104567295708027523, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}

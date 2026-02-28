@@ -111,6 +111,7 @@ public class GuardNPCController : NPCBaseController
             else if (detectionController.IsPlayerInRange && this.HasReachedDestination())
             {
                 // launch a dialogue & Trigger the menace level if not is the allowed type
+                Debug.Log("Permitido: " + npcAllowed + " - Player: " + playerController.GetCurrentSkin());
                 if (npcAllowed != playerController.GetCurrentSkin())
                 {
                     isInDialogue = true;

@@ -60,7 +60,8 @@ public class BurecrautNPCController : NPCBaseController
 
         if(stateMachine.GetCurrentStateType() == NPCState.Idle)
         {
-            stateMachine.ChangeState(NPCState.GoToDialogue);
+            //stateMachine.ChangeState(NPCState.GoToDialogue);
+            stateMachine.ChangeState(NPCState.InBath);
         }
     }
 

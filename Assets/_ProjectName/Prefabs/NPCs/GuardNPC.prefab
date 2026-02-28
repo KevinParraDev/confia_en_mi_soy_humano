@@ -805,12 +805,13 @@ MonoBehaviour:
   ChaseFovAngle: 90
   chaseFovDistance: 4
   chaseDuration: 5
+  kevinTestState: {fileID: 0}
   npcFov: {fileID: 1981974612670455335}
   fovAngle: 360
   fovViewDistance: 2
   IdlePlace: {fileID: 5816033635414380887}
   doorCollider: {fileID: 1267660859267261096}
-  npcAllowed: 000000000000000000000000
+  npcAllowed: 5
 --- !u!114 &8380068682148863723
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,109 +18,124 @@ MonoBehaviour:
   - skinRequired: 2
     dialogNodes:
     - id: start
-      text: "Buenos días, chef. Confío en que el almuerzo estará a la altura."
+      text: "Buenos d\xEDas, chef. Conf\xEDo en que el almuerzo estar\xE1 a la altura."
       options:
-      - text: "Todo estará perfecto, señor."
+      - text: "Todo estar\xE1 perfecto, se\xF1or."
         nextNodeId: good1
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
-      - text: "Coma lo que hay."
+      - text: Coma lo que hay.
         nextNodeId: bad1
         requiredSkin: 0
         suspicionChange: 10
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: good1
-      text: "Eso me tranquiliza."
+      text: Eso me tranquiliza.
       options: []
       endsConversation: 1
+      actionID: 
     - id: bad1
-      text: "Qué respuesta tan poco profesional."
+      text: "Qu\xE9 respuesta tan poco profesional."
       options: []
       endsConversation: 1
+      actionID: 
   - skinRequired: 3
     dialogNodes:
     - id: start
-      text: "Joven, tengo bastante hambre. ¿Mi plato está listo?"
+      text: "Joven, tengo bastante hambre. \xBFMi plato est\xE1 listo?"
       options:
-      - text: "Aquí tiene su comida."
+      - text: "Aqu\xED tiene su comida."
         nextNodeId: food1
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: food1
-      text: "Excelente. Después pasaré al pasillo presidencial."
+      text: "Excelente. Tal vez pase por el ba\xF1o y directo a la reuni\xF3n."
       options: []
       endsConversation: 1
+      actionID: Moverse
   - skinRequired: 6
     dialogNodes:
     - id: start
-      text: "Señor presidente."
+      text: "Se\xF1or presidente."
       options:
-      - text: "Continúe con su trabajo."
+      - text: "Contin\xFAe con su trabajo."
         nextNodeId: neutral1
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: neutral1
-      text: "Por supuesto."
+      text: Por supuesto.
       options: []
       endsConversation: 1
+      actionID: 
   - skinRequired: 7
     dialogNodes:
     - id: start
-      text: "Ah, colega."
+      text: Ah, colega.
       options:
-      - text: "La reunión será pronto."
+      - text: "La reuni\xF3n ser\xE1 pronto."
         nextNodeId: good2
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
-      - text: "No confío en los guardias."
+      - text: "No conf\xEDo en los guardias."
         nextNodeId: bad2
         requiredSkin: 0
         suspicionChange: 10
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: good2
-      text: "Siempre tan puntual."
+      text: Siempre tan puntual.
       options: []
       endsConversation: 1
+      actionID: 
     - id: bad2
-      text: "Eso suena extraño viniendo de usted."
+      text: "Eso suena extra\xF1o viniendo de usted."
       options: []
       endsConversation: 1
+      actionID: 
   - skinRequired: 8
     dialogNodes:
     - id: start
-      text: "Señorita Bety, todo está listo para la reunión."
+      text: "Se\xF1orita Bety, todo est\xE1 listo para la reuni\xF3n."
       options:
-      - text: "Perfecto."
+      - text: Perfecto.
         nextNodeId: neutral2
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: neutral2
-      text: "El presidente espera."
+      text: El presidente espera.
       options: []
       endsConversation: 1
+      actionID: 
   defaultConversation:
-    - id: start
-      text: "Disculpe, estoy ocupado."
-      options: []
-      endsConversation: 1
+  - id: start
+    text: Disculpe, estoy ocupado.
+    options: []
+    endsConversation: 1
+    actionID: 
   scaredConversation:
-    - id: start
-      text: "¡¿Qué me hizo?! ¡Mi rostro! ¡Esto es imposible!"
-      options: []
-      endsConversation: 1
+  - id: start
+    text: "\xA1\xBFQu\xE9 me hizo?! \xA1Mi rostro! \xA1Esto es imposible!"
+    options: []
+    endsConversation: 1
+    actionID: 
   shortAfterFirstTalkConversation:
-    - id: start
-      text: "Ya hemos hablado."
-      options: []
-      endsConversation: 1
+  - id: start
+    text: Ya hemos hablado.
+    options: []
+    endsConversation: 1
+    actionID: 
   maskIcon: {fileID: -243836231375830197, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}

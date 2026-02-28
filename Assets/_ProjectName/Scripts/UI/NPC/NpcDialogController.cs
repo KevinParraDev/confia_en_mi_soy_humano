@@ -76,17 +76,25 @@ public class NpcDialogController : AnimatorControllerBase
 
         ClearOptions();
 
+        if (!string.IsNullOrEmpty(currentNode.actionID))
+        {
+            if (currentNode.actionID == "Moverse")
+            {
+                BurecrautNPCController npc = GetComponentInParent<BurecrautNPCController>();
+                if (npc != null)
+                {
+                    npc.Poison();
+                }
+            }
+
+        }
+
         if (currentNode.endsConversation)
         {
             StartCoroutine(WaitAndEndAfterTyping());
             return;
         }
 
-        if(!string.IsNullOrEmpty(currentNode.actionID))
-        {
-            if (currentNode.actionID == "betty")
-                Debug.Log("Betty");
-        }
 
         foreach (var option in currentNode.options)
         {
