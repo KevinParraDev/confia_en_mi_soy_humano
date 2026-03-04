@@ -7,6 +7,7 @@ public class NpcInteractableController : InteractableBaseController
     [SerializeField] private NpcDataSO npcData;
     [SerializeField] private NpcDialogController dialogController;
     private CharacterView view;
+    private bool isScared = false;
 
     public static Action onNPCIsCopied;
 
@@ -38,7 +39,7 @@ public class NpcInteractableController : InteractableBaseController
 
         NPC playerSkin = playerController.GetCurrentSkin();
 
-        DialogNode startNode = npcData.GetStartNode(playerSkin);
+        DialogNode startNode = npcData.GetStartNode(playerSkin, isScared);
 
         if (startNode != null)
         {
@@ -51,7 +52,7 @@ public class NpcInteractableController : InteractableBaseController
     }
     public void StartDialogue(NPC npcType)
     {
-        DialogNode startNode = npcData.GetStartNode(npcType);
+        DialogNode startNode = npcData.GetStartNode(npcType, isScared);
 
         if (startNode != null)
         {
@@ -111,7 +112,7 @@ public class NpcInteractableController : InteractableBaseController
                 }
 
                 view.SetBoolAnimation(Constants.ANIM_SCARRY, true);
-                npcData.isScared = true;
+                isScared = true;
 
                 if (this.TryGetComponent<NPCBaseController>(out NPCBaseController npcController))
                 {

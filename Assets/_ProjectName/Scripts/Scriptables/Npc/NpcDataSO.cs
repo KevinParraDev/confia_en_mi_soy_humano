@@ -14,19 +14,19 @@ public class NpcDataSO : ScriptableObject
     public List<DialogNode> scaredConversation;
     public List<DialogNode> shortAfterFirstTalkConversation;
 
-    [NonSerialized] public bool hasSpoken;
-    [NonSerialized] public bool isScared;
+    //[NonSerialized] public bool hasSpoken;
+    //[NonSerialized] public bool isScared;
 
 
     public Sprite maskIcon;
 
-    public DialogNode GetStartNode(NPC playerSkin)
+    public DialogNode GetStartNode(NPC playerSkin, bool isScared = false)
     {
         if (isScared && scaredConversation != null && scaredConversation.Count > 0)
             return scaredConversation[0];
 
-        if (hasSpoken && shortAfterFirstTalkConversation != null && shortAfterFirstTalkConversation.Count > 0)
-            return shortAfterFirstTalkConversation[0];
+        //if (hasSpoken && shortAfterFirstTalkConversation != null && shortAfterFirstTalkConversation.Count > 0)
+        //    return shortAfterFirstTalkConversation[0];
 
         var conversation = conversations.Find(c => c.skinRequired == playerSkin);
 
