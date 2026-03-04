@@ -41,9 +41,17 @@ public class PlayerInteractableController : MonoBehaviour
     {
         if (interactableInRange != null)
         {
-            interactableInRange.Transform(playerController);
             if (interactableInRange is NpcInteractableController)
             {
+                // Temporary Fix for the multiple
+                if (interactableInRange.gameObject.TryGetComponent(out NpcInteractableController npc))
+                {
+                    if (npc.GetData().npcType == playerController.GetCurrentSkin()) return;
+                }
+
+                interactableInRange.Transform(playerController);
+
+
                 SoundManager.Instance.PlaySFXByName(Constants.SFX_ACTION_1);
                 SoundManager.Instance.PlaySFXByName(Constants.SFX_WOOSH_1);
                 playerCanvasController?.PlayChangeSkinAnimation();

@@ -165,6 +165,10 @@ public class WaiterNPCController : NPCBaseController
     public override void StunNPC()
     {
         base.StunNPC();
+        if (playerController.TryGetComponent(out PlayerMovementController playerMovement))
+        {
+            playerMovement.ResumeMovement();
+        }
         kitchenDoor.SetActive(false);
     }
 

@@ -77,6 +77,12 @@ public class NpcInteractableController : InteractableBaseController
         base.Transform();
         if (playerController != null)
         {
+            Debug.Log("NPC Type: " + npcData.npcType + " Player Skin: " + playerController.GetCurrentSkin());
+            if (playerController.GetCurrentSkin() == npcData.npcType)
+            {
+                return;
+            }
+
             if(npcData.npcType != NPC.Guard)
             {
                 playerController.ChangeSkin(npcData);
