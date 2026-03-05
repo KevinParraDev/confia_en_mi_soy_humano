@@ -808,7 +808,7 @@ MonoBehaviour:
   kevinTestState: {fileID: 0}
   npcFov: {fileID: 1981974612670455335}
   fovAngle: 360
-  fovViewDistance: 2
+  fovViewDistance: 1.5
   IdlePlace: {fileID: 5816033635414380887}
   doorCollider: {fileID: 1267660859267261096}
   npcAllowed: 5
