@@ -47,6 +47,7 @@ public class PlayerInteractableController : MonoBehaviour
                 if (interactableInRange.gameObject.TryGetComponent(out NpcInteractableController npc))
                 {
                     if (npc.GetData().npcType == playerController.GetCurrentSkin()) return;
+                    if (npc.GetData().npcType == NPC.Guard) return;
                 }
 
                 interactableInRange.Transform(playerController);
