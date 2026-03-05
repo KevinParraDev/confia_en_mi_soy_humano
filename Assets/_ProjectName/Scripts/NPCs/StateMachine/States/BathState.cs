@@ -9,6 +9,10 @@ public class BathState : IState
     private float timer;
     private bool stayInBath = true;
 
+    private float timeToStartMoving = 3f;
+    private float timerToMoving;
+    private bool isMoving = false;
+
     public BathState(NPCBaseController npcController, Transform bathroom, float inBathDuration, bool stayInBath = true)
     {
         this.npcController = npcController;
@@ -19,13 +23,26 @@ public class BathState : IState
 
     public void Enter()
     {
-        npcController.SetNewDestination(bathroom.position);
-        npcController.ResumeMovement();
+        timerToMoving = 0;
+        timer = 0;
+        isMoving = false;
     }
 
     public void Execute()
     {
-        
+
+        if (timerToMoving < timeToStartMoving)
+        {
+            timerToMoving += Time.deltaTime;
+            return;
+        }
+
+        if (!isMoving)
+        {
+            npcController.SetNewDestination(bathroom.position);
+            npcController.ResumeMovement();
+            isMoving = true;
+        }
 
         if (npcController.HasReachedDestination())
         {

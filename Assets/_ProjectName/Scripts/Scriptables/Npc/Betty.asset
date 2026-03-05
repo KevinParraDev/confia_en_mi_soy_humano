@@ -72,7 +72,7 @@ MonoBehaviour:
       endsConversation: 0
       actionID: 
     - id: doc1
-      text: "Ya voy se\xF1or"
+      text: Cl-Claro Doctor, ya voy a recogerlos, que pena con usted
       options: []
       endsConversation: 1
       actionID: Moverse
