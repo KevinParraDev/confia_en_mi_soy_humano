@@ -5,6 +5,7 @@ public class KevinTestState : GameStateBase
     [SerializeField] private PlayerController playerController;
     [SerializeField] private AlarmBarController alarmBarController;
     [SerializeField] private LoseScreenView loseScreen;
+    [SerializeField] private NPCBaseController[] npcsAgentList;
     protected override void Awake()
     {
         base.Awake();
@@ -28,9 +29,9 @@ public class KevinTestState : GameStateBase
     public void Initialize()
     {
         SoundManager.Instance.PlaySongByName(Constants.MUSIC_SONG_2, 0, 1, 1);
-
-        //playerController?.Initialize();
         alarmBarController?.Initialize();
+        //foreach (var npc in npcsAgentList)
+        //    npc.Initialize(playerController);
     }
 
     public void GoHome()

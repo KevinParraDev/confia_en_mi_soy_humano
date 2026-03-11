@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class WinScreenView : MonoBehaviour
 {
@@ -14,10 +15,13 @@ public class WinScreenView : MonoBehaviour
     }
     public void OnAppearButton()
     {
+        if(homeButton == null)
+            homeButton = GetComponentInChildren<Button>().gameObject;
         EventSystem.current.SetSelectedGameObject(homeButton);
     }
     public void Appear()
     {
+        gameObject.SetActive(true);
         anim.SetTrigger(Constants.ANIM_PANNEL_APPEAR);
         if (playerInput != null)
             playerInput.SwitchCurrentActionMap("UI");

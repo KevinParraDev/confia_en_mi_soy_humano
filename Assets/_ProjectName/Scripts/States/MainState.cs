@@ -6,6 +6,7 @@ public class MainState : GameStateBase
     [SerializeField] private SettingsManager settingsManager;
     [SerializeField] private MainController main;
     [SerializeField] private VideoPlayer video;
+    [SerializeField] private OnboardingVideoController onboardingVideoController;
     public void Dependencies()
     {
 
@@ -19,40 +20,31 @@ public class MainState : GameStateBase
         settingsManager?.Initialize();
         main?.Initialize();
         main.PlayActivated += OnPressPlay;
+        onboardingVideoController.Ended += StartGame;
+        onboardingVideoController.Initialize();
     }
     public void OnPressPlay()
     {
-        //nextState = States.KevinScene;
-        //ExitState();
-
         video.Play();
         video.loopPointReached += OnVideoFinished;
     }
     private void OnVideoFinished(VideoPlayer vp)
+    {
+        StartGame();
+    }
+    private void StartGame()
     {
         nextState = States.KevinScene;
         ExitState();
     }
     public override void ExitState()
     {
-        base.ExitState();
-
         settingsManager?.Conclude();
         main?.Conclude();
         main.PlayActivated -= OnPressPlay;
-    }
+        onboardingVideoController.Ended -= StartGame;
+        onboardingVideoController.Conclude();
 
-    //TODO:DEBUG
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            nextState = States.Onboarding;
-            ExitState();
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-
-        }
+        base.ExitState();
     }
 }

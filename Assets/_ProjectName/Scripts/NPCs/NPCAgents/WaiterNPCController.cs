@@ -77,6 +77,7 @@ public class WaiterNPCController : NPCBaseController
 
     private void FixedUpdate()
     {
+
         if (stateMachine.GetCurrentStateType() == NPCState.Stun) return;
 
 

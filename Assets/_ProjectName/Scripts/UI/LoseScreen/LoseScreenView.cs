@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class LoseScreenView : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class LoseScreenView : MonoBehaviour
     }
     public void Appear()
     {
+        gameObject.SetActive(true);
         anim.SetTrigger(Constants.ANIM_PANNEL_APPEAR);
         if (playerInput != null)
             playerInput.SwitchCurrentActionMap("UI");
@@ -22,6 +24,8 @@ public class LoseScreenView : MonoBehaviour
     }
     public void OnAppearButton()
     {
+        if (homeButton == null)
+            homeButton = GetComponentInChildren<Button>().gameObject;
         EventSystem.current.SetSelectedGameObject(homeButton);
     }
 }

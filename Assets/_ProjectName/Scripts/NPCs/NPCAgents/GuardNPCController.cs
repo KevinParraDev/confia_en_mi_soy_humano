@@ -75,7 +75,7 @@ public class GuardNPCController : NPCBaseController
 
     private void FixedUpdate()
     {
-        if(stateMachine.GetCurrentStateType() != NPCState.Chase)
+        if (stateMachine.GetCurrentStateType() != NPCState.Chase)
         {
             if (this.IsAlarmed)
             {

@@ -578,6 +578,10 @@ PrefabInstance:
       propertyPath: kevinTestState
       value: 
       objectReference: {fileID: 1969567915}
+    - target: {fileID: 7366668716393488446, guid: b0add0b262ff61c4da50c7949d2f8f71, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 920751833}
     - target: {fileID: 8819146071525536217, guid: b0add0b262ff61c4da50c7949d2f8f71, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 10.222412
@@ -619,6 +623,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2406687781679475289, guid: b0add0b262ff61c4da50c7949d2f8f71, type: 3}
   m_PrefabInstance: {fileID: 30124424}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &30124426 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7366668716393488446, guid: b0add0b262ff61c4da50c7949d2f8f71, type: 3}
+  m_PrefabInstance: {fileID: 30124424}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088603882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa75f91237b3ec458c5899ef070067b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &30377822
 GameObject:
   m_ObjectHideFlags: 0
@@ -5278,6 +5293,10 @@ PrefabInstance:
       propertyPath: servingStation
       value: 
       objectReference: {fileID: 2095860754}
+    - target: {fileID: 2719851988991461180, guid: edce89c9b184f604d939e24f884b2634, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 920751833}
     - target: {fileID: 2918210448021149682, guid: edce89c9b184f604d939e24f884b2634, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -5428,6 +5447,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8042585900645504261, guid: edce89c9b184f604d939e24f884b2634, type: 3}
   m_PrefabInstance: {fileID: 503210220}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &503210222 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2719851988991461180, guid: edce89c9b184f604d939e24f884b2634, type: 3}
+  m_PrefabInstance: {fileID: 503210220}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d739cbe7e6441445a4bd1fc1e2d1e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &505853621
 GameObject:
   m_ObjectHideFlags: 0
@@ -12281,6 +12311,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8047172859935294715, guid: 1bc89efe537c3794bbe20b1eab6d7a77, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 920751833}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12291,6 +12325,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7296886211972663245, guid: 1bc89efe537c3794bbe20b1eab6d7a77, type: 3}
   m_PrefabInstance: {fileID: 1043338241}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1043338243 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8047172859935294715, guid: 1bc89efe537c3794bbe20b1eab6d7a77, type: 3}
+  m_PrefabInstance: {fileID: 1043338241}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158bbd747c410e4469ef873b7d5d774d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1043604584 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5881889486620587354, guid: d1be7e61e695729469a0abaece14e48a, type: 3}
@@ -14021,7 +14066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1269714901
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17260,6 +17305,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1176796962}
     m_Modifications:
+    - target: {fileID: 451237339380545437, guid: 9fbd0d8fbd0f91246940b7be5543f16e, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 920751833}
     - target: {fileID: 499395180747979442, guid: 9fbd0d8fbd0f91246940b7be5543f16e, type: 3}
       propertyPath: m_Name
       value: BureaucratNPC
@@ -17318,6 +17367,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 913649863829451947, guid: 9fbd0d8fbd0f91246940b7be5543f16e, type: 3}
   m_PrefabInstance: {fileID: 1479175461}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1479175463 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 451237339380545437, guid: 9fbd0d8fbd0f91246940b7be5543f16e, type: 3}
+  m_PrefabInstance: {fileID: 1479175461}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158bbd747c410e4469ef873b7d5d774d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1483732479 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6720248131760408127, guid: 764b9075b42fdf84285f1f34f1ba62ce, type: 3}
@@ -21264,6 +21324,10 @@ PrefabInstance:
       propertyPath: kevinTestState
       value: 
       objectReference: {fileID: 1969567915}
+    - target: {fileID: 7366668716393488446, guid: b0add0b262ff61c4da50c7949d2f8f71, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 920751833}
     - target: {fileID: 8380068682148863723, guid: b0add0b262ff61c4da50c7949d2f8f71, type: 3}
       propertyPath: npcData
       value: 
@@ -21360,6 +21424,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2406687781679475289, guid: b0add0b262ff61c4da50c7949d2f8f71, type: 3}
   m_PrefabInstance: {fileID: 1739126067}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1739126071 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7366668716393488446, guid: b0add0b262ff61c4da50c7949d2f8f71, type: 3}
+  m_PrefabInstance: {fileID: 1739126067}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739126068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa75f91237b3ec458c5899ef070067b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1749550881
 GameObject:
   m_ObjectHideFlags: 0
@@ -24631,6 +24706,13 @@ MonoBehaviour:
   playerController: {fileID: 920751833}
   alarmBarController: {fileID: 355849719}
   loseScreen: {fileID: 1269714906}
+  npcsAgentList:
+  - {fileID: 1043338243}
+  - {fileID: 1479175463}
+  - {fileID: 6595328880219553745}
+  - {fileID: 503210222}
+  - {fileID: 30124426}
+  - {fileID: 1739126071}
 --- !u!1001 &1975799532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26003,6 +26085,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WInScreenCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 532579939999969023, guid: 50616682d921fed4aaed929dd657182c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2666344573505047303, guid: 50616682d921fed4aaed929dd657182c, type: 3}
       propertyPath: m_Size.x
       value: 2.2041678
@@ -26651,6 +26737,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3373885394975578504, guid: d4c28b5f2fb73c74cbd9797eaf64f2f8, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 920751833}
     - target: {fileID: 8235965262232041217, guid: d4c28b5f2fb73c74cbd9797eaf64f2f8, type: 3}
       propertyPath: m_Name
       value: BureacratBetty
@@ -26700,6 +26790,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4c28b5f2fb73c74cbd9797eaf64f2f8, type: 3}
+--- !u!114 &6595328880219553745 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3373885394975578504, guid: d4c28b5f2fb73c74cbd9797eaf64f2f8, type: 3}
+  m_PrefabInstance: {fileID: 6595328880219553744}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158bbd747c410e4469ef873b7d5d774d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6843113330696859615
 PrefabInstance:
   m_ObjectHideFlags: 0

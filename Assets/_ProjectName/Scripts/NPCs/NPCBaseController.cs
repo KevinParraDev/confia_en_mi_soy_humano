@@ -13,7 +13,7 @@ public abstract class NPCBaseController : MonoBehaviour
 
     // Provisional Method
     protected Transform playerTransform;
-    protected PlayerController playerController;
+    [SerializeField] protected PlayerController playerController;
     protected CharacterView characterView;
 
     private bool isAlarmed;
@@ -24,10 +24,14 @@ public abstract class NPCBaseController : MonoBehaviour
 
     private void Awake()
     {
-        Initialize(FindAnyObjectByType<PlayerController>());
+        Initialize(playerController);
     }
+
     public void Initialize(PlayerController _player)
     {
+        if(playerController == null)
+            playerController = FindAnyObjectByType<PlayerController>();
+
         characterView = GetComponentInChildren<CharacterView>();
         agent = GetComponent<NavMeshAgent>();
         stateMachine = GetComponent<StateMachine>();
@@ -65,6 +69,8 @@ public abstract class NPCBaseController : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.speed = moveSpeed;
+
+        Debug.Log("Initialized");
     }
 
     public void Conclude()
@@ -136,6 +142,10 @@ public abstract class NPCBaseController : MonoBehaviour
     public virtual void BackToPatrol()
     {
         stateMachine.ChangeState(NPCState.Patrol);
+    }
+    private void OnDestroy()
+    {
+        Conclude();
     }
 
     public virtual void SetToDialogue() { }
