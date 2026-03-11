@@ -34,14 +34,24 @@ MonoBehaviour:
       actionID: 
     - id: chef1
       text: "\xBFY de casualidad no me trajo alguito?"
-      options: []
-      endsConversation: 1
+      options:
+      - text: "Lo dej\xE9 en el sal\xF3n"
+        nextNodeId: chef3
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
       actionID: 
     - id: chef2
       text: "\xBFDon Armando?...Ay que pena, esto no es Ecomoda"
       options: []
       endsConversation: 1
       actionID: 
+    - id: chef3
+      text: Espereme ya vuelvo, no le diga a mr president.
+      options: []
+      endsConversation: 1
+      actionID: Moverse
   - skinRequired: 3
     dialogNodes:
     - id: start
@@ -52,6 +62,11 @@ MonoBehaviour:
         requiredSkin: 0
         suspicionChange: 0
         isLie: 1
+      - text: Es comida humana
+        nextNodeId: waiter2
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 1
       endsConversation: 0
       actionID: 
     - id: waiter1
@@ -59,21 +74,62 @@ MonoBehaviour:
       options: []
       endsConversation: 1
       actionID: 
+    - id: waiter2
+      text: "Ay c\xF3mo as\xED? Usted qui\xE9n es?"
+      options: []
+      endsConversation: 1
+      actionID: 
   - skinRequired: 5
     dialogNodes:
     - id: start
-      text: "D-Doctor... traje los documentos que pidi\xF3."
+      text: "D-Doctor... como me le va?. Me alegra mucho verlo por ac\xE1"
       options:
-      - text: "Est\xE1n incompletos, los dem\xE1s los dej\xF3 en el sal\xF3n principal."
+      - text: "Deber\xEDa estar en el sal\xF3n principal"
         nextNodeId: doc1
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 0
+      - text: Lo mismo digo
+        nextNodeId: doc2
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
       endsConversation: 0
       actionID: 
     - id: doc1
-      text: Cl-Claro Doctor, ya voy a recogerlos, que pena con usted
+      text: "Ay \xBFc\xF3mo as\xED? Si me dijeron que asistiera a la reun\xF3n, muy
+        raro"
+      options:
+      - text: "Ret\xEDrese!."
+        nextNodeId: doc3
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 0
+      endsConversation: 0
+      actionID: 
+    - id: doc2
+      text: "\xA1Tan Divino!, aqu\xED le tengo el informe para la junta."
+      options:
+      - text: Faltan documentos.
+        nextNodeId: doc4
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+      actionID: 
+    - id: doc3
+      text: "Ser\xE9 fea pero no bruta, aqu\xED pasa algo raro."
       options: []
+      endsConversation: 1
+      actionID: Moverse
+    - id: doc4
+      text: "Ay que pena, tal vez los dej\xE9 en el sal\xF3n"
+      options:
+      - text: "Ret\xEDrese!."
+        nextNodeId: doc3
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 0
       endsConversation: 1
       actionID: Moverse
   - skinRequired: 6
@@ -81,7 +137,7 @@ MonoBehaviour:
     - id: start
       text: "S-Se\xF1or presidente..."
       options:
-      - text: "Todo est\xE1 en orden. Por cierto, \xBFNo eras Latina?"
+      - text: "\xBFQu\xE9 hace aqu\xED una Latina?"
         nextNodeId: pres1
         requiredSkin: 0
         suspicionChange: 0
@@ -99,23 +155,23 @@ MonoBehaviour:
       text: "D-Doctor... \xBFnecesita algo m\xE1s?"
       options:
       - text: No estorbe.
-        nextNodeId: doc3
+        nextNodeId: bur21
         requiredSkin: 0
         suspicionChange: 5
         isLie: 0
       - text: "Qu\xE9dese aqu\xED."
-        nextNodeId: doc4
+        nextNodeId: bur22
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
       endsConversation: 0
       actionID: 
-    - id: doc3
-      text: "P-Perd\xF3n, doctor."
+    - id: bur21
+      text: "P-Perd\xF3n, doctor. Ya me retiro"
       options: []
       endsConversation: 1
-      actionID: 
-    - id: doc4
+      actionID: Moverse
+    - id: bur22
       text: "S-S\xED, doctor."
       options: []
       endsConversation: 1

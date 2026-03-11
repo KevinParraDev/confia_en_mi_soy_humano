@@ -52,6 +52,16 @@ MonoBehaviour:
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
+      - text: Ya se la traigo.
+        nextNodeId: food2
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "\xBFDe qu\xE9 trata la junta?"
+        nextNodeId: waiter3
+        requiredSkin: 0
+        suspicionChange: 15
+        isLie: 0
       endsConversation: 0
       actionID: 
     - id: food1
@@ -59,6 +69,16 @@ MonoBehaviour:
       options: []
       endsConversation: 1
       actionID: Moverse
+    - id: food2
+      text: "Que no tarde, debo subir a la reuni\xF3n"
+      options: []
+      endsConversation: 1
+      actionID: 
+    - id: waiter3
+      text: Creo que eso no es de su incumbencia
+      options: []
+      endsConversation: 1
+      actionID: 
   - skinRequired: 6
     dialogNodes:
     - id: start

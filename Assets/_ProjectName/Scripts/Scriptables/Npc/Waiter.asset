@@ -54,6 +54,134 @@ MonoBehaviour:
       options: []
       endsConversation: 1
       actionID: 
+  - skinRequired: 5
+    dialogNodes:
+    - id: start
+      text: "Si le ha gustado la cena se\xF1or?"
+      options:
+      - text: Asqueroso
+        nextNodeId: bur11
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: Delicioso
+        nextNodeId: bur12
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "Deber\xEDas trabajar m\xE1s r\xE1pido."
+        nextNodeId: bur13
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+      actionID: 
+    - id: bur11
+      text: "Es una pena, hablar\xE9 con el chef"
+      options: []
+      endsConversation: 1
+      actionID: 
+    - id: bur12
+      text: Me alegro mucho!
+      options: []
+      endsConversation: 1
+      actionID: 
+    - id: bur13
+      text: "Es mi descanso se\xF1or!"
+      options: []
+      endsConversation: 1
+      actionID: 
+  - skinRequired: 7
+    dialogNodes:
+    - id: start
+      text: "Si le ha gustado la cena se\xF1or?"
+      options:
+      - text: Asqueroso
+        nextNodeId: bur21
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: Delicioso
+        nextNodeId: bur22
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "Deber\xEDas trabajar m\xE1s r\xE1pido."
+        nextNodeId: bur23
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+      actionID: 
+    - id: bur21
+      text: "Es una pena, hablar\xE9 con el chef"
+      options: []
+      endsConversation: 1
+      actionID: 
+    - id: bur22
+      text: Me alegro mucho!
+      options: []
+      endsConversation: 1
+      actionID: 
+    - id: bur23
+      text: "Es mi descanso se\xF1or!"
+      options: []
+      endsConversation: 1
+      actionID: 
+  - skinRequired: 6
+    dialogNodes:
+    - id: start
+      text: "Si le ha gustado la cena se\xF1or presidente?"
+      options:
+      - text: Asqueroso
+        nextNodeId: pres1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: Delicioso
+        nextNodeId: pres2
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+      actionID: 
+    - id: pres1
+      text: "Es una pena, hablar\xE9 con el chef"
+      options: []
+      endsConversation: 1
+      actionID: 
+    - id: pres2
+      text: "Es excelente, \xBFas\xED me dar\xE1n los papeles?"
+      options: []
+      endsConversation: 1
+      actionID: 
+  - skinRequired: 8
+    dialogNodes:
+    - id: start
+      text: "Se\xF1orita Betty le guard\xE9 algo"
+      options:
+      - text: Tan divino!!!
+        nextNodeId: betty1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: Ahora no tengo hambre
+        nextNodeId: betty2
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+      actionID: 
+    - id: betty1
+      text: Me alegro de verla, ya casi recibo mis papeles.
+      options: []
+      endsConversation: 1
+      actionID: 
+    - id: betty2
+      text: "Es una pena, me lo llevar\xE9 para mi cena."
+      options: []
+      endsConversation: 1
+      actionID: 
   defaultConversation:
   - id: start
     text: Estoy ocupado.

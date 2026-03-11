@@ -31,33 +31,48 @@ MonoBehaviour:
         suspicionChange: 10
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: chef1
       text: Eso me gusta. Grandes cosas.
       options: []
       endsConversation: 1
+      actionID: 
     - id: chef2
       text: "No me gusta esa actitud. \xBFAcaso eres latino?"
       options: []
       endsConversation: 1
+      actionID: 
   - skinRequired: 3
     dialogNodes:
     - id: start
-      text: "Mesero. R\xE1pido. La gente espera liderazgo, no espera hambre."
+      text: "Mesero. R\xE1pido. El mundo podr\xE1 morir de hambre, pero no nosotros."
       options:
       - text: "Enseguida, se\xF1or."
         nextNodeId: waiter1
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
+      - text: "Qu\xE9 horror"
+        nextNodeId: waiter2
+        requiredSkin: 0
+        suspicionChange: 20
+        isLie: 0
       endsConversation: 0
+      actionID: 
     - id: waiter1
       text: Bien. Eficiencia. Me agrada.
       options: []
       endsConversation: 1
+      actionID: 
+    - id: waiter2
+      text: "Cuidado, eso solo lo dir\xEDa un comunista!"
+      options: []
+      endsConversation: 1
+      actionID: 
   - skinRequired: 5
     dialogNodes:
     - id: start
-      text: Necesito resultados enormes. Los mejores resultados.
+      text: Necesito resultados enormes. Tan enormes como America.
       options:
       - text: "Todo est\xE1 bajo control."
         nextNodeId: bur1
@@ -70,14 +85,17 @@ MonoBehaviour:
         suspicionChange: 5
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: bur1
-      text: Eso suena correcto.
+      text: "Ahora lleven libertad a otro pa\xEDs o algo."
       options: []
       endsConversation: 1
+      actionID: 
     - id: bur2
       text: No me gustan las complicaciones. Ni los Latinos.
       options: []
       endsConversation: 1
+      actionID: 
   - skinRequired: 7
     dialogNodes:
     - id: start
@@ -86,7 +104,7 @@ MonoBehaviour:
       - text: Rumores sin importancia.
         nextNodeId: bur3
         requiredSkin: 0
-        suspicionChange: 0
+        suspicionChange: 10
         isLie: 1
       - text: "Todo est\xE1 perfecto."
         nextNodeId: bur4
@@ -94,14 +112,17 @@ MonoBehaviour:
         suspicionChange: 0
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: bur3
-      text: Espero que sea cierto.
+      text: "Rumores? C\xF3mo los de Joffrey?"
       options: []
       endsConversation: 1
+      actionID: 
     - id: bur4
       text: Perfecto es lo que me gusta.
       options: []
       endsConversation: 1
+      actionID: 
   - skinRequired: 8
     dialogNodes:
     - id: start
@@ -113,23 +134,28 @@ MonoBehaviour:
         suspicionChange: 0
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: bety1
       text: Eso espero, no me haga llamar a ICE
       options: []
       endsConversation: 1
+      actionID: 
   defaultConversation:
   - id: start
     text: Estoy ocupado haciendo cosas enormes, enormes como AMERICA.
     options: []
     endsConversation: 1
+    actionID: 
   scaredConversation:
   - id: start
     text: "\xBFQu\xE9 es esto? \xA1Esto es terrible! \xA1Arreglen esto ahora!"
     options: []
     endsConversation: 1
+    actionID: 
   shortAfterFirstTalkConversation:
   - id: start
     text: Ya hablamos. Grandes conversaciones.
     options: []
     endsConversation: 1
+    actionID: 
   maskIcon: {fileID: -6664124353167381402, guid: 4c8996810926d954ea09b3d8226ac5fe, type: 3}

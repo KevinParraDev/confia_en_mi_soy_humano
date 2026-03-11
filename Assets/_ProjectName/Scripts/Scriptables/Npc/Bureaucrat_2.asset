@@ -18,148 +18,168 @@ MonoBehaviour:
   - skinRequired: 2
     dialogNodes:
     - id: start
-      text: "¿Qué hace un chef aquí? Este pasillo no es la cocina."
+      text: "\xBFQu\xE9 hace un chef aqu\xED? Este pasillo no es la cocina."
       options:
-      - text: "Traigo algo para la reunión."
+      - text: "Traigo algo para la reuni\xF3n."
         nextNodeId: suspicious1
         requiredSkin: 0
         suspicionChange: 10
         isLie: 1
-      - text: "Me equivoqué de puerta."
+      - text: "Me equivoqu\xE9 de puerta."
         nextNodeId: neutral1
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: suspicious1
-      text: "Más le vale que sea verdad."
+      text: "Es una reuni\xF3n secreta!"
       options: []
       endsConversation: 1
+      actionID: 
     - id: neutral1
-      text: "Entonces salga antes de que llame a seguridad."
+      text: Entonces salga antes de que llame a seguridad.
       options: []
       endsConversation: 1
+      actionID: 
   - skinRequired: 3
     dialogNodes:
     - id: start
-      text: "Mesero, no estoy para interrupciones."
+      text: Mesero, no estoy para interrupciones.
       options:
-      - text: "Vengo por su orden."
+      - text: Traje su cena
         nextNodeId: angry1
         requiredSkin: 0
         suspicionChange: 5
         isLie: 1
       endsConversation: 0
+      actionID: 
     - id: angry1
-      text: "No pedí nada. Retírese."
+      text: "No ped\xED nada. Ret\xEDrese."
       options: []
       endsConversation: 1
+      actionID: 
   - skinRequired: 4
     dialogNodes:
     - id: start
-      text: "Guardia, asegúrese de que nadie cruce sin autorización."
+      text: "Guardia, aseg\xFArese de que nadie cruce sin autorizaci\xF3n."
       options:
-      - text: "Todo está bajo control."
+      - text: "Todo est\xE1 bajo control."
         nextNodeId: guard1
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
-      - text: "Hubo un problema abajo."
+      - text: Hubo un problema abajo.
         nextNodeId: guard2
         requiredSkin: 0
         suspicionChange: 5
         isLie: 1
       endsConversation: 0
+      actionID: 
     - id: guard1
-      text: "Eso espero."
+      text: Eso espero.
       options: []
       endsConversation: 1
+      actionID: 
     - id: guard2
-      text: "Si es mentira, será su cabeza."
+      text: "Si es mentira, ser\xE1 su cabeza."
       options: []
       endsConversation: 1
+      actionID: 
   - skinRequired: 5
     dialogNodes:
     - id: start
-      text: "Ah... así que decidió aparecer."
+      text: "Ah... as\xED que decidi\xF3 aparecer."
       options:
-      - text: "No me dé órdenes."
+      - text: "No me d\xE9 \xF3rdenes."
         nextNodeId: clash1
         requiredSkin: 0
         suspicionChange: 10
         isLie: 0
-      - text: "Solo verificaba el protocolo."
+      - text: Solo verificaba el protocolo.
         nextNodeId: rivalry1
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: clash1
-      text: "Recuerde su lugar."
+      text: Recuerde su lugar.
       options: []
       endsConversation: 1
+      actionID: 
     - id: rivalry1
-      text: "Entonces deje de estorbar."
+      text: Entonces deje de estorbar.
       options: []
       endsConversation: 1
+      actionID: 
   - skinRequired: 6
     dialogNodes:
     - id: start
-      text: "Presidente."
+      text: Presidente.
       options:
-      - text: "Su actitud será evaluada."
+      - text: "Su actitud ser\xE1 evaluada."
         nextNodeId: intimidated1
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: intimidated1
-      text: "Por supuesto. Mis disculpas."
+      text: Por supuesto. Mis disculpas.
       options: []
       endsConversation: 1
+      actionID: 
   - skinRequired: 7
     dialogNodes:
     - id: start
-      text: "..."
+      text: ...
       options:
-      - text: "..."
+      - text: ...
         nextNodeId: mirror1
         requiredSkin: 0
         suspicionChange: 15
         isLie: 1
       endsConversation: 0
+      actionID: 
     - id: mirror1
-      text: "Esto no tiene gracia."
+      text: Esto no tiene gracia.
       options: []
       endsConversation: 1
+      actionID: 
   - skinRequired: 8
     dialogNodes:
     - id: start
-      text: "Señorita Bety, no se involucre en asuntos que no entiende."
+      text: "Se\xF1orita Bety, no se involucre en asuntos que no entiende."
       options:
-      - text: "Solo cumplía órdenes."
+      - text: "Solo cumpl\xEDa \xF3rdenes."
         nextNodeId: bety1
         requiredSkin: 0
         suspicionChange: 0
         isLie: 0
       endsConversation: 0
+      actionID: 
     - id: bety1
-      text: "Procure no entorpecer."
+      text: Procure no entorpecer.
       options: []
       endsConversation: 1
+      actionID: 
   defaultConversation:
-    - id: start
-      text: "No tengo tiempo para esto."
-      options: []
-      endsConversation: 1
+  - id: start
+    text: No tengo tiempo para esto.
+    options: []
+    endsConversation: 1
+    actionID: 
   scaredConversation:
-    - id: start
-      text: "¡¿Qué demonios soy?! ¡Devuélvame mi rostro!"
-      options: []
-      endsConversation: 1
+  - id: start
+    text: "\xA1\xBFQu\xE9 demonios soy?! \xA1Devu\xE9lvame mi rostro!"
+    options: []
+    endsConversation: 1
+    actionID: 
   shortAfterFirstTalkConversation:
-    - id: start
-      text: "Ya dije lo que tenía que decir."
-      options: []
-      endsConversation: 1
+  - id: start
+    text: "Ya dije lo que ten\xEDa que decir."
+    options: []
+    endsConversation: 1
+    actionID: 
   maskIcon: {fileID: 0}
