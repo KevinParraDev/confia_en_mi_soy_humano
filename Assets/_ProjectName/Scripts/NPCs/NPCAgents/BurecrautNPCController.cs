@@ -37,21 +37,21 @@ public class BurecrautNPCController : NPCBaseController
 
     private void FixedUpdate()
     {
-        if (stateMachine.GetCurrentStateType() == NPCState.Idle)
-        {
-            if (this.IsAlarmed)
-            {
-                stateMachine.ChangeState(NPCState.Panic);
-            }
-        }
+        //if (stateMachine.GetCurrentStateType() == NPCState.Idle)
+        //{
+        //    if (this.IsAlarmed)
+        //    {
+        //        stateMachine.ChangeState(NPCState.Panic);
+        //    }
+        //}
 
-        if (stateMachine.GetCurrentStateType() == NPCState.Panic)
-        {
-            if (!this.IsAlarmed)
-            {
-                stateMachine.ChangeState(NPCState.BackToIdle);
-            }
-        }
+        //if (stateMachine.GetCurrentStateType() == NPCState.Panic)
+        //{
+        //    if (!this.IsAlarmed)
+        //    {
+        //        stateMachine.ChangeState(NPCState.Idle);
+        //    }
+        //}
     }
 
     public override void Poison()
