@@ -80,6 +80,15 @@ public class WaiterNPCController : NPCBaseController
 
         if (stateMachine.GetCurrentStateType() == NPCState.Stun) return;
 
+        if (servingStation.GetDishCount() >= 1 && dishesToRecolect > 0)
+        {
+            if (stateMachine.GetCurrentStateType() == NPCState.BackToIdle)
+            {
+                stateMachine.ChangeState(NPCState.Recolect);
+                this.ResumeMovement();
+                return;
+            }
+        }
 
         if (stateMachine.GetCurrentStateType() != NPCState.Panic)
         {
@@ -114,6 +123,12 @@ public class WaiterNPCController : NPCBaseController
                 isWaitingForDishes = false;
             } else if(dishesToRecolect >= 0 && isWaitingForDishes)
             {
+                if (servingStation.GetDishCount() >= 1)
+                {
+                    stateMachine.ChangeState(NPCState.Recolect);
+                    this.ResumeMovement();
+                    return;
+                }
                 npcInteractable.StartDialogue(waitingDialogue);
             }
             else
