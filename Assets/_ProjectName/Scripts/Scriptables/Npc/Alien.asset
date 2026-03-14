@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d971bea71cd0b44b2c4e2fce537977, type: 3}
+  m_Name: Alien
+  m_EditorClassIdentifier: 
+  npcType: 1
+  animatorSkin: {fileID: 9100000, guid: 273d9a2e8911d8844ac5506924884be9, type: 2}
+  conversations:
+  - skinRequired: 2
+    dialogNodes:
+    - id: start
+      text: "Buenos d\xEDas, chef. Conf\xEDo en que el almuerzo estar\xE1 a la altura."
+      options:
+      - text: "Todo estar\xE1 perfecto, se\xF1or."
+        nextNodeId: good1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: Coma lo que hay.
+        nextNodeId: bad1
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 0
+      endsConversation: 0
+      actionID: 
+    - id: good1
+      text: Eso me tranquiliza.
+      options: []
+      endsConversation: 1
+      actionID: 
+    - id: bad1
+      text: "Qu\xE9 respuesta tan poco profesional."
+      options: []
+      endsConversation: 1
+      actionID: 
+  - skinRequired: 3
+    dialogNodes:
+    - id: start
+      text: "Joven, tengo bastante hambre. \xBFMi plato est\xE1 listo?"
+      options:
+      - text: "Aqu\xED tiene su comida."
+        nextNodeId: food1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: Ya se la traigo.
+        nextNodeId: food2
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "\xBFDe qu\xE9 trata la junta?"
+        nextNodeId: waiter3
+        requiredSkin: 0
+        suspicionChange: 15
+        isLie: 0
+      endsConversation: 0
+      actionID: 
+    - id: food1
+      text: "Excelente. Tal vez pase por el ba\xF1o y directo a la reuni\xF3n."
+      options: []
+      endsConversation: 1
+      actionID: Moverse
+    - id: food2
+      text: "Que no tarde, debo subir a la reuni\xF3n"
+      options: []
+      endsConversation: 1
+      actionID: 
+    - id: waiter3
+      text: Creo que eso no es de su incumbencia
+      options: []
+      endsConversation: 1
+      actionID: 
+  - skinRequired: 6
+    dialogNodes:
+    - id: start
+      text: "Se\xF1or presidente."
+      options:
+      - text: "Contin\xFAe con su trabajo."
+        nextNodeId: neutral1
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+      actionID: 
+    - id: neutral1
+      text: Por supuesto.
+      options: []
+      endsConversation: 1
+      actionID: 
+  - skinRequired: 7
+    dialogNodes:
+    - id: start
+      text: Ah, colega.
+      options:
+      - text: "La reuni\xF3n ser\xE1 pronto."
+        nextNodeId: good2
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      - text: "No conf\xEDo en los guardias."
+        nextNodeId: bad2
+        requiredSkin: 0
+        suspicionChange: 10
+        isLie: 0
+      endsConversation: 0
+      actionID: 
+    - id: good2
+      text: Siempre tan puntual.
+      options: []
+      endsConversation: 1
+      actionID: 
+    - id: bad2
+      text: "Eso suena extra\xF1o viniendo de usted."
+      options: []
+      endsConversation: 1
+      actionID: 
+  - skinRequired: 8
+    dialogNodes:
+    - id: start
+      text: "Se\xF1orita Bety, todo est\xE1 listo para la reuni\xF3n."
+      options:
+      - text: Perfecto.
+        nextNodeId: neutral2
+        requiredSkin: 0
+        suspicionChange: 0
+        isLie: 0
+      endsConversation: 0
+      actionID: 
+    - id: neutral2
+      text: El presidente espera.
+      options: []
+      endsConversation: 1
+      actionID: 
+  defaultConversation:
+  - id: start
+    text: Disculpe, estoy ocupado.
+    options: []
+    endsConversation: 1
+    actionID: 
+  scaredConversation:
+  - id: start
+    text: "\xA1\xBFQu\xE9 me hizo?! \xA1Mi rostro! \xA1Esto es imposible!"
+    options: []
+    endsConversation: 1
+    actionID: 
+  shortAfterFirstTalkConversation:
+  - id: start
+    text: Ya hemos hablado.
+    options: []
+    endsConversation: 1
+    actionID: 
+  maskIcon: {fileID: 21300000, guid: 5f404b610b8ac1b4dafe7c231a8a243e, type: 3}

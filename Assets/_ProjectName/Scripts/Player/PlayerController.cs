@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     private PlayerInteractableController interactableController;
     private CharacterView view;
     [SerializeField] private NpcDataSO currentNPC;
+    [SerializeField] private bool walkInAwake = false;
 
     private bool onboardingSeen;
     private void Awake()
@@ -16,14 +17,24 @@ public class PlayerController : MonoBehaviour
     }
     public void Initialize()
     {
+        if(walkInAwake)
+        {
+            interactableController?.Initialize();
+            movementController?.Initialize();
+        }
+    }
+    public void EnableInteract()
+    {
         interactableController?.Initialize();
     }
     public void ChangeSkin(NpcDataSO npc)
     {
-        if(!onboardingSeen)
+        Debug.Log("Player Transform 4");
+        if (!onboardingSeen)
         {
             onboardingSeen = true;
-            movementController?.Initialize();
+            if (!walkInAwake)
+                movementController?.Initialize();
         }
         currentNPC = npc;
         view.ChangeSkin(currentNPC.animatorSkin);

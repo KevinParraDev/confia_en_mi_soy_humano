@@ -16,12 +16,9 @@ public class PlayerInteractableController : MonoBehaviour
         interactAction = GetComponentInParent<PlayerInput>().actions["Interact"];
         transformAction = GetComponentInParent<PlayerInput>().actions["Transform"];
     }
-    private void Start()
-    {
-        Initialize();
-    }
     public void Initialize()
     {
+        Debug.Log("Interactable initialize");
         AddListeners();
     }
     private void AddListeners()
@@ -41,13 +38,18 @@ public class PlayerInteractableController : MonoBehaviour
     {
         if (interactableInRange != null)
         {
-            if (interactableInRange is NpcInteractableController)
+            if (interactableInRange is NpcInteractableController || interactableInRange is FaceContainerController)
             {
                 // Temporary Fix for the multiple
                 if (interactableInRange.gameObject.TryGetComponent(out NpcInteractableController npc))
                 {
                     if (npc.GetData().npcType == playerController.GetCurrentSkin()) return;
                     if (npc.GetData().npcType == NPC.Guard) return;
+                }
+
+                if (interactableInRange.gameObject.TryGetComponent(out FaceContainerController skin))
+                {
+                    if (skin.GetData().npcType == playerController.GetCurrentSkin()) return;
                 }
 
                 interactableInRange.Transform(playerController);

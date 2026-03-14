@@ -21,7 +21,10 @@ public class OnboardingAnimationController : MonoBehaviour
         chefInteractable.StartDialogue(NPC.Alien);
         playerInteractable.SkinChanged += EndConversation;
     }
-    
+    public void ActivateInteraction()
+    {
+        player?.EnableInteract();
+    }
     public void EndConversation()
     {
         playerInteractable.SkinChanged -= EndConversation;

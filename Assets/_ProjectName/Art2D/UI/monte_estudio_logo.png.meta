@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 6c4fcd34966c15e49a7308a7fe800a5b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -760076643526358635
+    second: monte_estudio_logo_0
+  - first:
+      213: -6484339659964389145
+    second: monte_estudio_logo_1
+  - first:
+      213: 2953473883441529572
+    second: monte_estudio_logo_2
+  - first:
+      213: 6184918135125148365
+    second: monte_estudio_logo_3
+  - first:
+      213: 8204201877829303220
+    second: monte_estudio_logo_4
+  - first:
+      213: -4876394401924504761
+    second: monte_estudio_logo_5
+  - first:
+      213: -756088154814855265
+    second: monte_estudio_logo_6
+  - first:
+      213: -2539072822882273373
+    second: monte_estudio_logo_7
+  - first:
+      213: -6534429602497771482
+    second: monte_estudio_logo_8
+  - first:
+      213: -1422137844641768311
+    second: monte_estudio_logo_9
+  - first:
+      213: -6801142469142175005
+    second: monte_estudio_logo_10
+  - first:
+      213: -5112502668109203582
+    second: monte_estudio_logo_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: monte_estudio_logo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 817
+        height: 1203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5994a8cd15aa375f0800000000000000
+      internalID: -760076643526358635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monte_estudio_logo_1
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 469
+        width: 581
+        height: 934
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e868dc4f6ff206a0800000000000000
+      internalID: -6484339659964389145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monte_estudio_logo_2
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 446
+        width: 601
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e20deb49d8dcf820800000000000000
+      internalID: 2953473883441529572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monte_estudio_logo_3
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 434
+        width: 812
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc28109564e35d550800000000000000
+      internalID: 6184918135125148365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monte_estudio_logo_4
+      rect:
+        serializedVersion: 2
+        x: 2512
+        y: 0
+        width: 821
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bbbb91e32e2bd170800000000000000
+      internalID: 8204201877829303220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monte_estudio_logo_5
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 15
+        width: 252
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7432690b021935cb0800000000000000
+      internalID: -4876394401924504761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monte_estudio_logo_6
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 13
+        width: 230
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f97416144d5d185f0800000000000000
+      internalID: -756088154814855265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monte_estudio_logo_7
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 12
+        width: 256
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a7f04d58b663ccd0800000000000000
+      internalID: -2539072822882273373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monte_estudio_logo_8
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 11
+        width: 256
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628c25db5ea0155a0800000000000000
+      internalID: -6534429602497771482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monte_estudio_logo_9
+      rect:
+        serializedVersion: 2
+        x: 1852
+        y: 10
+        width: 223
+        height: 413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98cdc744a2d834ce0800000000000000
+      internalID: -1422137844641768311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monte_estudio_logo_10
+      rect:
+        serializedVersion: 2
+        x: 2071
+        y: 9
+        width: 181
+        height: 411
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e225f355fc7d91a0800000000000000
+      internalID: -6801142469142175005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monte_estudio_logo_11
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 8
+        width: 225
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2873d1a19edbc09b0800000000000000
+      internalID: -5112502668109203582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      monte_estudio_logo_0: -760076643526358635
+      monte_estudio_logo_1: -6484339659964389145
+      monte_estudio_logo_10: -6801142469142175005
+      monte_estudio_logo_11: -5112502668109203582
+      monte_estudio_logo_2: 2953473883441529572
+      monte_estudio_logo_3: 6184918135125148365
+      monte_estudio_logo_4: 8204201877829303220
+      monte_estudio_logo_5: -4876394401924504761
+      monte_estudio_logo_6: -756088154814855265
+      monte_estudio_logo_7: -2539072822882273373
+      monte_estudio_logo_8: -6534429602497771482
+      monte_estudio_logo_9: -1422137844641768311
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
